@@ -1,6 +1,8 @@
 # Keep SSH connections alive on Mac OS
 
-How to configure Mac OS terminal to keep SSH connections alive.
+:::callout
+Quick note on how to configure Mac OS terminal to keep SSH connections alive.
+:::
 
 In terminal, open ssh config file:
 
