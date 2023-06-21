@@ -1,11 +1,9 @@
 <template>
-  <TheNavBar />
-  <div>
-    <h1>
-      nuxt-content-portfolio
-    </h1>
-    <p>
-      Nuxt 3 + Content module + Tailwind CSS + GraphQL portfolio web site.
-    </p>
+  <div class="flex flex-col min-h-screen">
+    <TheNavBar />
+    <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 grow items-start w-full">
+      <NuxtPage />
+    </main>
+    <TheFooter />
   </div>
 </template>

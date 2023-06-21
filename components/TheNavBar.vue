@@ -1,13 +1,15 @@
-<script setup>
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+<script setup lang="ts">
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
+
+const route = useRoute();
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-]
+  { name: 'Home', href: '/', current: route.path == '/' },
+  { name: 'Blog', href: '/blog/', current: route.path == '/blog/' },
+  { name: 'Projects', href: '/projects/', current: route.path == '/projects/' },
+  { name: 'About', href: '/about/', current: route.path == '/about/' },
+];
 </script>
 
 <template>
@@ -53,4 +55,3 @@ const navigation = [
     </DisclosurePanel>
   </Disclosure>
 </template>
-

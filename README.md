@@ -17,6 +17,8 @@ npm install @headlessui/vue
 npm install @heroicons/vue
 ```
 
+- `nuxt-icon`
+
 ## Built on top of Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
