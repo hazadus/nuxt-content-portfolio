@@ -19,6 +19,10 @@ npm install @heroicons/vue
 
 - `nuxt-icon`
 
+- '@nuxt/content' https://content.nuxtjs.org/get-started/
+
+- '@tailwindcss/typography' https://tailwindcss.com/docs/typography-plugin
+
 ## Built on top of Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
