@@ -18,4 +18,4 @@ ServerAliveInterval 100
 
 Save config file. Your new SSH connections should be kept alive from now on.
 
-Tagged under: #MacOS #SSH
+10 Sep 2022 | Tagged under: #MacOS #SSH
