@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
   <Title>
     Hazadus.ru
@@ -35,5 +32,7 @@
     <h2 class="text-3xl font-bold mt-8">
       Latest Blog Posts
     </h2>
+
+    <PostList :limit="3" />
   </section>
 </template>

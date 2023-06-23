@@ -1,3 +1,14 @@
+---
+title: Keep SSH connections alive on Mac OS
+description: Quick note on how to configure Mac OS terminal to keep SSH connections alive.
+date: 2022-09-10
+cover: keep-ssh-alive-mac-os.jpeg
+tags:
+  - MacOs
+  - SSH
+  - CLI
+---
+
 # Keep SSH connections alive on Mac OS
 
 :::callout
@@ -17,5 +28,3 @@ ServerAliveInterval 100
 ```
 
 Save config file. Your new SSH connections should be kept alive from now on.
-
-10 Sep 2022 | Tagged under: #MacOS #SSH

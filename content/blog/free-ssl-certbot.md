@@ -1,7 +1,18 @@
+---
+title: Create and use free SSL certificate using Let's Encrypt with Nginx on Linux
+description: Quick tutorial on how to create and install free SSL certificate from Let's Encrypt with Nginx, Python and certbot on Linux.
+date: 2022-09-19
+cover: free-ssl-certbot.jpeg
+tags:
+  - SSL
+  - Nginx
+  - Linux
+---
+
 # Create and use free SSL certificate using Let's Encrypt with Nginx on Linux
 
 :::callout
-Quick tutorial on how to create and install free SSL certificate from Let's Encrypt with Nginx, Python and certbot on Linux
+Quick tutorial on how to create and install free SSL certificate from Let's Encrypt with Nginx, Python and certbot on Linux.
 :::
 
 First, check **Nginx** config file.
@@ -74,5 +85,3 @@ This was tested on Ubuntu v.20.04.4, nginx/1.18.0 (Ubuntu), and works well on th
 If you need more detailed instructions, refer to [Using Free Let’s Encrypt SSL/TLS Certificates with NGINX](https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/).
 
 More about adding SSL certificates to **nginx** config: [See Step 4 - (Optional) Running WebSSH Behind an Nginx Reverse Proxy](https://www.digitalocean.com/community/tutorials/how-to-connect-to-a-terminal-from-your-browser-using-python-webssh).
-
-19 Sep 2022 | Tagged under: #nginx #linux #ubuntu #ssl #python
