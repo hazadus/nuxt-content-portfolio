@@ -7,7 +7,7 @@ Nuxt 3 + Content module + GraphQL portfolio web site.
 - Tutorial series: https://www.youtube.com/watch?v=b6b2yZZNG6Y
 - [TailwindUI navbars](https://tailwindui.com/components/application-ui/navigation/navbars)
 - [Tailwind Starter Kit](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation)
-
+- [GitHub GraphQL API Explorer](https://docs.github.com/en/graphql/overview/explorer)
 ## Modules / Libraries used:
 
 - `@nuxtjs/tailwindcss`:
@@ -23,6 +23,8 @@ npm install @heroicons/vue
 - '@nuxt/content' https://content.nuxtjs.org/get-started/
 
 - '@tailwindcss/typography' https://tailwindcss.com/docs/typography-plugin
+
+- '@nuxtjs/apollo' https://apollo.nuxtjs.org
 
 ## Built on top of Nuxt 3 Minimal Starter
 
