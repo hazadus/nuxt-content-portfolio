@@ -1,6 +1,7 @@
 ---
 title: Create and use free SSL certificate using Let's Encrypt with Nginx on Linux
 description: Quick tutorial on how to create and install free SSL certificate from Let's Encrypt with Nginx, Python and certbot on Linux.
+published: true
 date: 2022-09-19
 cover: free-ssl-certbot.jpeg
 tags:

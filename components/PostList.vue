@@ -11,10 +11,12 @@ const { data: posts } = await useAsyncData("posts", () => {
   if (!props.limit) {
     return queryContent("/blog")
       .sort({ date: 1 })
+      .where({ published: true })
       .find();
   } else {
     return queryContent("/blog")
       .sort({ date: 1 })
+      .where({ published: true })
       .limit(props.limit)
       .find();
   }
