@@ -2,12 +2,19 @@
 
 Nuxt 3 + Content module + GraphQL portfolio web site.
 
+## Configuration
+
+Required environment variables to run the project:
+
+- `GITHUB_TOKEN` - your GitHub Personal access tokens (get it here: https://github.com/settings/tokens).
+
 ## References
 
 - Tutorial series: https://www.youtube.com/watch?v=b6b2yZZNG6Y
 - [TailwindUI navbars](https://tailwindui.com/components/application-ui/navigation/navbars)
 - [Tailwind Starter Kit](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation)
 - [GitHub GraphQL API Explorer](https://docs.github.com/en/graphql/overview/explorer)
+
 ## Modules / Libraries used:
 
 - `@nuxtjs/tailwindcss`:

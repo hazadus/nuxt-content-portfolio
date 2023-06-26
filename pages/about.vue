@@ -4,7 +4,7 @@
   </Title>
 
   <section>
-    <h1 class="text-5xl font-bold mt-20">
+    <h1 class="text-5xl font-bold mt-10">
       About this site
     </h1>
     <p class="text-base text-gray-900 p-2 italic">

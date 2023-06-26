@@ -4,7 +4,7 @@
   </Title>
 
   <section>
-    <h1 class="text-5xl font-bold mt-20">
+    <h1 class="text-5xl font-bold mt-10">
       Hello, I'm 🐻 Hazadus!
     </h1>
     <p class="text-base text-gray-900 p-2 italic">
@@ -12,20 +12,45 @@
     </p>
   </section>
 
-  <section class="flex flex-col md:flex-row">
-    <div class="md:w-3/4">
-      <h2 class="text-3xl font-bold mt-8">
-        &laquo;Who the hell are you?...&raquo;
-      </h2>
-      <p class="text-lg py-2">
-        Something about author.
-      </p>
-      <p class="text-lg py-2">
-        Something about this site.
-        Nuxt 3 + Content module + Tailwind CSS + GraphQL portfolio web site.
-      </p>
+  <section>
+    <h2 class="text-3xl font-bold mt-4">
+      My favorite technologies
+    </h2>
+
+    <div class="flex flex-col md:flex-row">
+      <div class="md:w-1/2">
+        <h3 class="text-2xl font-semibold mt-4">
+          Backend
+        </h3>
+        <ul>
+          <li>
+            Python
+          </li>
+          <li>
+            Rust
+          </li>
+          <li>
+            Docker
+          </li>
+        </ul>
+      </div>
+      <div class="md:w-1/2">
+        <h3 class="text-2xl font-semibold mt-4">
+          Frontend
+        </h3>
+        <ul>
+          <li>
+            Vue 3
+          </li>
+          <li>
+            Nuxt
+          </li>
+          <li>
+            TypeScript
+          </li>
+        </ul>
+      </div>
     </div>
-    <img src="~/assets/images/bear-in-sweater.jpg" class="w-1/2 md:max-w-sm p-8 mx-auto" />
   </section>
 
   <section>
