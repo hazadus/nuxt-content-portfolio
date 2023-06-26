@@ -1,4 +1,6 @@
 <script setup>
+import { useFormatDateTime } from "@/utils";
+
 const query = gql`
 {
   viewer {
@@ -56,7 +58,7 @@ const { data, error } = await useAsyncQuery(query);
         {{ project.description }}
       </p>
       <p class="text-gray-500 text-sm">
-        Last updated: {{ project.updatedAt }}
+        Last updated: {{ useFormatDateTime(project.updatedAt) }}
       </p>
     </div>
   </section>
