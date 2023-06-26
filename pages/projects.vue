@@ -12,6 +12,17 @@ const query = gql`
         createdAt
         updatedAt
         description
+        primaryLanguage {
+          name
+          color
+        }
+        repositoryTopics(first:100) {
+          nodes {
+            topic {
+              name
+            }
+          }
+        }
         url
         forks {
           totalCount
@@ -39,7 +50,7 @@ const { data, error } = await useAsyncQuery(query);
     My personal projects
   </h1>
   <p class="text-base text-gray-900 p-2 italic">
-    Stuff written by me.
+    Проекты автора на GitHub, в порядке последних обновлений: сверху то, над чем сейчас идёт активная работа.
   </p>
 
   <pre v-if="error">
@@ -54,10 +65,26 @@ const { data, error } = await useAsyncQuery(query);
           {{ project.name }}
         </h2>
       </a>
-      <p v-if="project.description" class="mb-2">
+      <p v-if="project.description" class="mb-8">
         {{ project.description }}
       </p>
-      <p class="text-gray-500 text-sm">
+
+      <template v-if="project.primaryLanguage">
+        <Icon name="streamline:programming-script-1-language-programming-code" class="mr-1" />
+        <span :style="`background-color: ${project.primaryLanguage.color};`" class="rounded px-2 py-1 mr-2">
+          {{ project.primaryLanguage.name }}
+        </span>
+      </template>
+
+      <template v-if="project.repositoryTopics.nodes.length">
+        <Icon name="mdi:tag" class="mr-1" />
+        <span v-for="topic in project.repositoryTopics.nodes" :key="`topic-${topic.topic.name}`"
+          class="inline-block bg-indigo-200 rounded px-2 mr-2 mb-1">
+          {{ topic.topic.name }}
+        </span>
+      </template>
+
+      <p class="text-gray-500 text-sm mt-4">
         Last updated: {{ useFormatDateTime(project.updatedAt) }}
       </p>
     </div>
