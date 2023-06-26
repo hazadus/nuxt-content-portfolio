@@ -5,21 +5,27 @@ const props = defineProps({
     default: 0,
     required: false,
   },
+  filterByTag: {
+    type: String,
+    default: "",
+    required: false,
+  },
 });
 
 const { data: posts } = await useAsyncData("posts", () => {
-  if (!props.limit) {
-    return queryContent("/blog")
-      .sort({ date: 1 })
-      .where({ published: true })
-      .find();
-  } else {
-    return queryContent("/blog")
-      .sort({ date: 1 })
-      .where({ published: true })
-      .limit(props.limit)
-      .find();
+  let query = queryContent("/blog")
+    .sort({ date: 1 })
+    .where({ published: true });
+
+  if (props.limit) {
+    query = query.limit(props.limit);
   }
+
+  if (props.filterByTag) {
+    query = query.where({ tags: { $in: [props.filterByTag,] }, });
+  }
+
+  return query.find();
 });
 </script>
 

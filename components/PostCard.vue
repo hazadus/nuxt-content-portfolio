@@ -24,10 +24,7 @@ defineProps({
         {{ post.description }}
       </p>
       <div>
-        <Icon name="mdi:tag" class="mr-2" />
-        <span v-for="tag in post.tags" :key="`tag-${tag}`" class="inline-block bg-indigo-200 rounded px-2 mr-2">
-          {{ tag }}
-        </span>
+        <Tag v-for="tag in post.tags" :key="`tag-${tag}`" :title="tag" size="large" />
       </div>
     </div>
   </div>
