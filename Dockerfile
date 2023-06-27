@@ -1,5 +1,5 @@
 # Dockerfile
-FROM node:18-alpine3.16
+FROM node:lts-alpine3.17
 
 # create destination directory
 RUN mkdir -p /usr/src/nuxt-app
@@ -10,5 +10,5 @@ RUN apk update && apk upgrade
 
 # copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
-RUN npm install
+RUN npm ci
 RUN npm run build
