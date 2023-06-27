@@ -1,11 +1,25 @@
 <script setup lang="ts">
 import { useFormatDate } from "@/utils";
+import { Breadcrumb } from "@/types";
 
 const { path } = useRoute();
 
-const { data } = await useAsyncData(`content-${path}`, () => {
-  return queryContent().where({ _path: path }).findOne()
-});
+const { data } = await useAsyncData(`content-${path}`, () =>
+  queryContent()
+    .where({ _path: path })
+    .findOne()
+);
+
+const breadcrumbs: Breadcrumb[] = [
+  {
+    title: "All blog posts",
+    url: "/blog/",
+  },
+  {
+    title: data.value?.title ? data.value.title : "Blog post",
+    url: null,
+  },
+];
 </script>
 
 <template>
@@ -13,6 +27,8 @@ const { data } = await useAsyncData(`content-${path}`, () => {
     <Title>
       {{ data.title }} | Blog | Hazadus.ru
     </Title>
+
+    <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
     <ContentRenderer :value="data" class="prose my-10 mx-auto max-w-4xl" />
 

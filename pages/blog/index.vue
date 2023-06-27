@@ -1,7 +1,20 @@
+<script setup lang="ts">
+import { Breadcrumb } from "@/types";
+
+const breadcrumbs: Breadcrumb[] = [
+  {
+    title: "All blog posts",
+    url: null,
+  },
+];
+</script>
+
 <template>
   <Title>
     Blog | Hazadus.ru
   </Title>
+
+  <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
   <section>
     <h1 class="text-5xl font-bold mt-10">

@@ -1,6 +1,13 @@
 <script setup>
 import { useFormatDateTime } from "@/utils";
 
+const breadcrumbs = [
+  {
+    title: "Projects",
+    url: null,
+  },
+];
+
 const query = gql`
 {
   viewer {
@@ -45,6 +52,8 @@ const { data, error } = await useAsyncQuery(query);
   <Title>
     Projects | Hazadus.ru
   </Title>
+
+  <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
   <h1 class="text-5xl font-bold mt-10">
     My personal projects
