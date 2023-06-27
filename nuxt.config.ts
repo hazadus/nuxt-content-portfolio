@@ -10,6 +10,11 @@ export default defineNuxtConfig({
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
   },
+  build: {
+    // References: https://github.com/nuxt/nuxt/discussions/21533
+    // https://v2.nuxt.com/docs/configuration-glossary/configuration-build/#transpile
+    transpile: ["tslib"],
+  },
   content: {
     // https://content.nuxtjs.org/api/configuration
     highlight: {
