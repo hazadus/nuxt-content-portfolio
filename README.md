@@ -1,8 +1,10 @@
 # nuxt-content-portfolio
 
-Nuxt 3 + Content module + GraphQL portfolio web site.
+Nuxt 3 + Content module + Tailwind CSS + GraphQL personal web site.
 
 ## Configuration
+
+**NB**: 2 Gb RAM needed to build and run the container.
 
 Required environment variables to run the project:
 
@@ -25,11 +27,11 @@ npm install @headlessui/vue
 npm install @heroicons/vue
 ```
 
+- '@tailwindcss/typography' https://tailwindcss.com/docs/typography-plugin
+
 - `nuxt-icon`
 
 - '@nuxt/content' https://content.nuxtjs.org/get-started/
-
-- '@tailwindcss/typography' https://tailwindcss.com/docs/typography-plugin
 
 - '@nuxtjs/apollo' https://apollo.nuxtjs.org
 

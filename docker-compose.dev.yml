@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  node:
+    container_name: "hazadus-node"
+    build: .
+    command: node .output/server/index.mjs
+    environment:
+      - "NITRO_HOST=0.0.0.0"
+      - "NITRO_PORT=3000"
+  nginx:
+    container_name: "hazadus-nginx"
+    image: nginx:1.23-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/nginx/logs:/var/log/nginx
+      - ./docker/nginx/default.dev.conf:/etc/nginx/conf.d/default.conf
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - node
