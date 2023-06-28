@@ -20,6 +20,14 @@ const breadcrumbs: Breadcrumb[] = [
     url: null,
   },
 ];
+
+useSeoMeta({
+  title: data.value?.title + " | Blog | Hazadus.ru",
+  ogTitle: data.value?.title + " | Blog | Hazadus.ru",
+  description: data.value?.description,
+  ogDescription: data.value?.description,
+  ogImage: 'https://hazadus.ru/images/' + data.value?.cover,
+});
 </script>
 
 <template>
