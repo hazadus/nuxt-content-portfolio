@@ -66,7 +66,7 @@ const { data, error } = await useAsyncQuery(query);
       {{ error }}
     </pre>
 
-  <section v-if="data" class="grid grid-cols-2 gap-4 mb-4">
+  <section v-if="data" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
     <div v-for="project in data.viewer.repositories.nodes" :key="project.id"
       class="p-8 border-4 my-0 rounded-lg hover:bg-gray-50">
       <a :href="project.url">
