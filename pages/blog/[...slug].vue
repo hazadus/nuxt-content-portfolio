@@ -26,7 +26,7 @@ useSeoMeta({
   ogTitle: data.value?.title + " | Blog | Hazadus.ru",
   description: data.value?.description,
   ogDescription: data.value?.description,
-  ogImage: 'https://hazadus.ru/images/' + data.value?.cover,
+  ogImage: 'https://hazadus.ru/images/blog/' + data.value?.cover,
 });
 </script>
 
