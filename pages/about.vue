@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { Breadcrumb } from "@/types";
+import { useViewCount } from "@/api";
 
 const pageTitle = "О сайте";
+
+const viewCount = await useViewCount("about");
 
 const breadcrumbs: Breadcrumb[] = [
   {
@@ -140,10 +143,13 @@ const breadcrumbs: Breadcrumb[] = [
       </div>
     </div>
 
-    <p class="mt-4 mb-8">
+    <p class="mt-4">
       Исходники сайта:
       <Icon name="logos:github-octocat" />
       <a href="https://github.com/hazadus/nuxt-content-portfolio" class="underline">hazadus/nuxt-content-portfolio</a>
+    </p>
+    <p class="mt-4 mb-8 text-gray-300">
+      Просмотров странички: {{ viewCount }}
     </p>
   </section>
 </template>
