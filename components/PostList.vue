@@ -14,7 +14,7 @@ const props = defineProps({
 
 const { data: posts } = await useAsyncData("posts", () => {
   let query = queryContent("/blog")
-    .sort({ date: 1 })
+    .sort({ date: -1 })
     .where({ published: true });
 
   if (props.limit) {

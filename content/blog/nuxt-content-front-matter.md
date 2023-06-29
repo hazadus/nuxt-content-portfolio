@@ -2,12 +2,14 @@
 title: Использование Front-matter в Nuxt Content
 description: Краткий пример того, как можно использовать метаданные в формате "Front matter" в Markdown-файлах в Nuxt Content.
 published: true
-date: 2022-06-26
+date: 2023-06-26
 cover: nuxt-content-front-matter.jpg
 tags:
   - Nuxt
   - Nuxt Content
+  - Markdown
   - Front matter
+  - TypeScript
 ---
 
 # Использование Front matter в Nuxt Content
@@ -44,24 +46,31 @@ const props = defineProps({
     default: 0,
     required: false,
   },
+  filterByTag: {
+    type: String,
+    default: "",
+    required: false,
+  },
 });
 
 const { data: posts } = await useAsyncData("posts", () => {
-  if (!props.limit) {
-    return queryContent("/blog")
-      .sort({ date: 1 })
-      .where({ published: true })
-      .find();
-  } else {
+  let query = queryContent("/blog")
     // сортируем по полю `date` по убыванию,
     // отбирая посты с полем `published: true`,
-    // ограничевая количество пареметром `props.limit`:
-    return queryContent("/blog")
-      .sort({ date: 1 })
-      .where({ published: true })
-      .limit(props.limit)
-      .find();
+    .sort({ date: -1 })
+    .where({ published: true });
+
+  if (props.limit) {
+    // ограничиваем количество постов пареметром `props.limit`:
+    query = query.limit(props.limit);
   }
+
+  if (props.filterByTag) {
+    // фильтруем посты по наличию указанного тега:
+    query = query.where({ tags: { $in: [props.filterByTag] } });
+  }
+
+  return query.find();
 });
 </script>
 
