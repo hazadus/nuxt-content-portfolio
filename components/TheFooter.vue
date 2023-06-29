@@ -17,7 +17,7 @@
         <a href="https://t.me/hazadus">
           <Icon name="bi:telegram" size="1.5rem" />
         </a>
-        <a>
+        <a href="https://steamcommunity.com/id/hazadus/">
           <Icon name="bi:steam" size="1.5rem" />
         </a>
       </div>

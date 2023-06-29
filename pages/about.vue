@@ -23,7 +23,7 @@ const breadcrumbs: Breadcrumb[] = [
       Об этом сайте
     </h1>
     <p class="text-base text-gray-900 p-2 italic">
-      Как он работает и зачем нужен...
+      Зачем он нужен и как работает...
     </p>
 
     <p class="mt-4">
@@ -33,7 +33,12 @@ const breadcrumbs: Breadcrumb[] = [
       также попробовать в действии интересный модуль <b>Nuxt Content</b>.
     </p>
 
-    <h2 class="text-2xl mt-8">
+    <p class="mt-4">
+      Кому нужен <i>ещё один блог</i>, спросите вы?.. Да, в первую очередь, себе &mdash; эти заметки позволяют
+      систематизировать новые знания, и, при необходимости, быстро найти опробованное ранее решение.
+    </p>
+
+    <h2 class="text-2xl mt-8 font-semibold">
       Связаться с автором
     </h2>
     <p class="mt-4">
@@ -41,10 +46,44 @@ const breadcrumbs: Breadcrumb[] = [
       <Icon name="logos:telegram" />&nbsp;<a href="https://t.me/Hazadus" class="underline">Телеграм</a>, или на
       <a href="mailto:hazadus7@gmail.com" class="underline">почту</a>.
     </p>
+    <p class="mt-4">
+      Мои профили:
+      <Icon name="octicon:mark-github-16" />
+      <a href="https://github.com/hazadus/" class="underline">GitHub</a> /
+      <Icon name="ion:logo-stackoverflow" />
+      <a href="https://stackoverflow.com/users/20197519/hazadus" class="underline">StackOverflow</a> /
+      <a href="https://www.codewars.com/users/hazadus" class="underline">CodeWars</a>&nbsp;
+      <img src="https://www.codewars.com/users/hazadus/badges/micro" class="inline-block" /> /
+      <Icon name="bi:steam" />
+      <a href="https://steamcommunity.com/id/hazadus/" class="underline">Steam</a> /
+      <a href="https://myshows.me/hazadus" class="underline">MyShows</a> /
+      <a href="https://www.livelib.ru/reader/hazadus" class="underline">LiveLib</a>.
+    </p>
+    <p class="mt-4">
+      Интересы:
+      <Icon name="logos:python" /> Python,
+      <Icon name="logos:django-icon" /> Django,
+      <Icon name="logos:postgresql" /> PostgreSQL,
+      <Icon name="logos:typescript-icon" /> TypeScript,
+      <Icon name="logos:nuxt-icon" /> Nuxt,
+      <Icon name="logos:vue" /> Vue,
+      <Icon name="logos:rust" /> Rust, CI/CD.
+    </p>
+    <p class="mt-4">
+      Книги: <a href="http://library.hazadus.ru/lists/3/details/" class="underline">читаю</a> /
+      <a href="http://library.hazadus.ru/lists/5/details/" class="underline">хочу прочитать</a> /
+      <a href="http://library.hazadus.ru/lists/2/details/" class="underline">недавно прочитал</a>.
+    </p>
 
-    <h2 class="text-2xl mt-8">
+    <h2 class="text-2xl mt-8 font-semibold">
       Реализация сайта
     </h2>
+    <p class="mt-4">
+      Для своего личного сайта я выбрал любимую на настоящий момент библиотеку фронтенда &mdash;
+      <Icon name="logos:nuxt-icon" />&nbsp;<b>Nuxt</b>. Наверное, правильнее будет сказать, что это даже фулл-стек
+      фреймворк, ведь все странички на сайте генерируются на бэкенде в реальном времени. Кроме того, интересно исследовать
+      возможности модулей <b>Nuxt Content</b>, <b>Apollo</b>.
+    </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-4">
       <div>
@@ -54,17 +93,13 @@ const breadcrumbs: Breadcrumb[] = [
         <ul>
           <li>
             <Icon name="logos:nuxt-icon" />&nbsp;
-            <a href="https://nuxt.com" class="underline">Nuxt 3</a>
-          </li>
-          <li>
-            <a href="https://content.nuxtjs.org/" class="underline">Nuxt Content</a>
+            <a href="https://nuxt.com" class="underline">Nuxt 3</a> /
+            <a href="https://content.nuxtjs.org/" class="underline">Nuxt Content</a> /
+            <a href="https://nitro.unjs.io/" class="underline">Nitro</a>
           </li>
           <li>
             <Icon name="logos:apollostack" />&nbsp;
             <a href="https://apollo.nuxtjs.org/" class="underline">Nuxt Apollo</a>
-          </li>
-          <li>
-            <a href="https://nitro.unjs.io/" class="underline">Nitro</a>
           </li>
           <li>
             <Icon name="logos:nginx" />&nbsp;
