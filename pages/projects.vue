@@ -96,7 +96,7 @@ const { data, error } = await useAsyncQuery(query);
       </template>
 
       <p class="text-gray-500 text-sm mt-4">
-        Last updated: {{ useFormatDateTime(project.updatedAt) }}
+        Обновлено: {{ useFormatDateTime(project.updatedAt) }}
       </p>
     </div>
   </section>
