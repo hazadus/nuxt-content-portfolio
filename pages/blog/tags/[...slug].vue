@@ -6,11 +6,11 @@ const slug = route.params.slug[0]
 
 const breadcrumbs: Breadcrumb[] = [
   {
-    title: "All blog posts",
+    title: "Блог",
     url: "/blog/",
   },
   {
-    title: `All posts tagged "${slug}"`,
+    title: `Все посты с меткой "${slug}"`,
     url: null,
   },
 ];
@@ -18,12 +18,12 @@ const breadcrumbs: Breadcrumb[] = [
 
 <template>
   <Title>
-    Все посты с меткой &laquo;{{ slug }}&raquo; | Blog | Hazadus.ru
+    Все посты с меткой &laquo;{{ slug }}&raquo; | Блог | Hazadus.ru
   </Title>
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
-  <h1 class="text-5xl font-bold mt-10">
+  <h1 class="text-4xl font-bold mt-8">
     Все посты с меткой &laquo;{{ slug }}&raquo;
   </h1>
 

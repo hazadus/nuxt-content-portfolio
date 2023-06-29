@@ -10,20 +10,22 @@ const { data } = await useAsyncData(`content-${path}`, () =>
     .findOne()
 );
 
+const pageTitle = data.value?.title + " | Блог | Hazadus.ru";
+
 const breadcrumbs: Breadcrumb[] = [
   {
-    title: "All blog posts",
+    title: "Блог",
     url: "/blog/",
   },
   {
-    title: data.value?.title ? data.value.title : "Blog post",
+    title: data.value?.title as string,
     url: null,
   },
 ];
 
 useSeoMeta({
-  title: data.value?.title + " | Blog | Hazadus.ru",
-  ogTitle: data.value?.title + " | Blog | Hazadus.ru",
+  title: pageTitle,
+  ogTitle: pageTitle,
   description: data.value?.description,
   ogDescription: data.value?.description,
   ogImage: 'https://hazadus.ru/images/blog/' + data.value?.cover,
@@ -33,7 +35,7 @@ useSeoMeta({
 <template>
   <template v-if="data">
     <Title>
-      {{ data.title }} | Blog | Hazadus.ru
+      {{ pageTitle }}
     </Title>
 
     <Breadcrumbs :breadcrumbs="breadcrumbs" />
@@ -41,7 +43,7 @@ useSeoMeta({
     <ContentRenderer :value="data" class="prose my-10 mx-auto max-w-4xl" />
 
     <div class="my-8 mx-auto max-w-4xl">
-      Published: {{ useFormatDate(data.date) }}
+      Опубликовано: {{ useFormatDate(data.date) }}
     </div>
     <div class="my-8 mx-auto max-w-4xl">
       <Tag :title="tag" v-for="tag in data.tags" :key="`tag-${tag}`" />

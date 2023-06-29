@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { Breadcrumb } from "@/types";
 
+const pageTitle = "Блог";
+
 const breadcrumbs: Breadcrumb[] = [
   {
-    title: "All blog posts",
+    title: pageTitle,
     url: null,
   },
 ];
@@ -11,14 +13,14 @@ const breadcrumbs: Breadcrumb[] = [
 
 <template>
   <Title>
-    Blog | Hazadus.ru
+    {{ pageTitle }} | Hazadus.ru
   </Title>
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
   <section>
-    <h1 class="text-5xl font-bold mt-10">
-      Blog posts
+    <h1 class="text-4xl font-bold mt-8">
+      {{ pageTitle }}
     </h1>
     <p class="text-base text-gray-900 p-4 italic">
       В этом блоге публикуются короткие заметки, касающиеся различных узких вопросов разработки, в формате а-ля "today I

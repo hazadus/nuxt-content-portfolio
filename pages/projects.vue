@@ -1,9 +1,11 @@
 <script setup>
 import { useFormatDateTime } from "@/utils";
 
+const pageTitle = "Проекты";
+
 const breadcrumbs = [
   {
-    title: "Projects",
+    title: pageTitle,
     url: null,
   },
 ];
@@ -50,23 +52,23 @@ const { data, error } = await useAsyncQuery(query);
 
 <template>
   <Title>
-    Projects | Hazadus.ru
+    {{ pageTitle }} | Hazadus.ru
   </Title>
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
-  <h1 class="text-5xl font-bold mt-10">
-    My personal projects
+  <h1 class="text-4xl font-bold mt-8">
+    Мои личные проекты
   </h1>
   <p class="text-base text-gray-900 p-2 italic">
     Проекты автора на GitHub, в порядке последних обновлений: сверху то, над чем сейчас идёт активная работа.
   </p>
 
   <pre v-if="error">
-      {{ error }}
-    </pre>
+    {{ error }}
+  </pre>
 
-  <section v-if="data" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+  <section v-if="data" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-4">
     <div v-for="project in data.viewer.repositories.nodes" :key="project.id"
       class="p-8 border-4 my-0 rounded-lg hover:bg-gray-50">
       <a :href="project.url">
