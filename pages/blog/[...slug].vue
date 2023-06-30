@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useFormatDate } from "@/utils";
+import { useViewCount } from "@/api";
 import { Breadcrumb } from "@/types";
 
 const { path } = useRoute();
@@ -10,6 +11,7 @@ const { data } = await useAsyncData(`content-${path}`, () =>
     .findOne()
 );
 
+const viewCount = await useViewCount(path);
 const pageTitle = data.value?.title + " | Блог | Hazadus.ru";
 
 const breadcrumbs: Breadcrumb[] = [
@@ -43,7 +45,7 @@ useSeoMeta({
     <ContentRenderer :value="data" class="prose my-10 mx-auto max-w-4xl" />
 
     <div class="my-8 mx-auto max-w-4xl">
-      Опубликовано: {{ useFormatDate(data.date) }}
+      Опубликовано: {{ useFormatDate(data.date) }} | Просмотров: {{ viewCount }}
     </div>
     <div class="my-8 mx-auto max-w-4xl">
       <Tag :title="tag" v-for="tag in data.tags" :key="`tag-${tag}`" />

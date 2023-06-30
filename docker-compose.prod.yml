@@ -1,5 +1,10 @@
 version: "3.9"
 services:
+  redis:
+    container_name: "hazadus-redis"
+    image: redis:7.0.4
+    volumes:
+      - ./docker/redis:/data
   node:
     container_name: "hazadus-node"
     build: .
@@ -7,6 +12,7 @@ services:
     environment:
       - "NITRO_HOST=0.0.0.0"
       - "NITRO_PORT=3000"
+      - "USE_REDIS=True"
   nginx:
     container_name: "hazadus-nginx"
     image: nginx:1.23-alpine

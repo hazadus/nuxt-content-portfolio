@@ -1,6 +1,6 @@
 # nuxt-content-portfolio
 
-Nuxt 3 + Content module + Tailwind CSS + GraphQL personal web site.
+Nuxt 3 + Content module + Tailwind CSS + GraphQL + Redis personal web site.
 
 ## Configuration
 
@@ -9,6 +9,7 @@ Nuxt 3 + Content module + Tailwind CSS + GraphQL personal web site.
 Required environment variables to run the project:
 
 - `GITHUB_TOKEN` - your GitHub Personal access tokens (get it here: https://github.com/settings/tokens).
+- `USE_REDIS` - set to `True` when you run the app alongside Redis instance. Redis is used by `./server/api/viewCount.get.ts` endpoint to save page view counters.
 
 ## References
 

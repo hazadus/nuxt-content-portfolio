@@ -10,6 +10,18 @@ export default defineNuxtConfig({
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
   },
+  nitro: {
+    storage: {
+      // Reference: https://nuxt.com/docs/guide/directory-structure/server#example-using-redis
+      redis: {
+        driver: "redis",
+        /* redis connector options */
+        host: "redis", // Redis host
+        port: 6379, // Redis port
+        db: 0, // Defaults to 0
+      },
+    },
+  },
   build: {
     // References: https://github.com/nuxt/nuxt/discussions/21533
     // https://v2.nuxt.com/docs/configuration-glossary/configuration-build/#transpile
