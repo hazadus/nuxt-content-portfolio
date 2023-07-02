@@ -1,13 +1,13 @@
 import { serverQueryContent } from "#content/server";
 import RSS from "rss";
 
-const feed = new RSS({
-  title: "Hazadus.ru Blog",
-  site_url: "https://hazadus.ru",
-  feed_url: `https://hazadus.ru/rss.xml`,
-});
-
 export default defineEventHandler(async (event) => {
+  const feed = new RSS({
+    title: "Hazadus.ru Blog",
+    site_url: "https://hazadus.ru",
+    feed_url: `https://hazadus.ru/rss.xml`,
+  });
+
   const blogPosts = await serverQueryContent(event)
     .sort({ date: -1 })
     .where({ _partial: false })
