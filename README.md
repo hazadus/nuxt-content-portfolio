@@ -36,6 +36,8 @@ npm install @heroicons/vue
 
 - '@nuxtjs/apollo' https://apollo.nuxtjs.org
 
+- 'rss' https://www.npmjs.com/package/rss
+
 ## Built on top of Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
