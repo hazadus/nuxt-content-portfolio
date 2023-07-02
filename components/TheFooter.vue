@@ -8,6 +8,9 @@
         &copy; hazadus, 2023
       </p>
       <div class="flex flex-row justify-center gap-4 mt-2 text-gray-300">
+        <a href="https://hazadus.ru/rss.xml">
+          <Icon name="material-symbols:rss-feed" size="1.5rem" />
+        </a>
         <a href="https://github.com/hazadus">
           <Icon name="octicon:mark-github-16" size="1.5rem" />
         </a>
