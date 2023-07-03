@@ -38,7 +38,8 @@ const breadcrumbs: Breadcrumb[] = [
 
     <p class="mt-4">
       Кому нужен <i>ещё один блог</i>, спросите вы?.. Да, в первую очередь, себе &mdash; эти заметки позволяют
-      систематизировать новые знания, и, при необходимости, быстро найти опробованное ранее решение.
+      систематизировать новые знания, и, при необходимости, быстро найти опробованное ранее решение. По мере появления
+      нового опыта и знаний, интересно пересматривать свой код, и находить возможность его улучшить.
     </p>
 
     <h2 class="text-2xl mt-8 font-semibold">
@@ -107,6 +108,10 @@ const breadcrumbs: Breadcrumb[] = [
           <li>
             <Icon name="logos:nginx" />&nbsp;
             <a href="https://nginx.org/" class="underline">Nginx</a>
+          </li>
+          <li>
+            <Icon name="logos:redis" />&nbsp;
+            <a href="https://nuxt.com/docs/guide/directory-structure/server#server-storage" class="underline">Redis</a>
           </li>
           <li>
             <Icon name="logos:docker-icon" />&nbsp;
