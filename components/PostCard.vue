@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ParsedContent } from '@nuxt/content/dist/runtime/types';
+import type { BlogPost } from "@/types";
 
 defineProps({
   post: {
-    type: Object as PropType<ParsedContent>,
+    type: Object as PropType<BlogPost>,
     required: true,
   },
 });

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { BlogPost } from "@/types";
+
 const props = defineProps({
   limit: {
     type: Number,
@@ -13,7 +15,7 @@ const props = defineProps({
 });
 
 const { data: posts } = await useAsyncData("posts", () => {
-  let query = queryContent("/blog")
+  let query = queryContent<BlogPost>("/blog")
     .sort({ date: -1 })
     .where({ published: true });
 
