@@ -10,6 +10,17 @@ export default defineNuxtConfig({
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
   },
+  app: {
+    head: {
+      script: [
+        {
+          src: "http://hazadus.ru:3000/script.js",
+          async: true,
+          "data-website-id": "70e071a0-0e00-42c6-a658-06988050d5c8",
+        },
+      ],
+    },
+  },
   nitro: {
     storage: {
       // Reference: https://nuxt.com/docs/guide/directory-structure/server#example-using-redis
