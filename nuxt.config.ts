@@ -14,9 +14,9 @@ export default defineNuxtConfig({
     head: {
       script: [
         {
-          src: "http://hazadus.ru:3000/script.js",
+          src: "https://stats.hazadus.ru/script.js",
           async: true,
-          "data-website-id": "70e071a0-0e00-42c6-a658-06988050d5c8",
+          "data-website-id": "765ffad5-0ba1-4925-87e1-d181762834c9",
         },
       ],
     },
