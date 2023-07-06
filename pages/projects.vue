@@ -10,10 +10,15 @@ const breadcrumbs = [
   },
 ];
 
+// Repos I don't want to show in the list:
+const excludedRepos = [
+  "hazadus", "stats-hazadus-ru", "TestGame1", "test",
+];
+
 const query = gql`
 {
   viewer {
-    repositories(first:12, orderBy: {field:UPDATED_AT, direction:DESC})  {
+    repositories(first:50, privacy:PUBLIC, orderBy: {field:UPDATED_AT, direction:DESC})  {
       totalCount
       nodes {
         id
@@ -48,6 +53,14 @@ const query = gql`
 }`;
 
 const { data, error } = await useAsyncQuery(query);
+
+const gitHubRepos = computed(() => {
+  if (data.value) {
+    return data.value.viewer.repositories.nodes.filter((repo) => !excludedRepos.includes(repo.name));
+  } else {
+    return [];
+  }
+});
 </script>
 
 <template>
@@ -61,43 +74,52 @@ const { data, error } = await useAsyncQuery(query);
     Мои личные проекты
   </h1>
   <p class="text-base text-gray-900 p-2 italic">
-    Проекты автора на GitHub, в порядке последних обновлений: сверху то, над чем сейчас идёт активная работа.
+    Репозитороии автора на GitHub, в порядке последних обновлений: сверху то, над чем сейчас идёт активная работа.
+    Цвет карточки проекта соответствует цвету языка на GitHub.
   </p>
 
   <pre v-if="error">
     {{ error }}
   </pre>
 
-  <section v-if="data" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-4">
-    <div v-for="project in data.viewer.repositories.nodes" :key="project.id"
-      class="p-8 border-4 my-0 rounded-lg hover:bg-gray-50">
-      <a :href="project.url">
-        <h2 class="text-2xl text-indigo-800 font-semibold mb-2 hover:underline">
-          {{ project.name }}
-        </h2>
-      </a>
-      <p v-if="project.description" class="mb-8">
-        {{ project.description }}
-      </p>
+  <section v-if="gitHubRepos.length" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-4">
+    <div v-for="project in gitHubRepos" :key="project.id"
+      class="flex flex-col p-8 border-4 my-0 rounded-lg hover:bg-gray-50"
+      :style="project.primaryLanguage ? `border-color: ${project.primaryLanguage.color};` : ''">
+      <div>
+        <a :href="project.url">
+          <h2 class="text-2xl text-indigo-800 font-semibold mb-2 hover:underline">
+            <template v-if="project.primaryLanguage">
+              <Icon v-if="project.primaryLanguage.name == 'Vue'" name="logos:vue" />
+              <Icon v-if="project.primaryLanguage.name == 'Python'" name="logos:python" />
+              <Icon v-if="project.primaryLanguage.name == 'Rust'" name="logos:rust" />
+              <Icon v-if="project.primaryLanguage.name == 'Go'" name="logos:go" />
+              <Icon v-if="project.primaryLanguage.name == 'JavaScript'" name="logos:javascript" />
+              <Icon v-if="project.primaryLanguage.name == 'HTML'" name="logos:html-5" />
+              <Icon v-if="project.primaryLanguage.name == 'C#'" name="logos:c-sharp" />
+              <Icon v-if="project.primaryLanguage.name == 'TypeScript'" name="logos:typescript-icon" />
+            </template>
+            {{ project.name }}
+          </h2>
+        </a>
+      </div>
 
-      <template v-if="project.primaryLanguage">
-        <Icon name="streamline:programming-script-1-language-programming-code" class="mr-1" />
-        <span :style="`background-color: ${project.primaryLanguage.color};`" class="rounded px-2 py-1 mr-2">
-          {{ project.primaryLanguage.name }}
-        </span>
-      </template>
+      <div class="flex grow">
+        <p v-if="project.description" class="mb-8">
+          {{ project.description }}
+        </p>
+      </div>
 
-      <template v-if="project.repositoryTopics.nodes.length">
-        <Icon name="mdi:tag" class="mr-1" />
+      <div v-if="project.repositoryTopics.nodes.length">
         <span v-for="topic in project.repositoryTopics.nodes" :key="`topic-${topic.topic.name}`"
-          class="inline-block bg-indigo-200 rounded px-2 mr-2 mb-1">
+          class="inline-block text-sm bg-indigo-200 rounded px-2 mr-2 mb-2">
           {{ topic.topic.name }}
         </span>
-      </template>
+      </div>
 
-      <p class="text-gray-500 text-sm mt-4">
+      <div class="text-gray-500 text-sm mt-0 grow-0">
         Обновлено: {{ useFormatDateTime(project.updatedAt) }}
-      </p>
+      </div>
     </div>
   </section>
 </template>
