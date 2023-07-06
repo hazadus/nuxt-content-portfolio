@@ -1,6 +1,4 @@
 <script setup>
-import { useFormatDateTime } from "@/utils";
-
 const pageTitle = "Проекты";
 
 const breadcrumbs = [
@@ -12,7 +10,14 @@ const breadcrumbs = [
 
 // Repos I don't want to show in the list:
 const excludedRepos = [
-  "hazadus", "stats-hazadus-ru", "TestGame1", "test",
+  "hazadus", "stats-hazadus-ru", "TestGame1", "test", "pySnake", "pySryfallDemo",
+  "pySkillboxMessenger", "aiogram-bot-demo",
+];
+
+// Stuff I want to always show on the top of the page:
+const pinnedRepos = [
+  "nuxt-content-portfolio", "drf-nuxt-library", "drf-vue-eshop", "rust-webserver", "rust-newsletter",
+  "drf-nuxt-bookmarks", "journal", "object-snake",
 ];
 
 const query = gql`
@@ -54,12 +59,23 @@ const query = gql`
 
 const { data, error } = await useAsyncQuery(query);
 
+// All repos excluding thos in `excludedRepos` list
 const gitHubRepos = computed(() => {
   if (data.value) {
     return data.value.viewer.repositories.nodes.filter((repo) => !excludedRepos.includes(repo.name));
   } else {
     return [];
   }
+});
+
+// Only "pinned" repos list
+const gitHubPinnedRepos = computed(() => {
+  return gitHubRepos.value.filter((repo) => pinnedRepos.includes(repo.name));
+});
+
+// All other repos list
+const gitHubMiscRepos = computed(() => {
+  return gitHubRepos.value.filter((repo) => !pinnedRepos.includes(repo.name));
 });
 </script>
 
@@ -74,52 +90,26 @@ const gitHubRepos = computed(() => {
     Мои личные проекты
   </h1>
   <p class="text-base text-gray-900 p-2 italic">
-    Репозитороии автора на GitHub, в порядке последних обновлений: сверху то, над чем сейчас идёт активная работа.
-    Цвет карточки проекта соответствует цвету языка на GitHub.
+    Репозитороии автора на GitHub, в порядке последних обновлений: сверху то, над чем сейчас идёт активная работа, либо
+    просто относительно недавно обновлено.
+    Цвет рамки карточки проекта соответствует цвету языка на GitHub.
   </p>
 
   <pre v-if="error">
     {{ error }}
   </pre>
 
-  <section v-if="gitHubRepos.length" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-4">
-    <div v-for="project in gitHubRepos" :key="project.id"
-      class="flex flex-col p-8 border-4 my-0 rounded-lg hover:bg-gray-50"
-      :style="project.primaryLanguage ? `border-color: ${project.primaryLanguage.color};` : ''">
-      <div>
-        <a :href="project.url">
-          <h2 class="text-2xl text-indigo-800 font-semibold mb-2 hover:underline">
-            <template v-if="project.primaryLanguage">
-              <Icon v-if="project.primaryLanguage.name == 'Vue'" name="logos:vue" />
-              <Icon v-if="project.primaryLanguage.name == 'Python'" name="logos:python" />
-              <Icon v-if="project.primaryLanguage.name == 'Rust'" name="logos:rust" />
-              <Icon v-if="project.primaryLanguage.name == 'Go'" name="logos:go" />
-              <Icon v-if="project.primaryLanguage.name == 'JavaScript'" name="logos:javascript" />
-              <Icon v-if="project.primaryLanguage.name == 'HTML'" name="logos:html-5" />
-              <Icon v-if="project.primaryLanguage.name == 'C#'" name="logos:c-sharp" />
-              <Icon v-if="project.primaryLanguage.name == 'TypeScript'" name="logos:typescript-icon" />
-            </template>
-            {{ project.name }}
-          </h2>
-        </a>
-      </div>
+  <h2 class="text-3xl font-semi-bold mt-4">
+    Самое любимое
+  </h2>
+  <section v-if="gitHubPinnedRepos.length" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-4">
+    <GitHubRepoCard v-for="project in gitHubPinnedRepos" :key="project.id" :project="project" />
+  </section>
 
-      <div class="flex grow">
-        <p v-if="project.description" class="mb-8">
-          {{ project.description }}
-        </p>
-      </div>
-
-      <div v-if="project.repositoryTopics.nodes.length">
-        <span v-for="topic in project.repositoryTopics.nodes" :key="`topic-${topic.topic.name}`"
-          class="inline-block text-sm bg-indigo-200 rounded px-2 mr-2 mb-2">
-          {{ topic.topic.name }}
-        </span>
-      </div>
-
-      <div class="text-gray-500 text-sm mt-0 grow-0">
-        Обновлено: {{ useFormatDateTime(project.updatedAt) }}
-      </div>
-    </div>
+  <h2 class="text-3xl font-semi-bold mt-8">
+    Остальные репозитории
+  </h2>
+  <section v-if="gitHubMiscRepos.length" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-4">
+    <GitHubRepoCard v-for="project in gitHubMiscRepos" :key="project.id" :project="project" />
   </section>
 </template>
