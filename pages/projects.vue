@@ -43,6 +43,7 @@ const query = gql`
           }
         }
         url
+        homepageUrl
         forks {
           totalCount
         }

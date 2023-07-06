@@ -36,6 +36,11 @@ defineProps({
       </p>
     </div>
 
+    <div v-if="project.homepageUrl" class="mb-2">
+      <Icon name="akar-icons:link-chain" class="mr-1" />
+      <a :href="project.homepageUrl" class="hover:underline">{{ project.homepageUrl }}</a>
+    </div>
+
     <div v-if="project.repositoryTopics.nodes.length">
       <span v-for="topic in project.repositoryTopics.nodes" :key="`topic-${topic.topic.name}`"
         class="inline-block text-sm bg-indigo-200 rounded px-2 mr-2 mb-2">
