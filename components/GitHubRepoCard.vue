@@ -8,6 +8,17 @@ defineProps({
   },
 });
 
+// Map `nuxt-icon` icon names to repo primary language names
+const languageIcons = new Map();
+languageIcons.set("Vue", "logos:vue");
+languageIcons.set("Python", "logos:python");
+languageIcons.set("Rust", "logos:rust");
+languageIcons.set("Go", "logos:go");
+languageIcons.set("JavaScript", "logos:javascript");
+languageIcons.set("TypeScript", "logos:typescript-icon");
+languageIcons.set("C#", "logos:c-sharp");
+languageIcons.set("HTML", "logos:html-5");
+
 // Map `nuxt-icon` icon names to GitHub topics
 const topicIcons = new Map();
 topicIcons.set("vue", "logos:vue");
@@ -43,14 +54,8 @@ topicIcons.set("graphql", "logos:graphql");
       <a :href="project.url">
         <h2 class="text-2xl text-indigo-800 font-semibold mb-2 hover:underline">
           <template v-if="project.primaryLanguage">
-            <Icon v-if="project.primaryLanguage.name == 'Vue'" name="logos:vue" />
-            <Icon v-if="project.primaryLanguage.name == 'Python'" name="logos:python" />
-            <Icon v-if="project.primaryLanguage.name == 'Rust'" name="logos:rust" />
-            <Icon v-if="project.primaryLanguage.name == 'Go'" name="logos:go" />
-            <Icon v-if="project.primaryLanguage.name == 'JavaScript'" name="logos:javascript" />
-            <Icon v-if="project.primaryLanguage.name == 'HTML'" name="logos:html-5" />
-            <Icon v-if="project.primaryLanguage.name == 'C#'" name="logos:c-sharp" />
-            <Icon v-if="project.primaryLanguage.name == 'TypeScript'" name="logos:typescript-icon" />
+            <Icon v-if="languageIcons.has(project.primaryLanguage.name)"
+              :name="languageIcons.get(project.primaryLanguage.name)" />
           </template>
           {{ project.name }}
         </h2>
