@@ -7,6 +7,33 @@ defineProps({
     required: true,
   },
 });
+
+// Map `nuxt-icon` icon names to GitHub topics
+const topicIcons = new Map();
+topicIcons.set("vue", "logos:vue");
+topicIcons.set("vue3", "logos:vue");
+topicIcons.set("vueuse", "logos:vueuse");
+topicIcons.set("nuxt", "logos:nuxt-icon");
+topicIcons.set("nuxt3", "logos:nuxt-icon");
+topicIcons.set("pinia", "logos:pinia");
+topicIcons.set("python", "logos:python");
+topicIcons.set("django", "logos:django-icon");
+topicIcons.set("flask", "logos:flask");
+topicIcons.set("rust", "logos:rust");
+topicIcons.set("redis", "logos:redis");
+topicIcons.set("nginx", "logos:nginx");
+topicIcons.set("gunicorn", "logos:gunicorn");
+topicIcons.set("react", "logos:react");
+topicIcons.set("postgres", "logos:postgresql");
+topicIcons.set("css3", "logos:css-3");
+topicIcons.set("html5", "logos:html-5");
+topicIcons.set("javascript", "logos:javascript");
+topicIcons.set("bulma", "logos:bulma");
+topicIcons.set("tailwindcss", "logos:tailwindcss-icon");
+topicIcons.set("bootstrap5", "logos:bootstrap");
+topicIcons.set("typescript", "logos:typescript-icon");
+topicIcons.set("docker", "logos:docker-icon");
+topicIcons.set("graphql", "logos:graphql");
 </script>
 
 <template>
@@ -44,7 +71,7 @@ defineProps({
     <div v-if="project.repositoryTopics.nodes.length">
       <span v-for="topic in project.repositoryTopics.nodes" :key="`topic-${topic.topic.name}`"
         class="inline-block text-sm bg-indigo-200 rounded px-2 mr-2 mb-2">
-        {{ topic.topic.name }}
+        <Icon v-if="topicIcons.has(topic.topic.name)" :name="topicIcons.get(topic.topic.name)" /> {{ topic.topic.name }}
       </span>
     </div>
 
