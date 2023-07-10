@@ -60,9 +60,9 @@ const gitHubMiscRepos = computed(() => {
     Цвет рамки карточки проекта соответствует цвету языка на GitHub.
   </p>
 
-  <pre v-if="error">
-    {{ error }}
-  </pre>
+  <Alert v-if="error">
+    Произошла ошибка! Пожалуйста, обновите страницу. {{ error }}
+  </Alert>
 
   <h2 class="text-3xl font-semi-bold mt-4">
     Самое любимое
