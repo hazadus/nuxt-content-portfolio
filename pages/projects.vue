@@ -67,14 +67,10 @@ const gitHubMiscRepos = computed(() => {
   <h2 class="text-3xl font-semi-bold mt-4">
     Самое любимое
   </h2>
-  <section v-if="gitHubPinnedRepos.length" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-4">
-    <GitHubRepoCard v-for="project in gitHubPinnedRepos" :key="`project-fav-${project.id}`" :project="project" />
-  </section>
+  <GitHubRepoCardList v-if="gitHubPinnedRepos.length" :repositories="gitHubPinnedRepos" />
 
   <h2 class="text-3xl font-semi-bold mt-8">
     Остальные репозитории
   </h2>
-  <section v-if="gitHubMiscRepos.length" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-4">
-    <GitHubRepoCard v-for="project in gitHubMiscRepos" :key="`project-misc-${project.id}`" :project="project" />
-  </section>
+  <GitHubRepoCardList v-if="gitHubMiscRepos.length" :repositories="gitHubMiscRepos" />
 </template>
