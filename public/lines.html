@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Lines: The Grid</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+    :root {
+      --font-family: 'Ubuntu', sans-serif;
+
+      --field-height: min(80vh, 80vw);
+      --field-border-color: hsl(var(--bc)/.7);
+      --field-background-color: #191D24;
+      --cell-border-color: hsl(var(--bc)/.7);
+      --cell-background-color: #2A303C;
+      --ball-red-color: red;
+      --ball-yellow-color: yellow;
+      --ball-navy-color: navy;
+      --ball-blue-color: blue;
+      --ball-purple-color: #6419E6;
+      --ball-green-color: green;
+
+      --primary: #6419E6;
+      --secondary: #D926A9;
+      --accent: #1FB2A6;
+      --neutral: #191D24;
+      --base-100: #2A303C;
+      --info: #3ABFF8;
+      --success: #36D399;
+      --warning: #FBBD23;
+      --error: #F87272;
+      --bc: 220 13% 69%;
+      --text: rgb(166, 173, 186);
+      --text-muted: hsl(var(--bc)/.7);
+
+      --glass-border-radius: 20px;
+    }
+
+    *,
+    ::after,
+    ::before {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--base-100);
+      color: var(--text);
+      margin: 0;
+    }
+
+    .top_gradient_block {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50vh;
+      min-height: 400px;
+      background: rgb(100, 25, 230);
+      background: linear-gradient(135deg, rgba(100, 25, 230, 1) 0%, rgba(217, 38, 169, 1) 100%);
+    }
+
+    .main_container {
+      height: 100vh;
+      width: 100vw;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .glass {
+      display: flex;
+      flex-direction: column;
+      padding: 25px 25px 0 25px;
+      border: none;
+      border-radius: var(--glass-border-radius);
+      -webkit-backdrop-filter: blur(40px);
+      backdrop-filter: blur(40px);
+      background-color: transparent;
+      background-image: linear-gradient(135deg, rgb(255 255 255/30%) 0%, rgb(0 0 0/0%) 100%), linear-gradient(100deg, rgb(255 255 255/10%) 25%, rgb(0 0 0/0%) 25%);
+      box-shadow: 0 0 0 1px rgb(255 255 255/10%) inset, 0 0 0 2px #0000000d;
+      text-shadow: 0 1px rgb(0 0 0/5%);
+    }
+
+    .field {
+      height: var(--field-height);
+      aspect-ratio: 1 / 1;
+      /* https://css-tricks.com/almanac/properties/a/aspect-ratio/ */
+      margin: 0 0 10px 0;
+      padding: 1px 1px;
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(9, 1fr);
+      gap: 1px 1px;
+      background-color: var(--field-background-color);
+      border: 2px outset var(--field-border-color);
+      cursor: default;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 0 0 10px 0;
+    }
+
+    .cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--cell-background-color);
+      border: 2px outset var(--cell-border-color);
+    }
+
+    .cell-highlight-path {
+      background-color: var(--cell-border-color);
+    }
+
+    .ball {
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      transition: 0.2s all;
+      cursor: pointer;
+    }
+
+    .ball:hover {
+      transform: scale(1.04);
+    }
+
+    .ball-selected {
+      animation: bounce 1s infinite ease-in;
+    }
+
+    @keyframes bounce {
+      10% {
+        transform: scaleY(0.95);
+      }
+
+      50% {
+        transform: scaleY(0.90) scaleX(1.05) translateY(-7px);
+      }
+    }
+
+    .ball-purple {
+      background: radial-gradient(circle at 40% 40%, var(--ball-purple-color), #000);
+    }
+
+    .ball-red {
+      background: radial-gradient(circle at 40% 40%, var(--ball-red-color), #000);
+    }
+
+    .ball-yellow {
+      background: radial-gradient(circle at 40% 40%, var(--ball-yellow-color), #000);
+    }
+
+    .ball-blue {
+      background: radial-gradient(circle at 40% 40%, var(--ball-blue-color), #000);
+    }
+
+    .ball-navy {
+      background: radial-gradient(circle at 40% 40%, var(--ball-navy-color), #000);
+    }
+
+    .ball-green {
+      background: radial-gradient(circle at 40% 40%, var(--ball-green-color), #000);
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 5px;
+      padding: 1rem 1.5rem;
+      font-family: var(--font-family);
+      font-size: 1rem;
+      color: var(--neutral);
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.2s all;
+    }
+
+    .btn:hover {
+      transform: scale(1.01);
+    }
+
+    .btn:active {
+      transform: scale(0.95);
+    }
+
+    .btn-success {
+      background-color: var(--success);
+    }
+
+    .btn-warning {
+      background-color: var(--warning);
+    }
+  </style>
+  <script type="text/javascript" src="astar.js"></script>
+</head>
+
+<body>
+  <div class="top_gradient_block"></div>
+  <main class="main_container">
+    <div class="glass">
+      <div id="field" class="field"></div>
+      <div class="controls">
+        <button class="btn btn-success" onclick="newGameButton();">New Game</button>
+        <button class="btn btn-warning" onclick="resetGameButton();">Reset game</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    //
+    // Global stuff
+    //
+    const fieldSize = 9;
+    const ballColors = ["purple", "red", "blue", "navy", "yellow", "green"];
+    const newBallsEachTurn = 3;
+    const minLineLength = 5;
+    let field = [];
+    let isGameOver = true;
+    let selectedBall = null;
+
+    //
+    // Game logic functions
+    //
+    function resetFieldArray() {
+      for (let i = 0; i < fieldSize; i++) {
+        field[i] = [];
+        for (let j = 0; j < fieldSize; j++) {
+          field[i][j] = null;
+        }
+      }
+    }
+
+    function getFreeCells() {
+      // Returns list of free cells in field array, each cell represented by object like {x: 0, y: 0}
+      let freeCells = [];
+      for (let y = 0; y < fieldSize; y++) {
+        for (let x = 0; x < fieldSize; x++) {
+          if (field[x][y] === null) {
+            freeCells.push({ "x": x, "y": y });
+          }
+        }
+      }
+      return freeCells;
+    }
+
+    function getRandomFreeCell() {
+      // Returns random free cell coords as object {x: 0, y: 0}
+      let freeCells = getFreeCells();
+      let randomFreeCell = null;
+
+      if (freeCells) {
+        let randomCellIndex = Math.floor(Math.random() * (freeCells.length));
+        // console.log(freeCells);
+        randomFreeCell = freeCells[randomCellIndex];
+      }
+
+      return randomFreeCell;
+    }
+
+    function getRandomColor() {
+      // Returns a random color name
+      let randomColorIndex = Math.floor(Math.random() * (ballColors.length));
+      return ballColors[randomColorIndex];
+    }
+
+    function addRandomBall() {
+      // Adds a random ball to the game field
+      // Returns true if ball was added, otherwise false
+      let randomFreeCell = getRandomFreeCell();
+
+      if (randomFreeCell) {
+        let x = randomFreeCell.x;
+        let y = randomFreeCell.y;
+        let color = getRandomColor();
+        // console.log(`Random cell is (${x}, ${y}); random color is ${color}`);
+        field[x][y] = color;
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function addNewBalls() {
+      //
+      // Adds new balls to the field after player's move
+      //
+      for (let i = 0; i < newBallsEachTurn; i++) {
+        if (!addRandomBall()) {
+          isGameOver = true;
+          break;
+        }
+      }
+    }
+
+    function findPath(startX, startY, endX, endY) {
+      // Return array containing the shortest path
+      // Length of array equal to zero means there's no available path.
+
+      // Create array for astar.js
+      // 0 = wall, 1 = clear
+      let graphArray = [];
+      for (let i = 0; i < fieldSize; i++) {
+        graphArray[i] = [];
+      }
+
+      for (let yy = 0; yy < fieldSize; yy++) {
+        for (let xx = 0; xx < fieldSize; xx++) {
+          graphArray[xx][yy] = field[xx][yy] != null ? 0 : 1;  // 0 = wall, 1 = clear
+        }
+      }
+
+      let graph = new Graph(graphArray);
+      let start = graph.grid[startX][startY];
+      let end = graph.grid[endX][endY];
+
+      return astar.search(graph, start, end);  // return array containing the shortest path
+    }
+
+    function findLine(x, y, dx, dy, lineArray) {
+      //
+      // Recursive function to find a line of balls of the same color in the `field` array.
+      // Currently ONLY horizontal/vertical lines.
+      // on first call, lineArray[0] contains object with info about starting cell
+      // {x, y, color}
+      let prevColor = lineArray[lineArray.length - 1].color;
+
+      let color = field[x][y];
+      if (color == null || color != prevColor) {
+        // If current cell is clear or contains ball of another color, end recursion
+        return lineArray;
+      }
+
+      if (color == prevColor) {
+        // Add this cell to line array
+        lineArray.push({ "x": x, "y": y, "color": color });
+      }
+
+      // Decide if we stop or continue recursion
+      if ((dx && x == fieldSize - 1) || (dy && y == fieldSize - 1)) {
+        return lineArray;
+      } else {
+        return findLine(x + dx, y + dy, dx, dy, lineArray);
+      }
+    }
+
+    function searchForLines() {
+      //
+      // Scans `field` for lines of balls of same color with `minLineLength`
+      // (Currently ONLY horizontal/vertical lines!)
+      // Returns: line array [{x, y, color}] or `null`.
+      //
+      const deltas = [
+        { "dx": 1, "dy": 0 },
+        { "dx": 0, "dy": 1 },
+      ]
+
+      for (let iDelta = 0; iDelta < deltas.length; iDelta++) {
+        let dx = deltas[iDelta].dx;
+        let dy = deltas[iDelta].dy;
+
+        let maxX = dx ? fieldSize - minLineLength + 1 : fieldSize;
+        let maxY = dy ? fieldSize - minLineLength + 1 : fieldSize;
+
+        for (let y = 0; y < maxY; y++) {
+          for (let x = 0; x < maxX; x++) {
+            // Start search for a line only if current cell has a ball in it
+            if (field[x][y]) {
+              let line = findLine(x + dx, y + dy, dx, dy, [
+                {
+                  "x": x,
+                  "y": y,
+                  "color": field[x][y],
+                }
+              ])
+              if (line.length >= minLineLength) {
+                return line;
+              }
+            }
+          }
+        }
+      }
+
+      return null;
+    }
+
+    function removeLine(
+      lineArray  // array of objects {x, y, color}
+    ) {
+      lineArray.forEach((value) => {
+        field[value.x][value.y] = null;
+      })
+    }
+
+    //
+    // Interface functions
+    //
+    function drawBalls() {
+      // Renders `field` array to the `field` div grid
+      for (let y = 0; y < fieldSize; y++) {
+        for (let x = 0; x < fieldSize; x++) {
+          let cellDiv = document.getElementById(`cell-${x}-${y}`);
+          let color = null;
+          let isSelected = false;
+
+          if (field[x][y] != null) {
+            color = field[x][y];
+
+            if (selectedBall) {
+              if (selectedBall.x == x && selectedBall.y == y) {
+                isSelected = true;
+              }
+            }
+
+            cellDiv.innerHTML = `<div id="ball-${x}-${y}" class="ball ball-${color} ${isSelected ? ' ball-selected' : ' '}" data-x="${x}" data-y="${y}" onclick="onBallClick(event);"></div>`;
+          } else {
+            cellDiv.innerHTML = '';
+          }
+        }
+      }
+    }
+
+    function onBallClick(event) {
+      // Sets `selectedBall` to the clicked ball's (x,y), then redraws the field
+      if (event.target.id.startsWith('ball-')) {
+        // console.log(`Ball selected (x=${event.target.dataset.x}, y=${event.target.dataset.y})`);
+        selectedBall = {
+          "x": event.target.dataset.x,
+          "y": event.target.dataset.y
+        };
+        drawBalls();
+      }
+
+      event.stopPropagation();
+    }
+
+    function onCellClick(event) {
+      // Moves selected ball to the clicked cell (if it's free), then redraws the field.
+      if (event.target.id.startsWith('cell-')) {
+        let x = event.target.dataset.x;
+        let y = event.target.dataset.y;
+        // console.log(`Cell (x=${x}, y=${y})`);
+
+        if (selectedBall) {
+          if (field[x][y] == null) {
+            // Act only if the clicked cell is free!
+
+            let path = findPath(selectedBall.x, selectedBall.y, x, y);
+            // console.log(path);
+
+            if (path.length) {
+              // Actually move the ball if there's path, reset stuff
+              let color = field[selectedBall.x][selectedBall.y];
+              field[selectedBall.x][selectedBall.y] = null;
+              field[x][y] = color;
+              selectedBall = null;
+              unlitAllCells();
+              addNewBalls();
+
+              line = searchForLines();
+              if (line) {
+                console.log("FOUND A LINE!");
+                console.log(line);
+                removeLine(line);
+              }
+            }
+
+            drawBalls();
+          }
+        }
+      }
+
+      event.stopPropagation();
+    }
+
+    function getCellDiv(x, y) {
+      const cellID = `cell-${x}-${y}`;
+      return document.getElementById(cellID);
+    }
+
+    function highlightCell(value) {
+      // `value` is a cell object from astar.js-generated path
+      let cellDiv = getCellDiv(value.x, value.y);
+      cellDiv.classList.add("cell-highlight-path");
+    }
+
+    function unlitAllCells() {
+      for (let y = 0; y < fieldSize; y++) {
+        for (let x = 0; x < fieldSize; x++) {
+          getCellDiv(x, y).classList.remove("cell-highlight-path");
+        }
+      }
+    }
+
+    function onCellMouseEnter(event) {
+      //
+      // If a ball selected, try to build path to underlying cell and highlight the path.
+      //
+      let x = event.target.dataset.x;
+      let y = event.target.dataset.y;
+      // console.log(`> Mouse entered cell (x=${x}, y=${y})`);
+
+      if (selectedBall) {
+        // Try to find the path for selected ball to the current cell
+        let path = findPath(selectedBall.x, selectedBall.y, x, y);
+        if (path.length) {
+          // console.log('Ball can get here!');
+          // Highlight ball's location and the path
+          highlightCell({ "x": selectedBall.x, "y": selectedBall.y });
+          path.forEach(highlightCell);
+        } else {
+          // console.log('Ball CAN NOT get here!');
+        }
+      }
+    }
+
+    function onCellMouseLeave(event) {
+      //
+      // Reset cells colors to default (if any ball is selected).
+      //
+      let x = event.target.dataset.x;
+      let y = event.target.dataset.y;
+      // console.log(`< Mouse left cell (x=${x}, y=${y})`);
+
+      if (selectedBall) {
+        unlitAllCells();
+      }
+    }
+
+    function newGameButton() {
+      if (isGameOver) {
+        isGameOver = false;
+        addNewBalls();
+        drawBalls();
+      }
+    }
+
+    function resetGameButton() {
+      if (!isGameOver) {
+        isGameOver = true;
+        resetFieldArray();
+        drawBalls();
+      }
+    }
+
+    //
+    // Program entry point
+    //
+
+    // Fill field with cells
+    fieldDiv = document.getElementById("field");
+    for (let y = 0; y < fieldSize; y++) {
+      for (let x = 0; x < fieldSize; x++) {
+        fieldDiv.innerHTML += `<div id="cell-${x}-${y}" class="cell" data-x="${x}" data-y="${y}" onclick="onCellClick(event);" onmouseenter="onCellMouseEnter(event);" onmouseleave="onCellMouseLeave(event);"></div>`;
+      }
+    }
+
+    resetFieldArray();
+  </script>
+</body>
+
+</html>
