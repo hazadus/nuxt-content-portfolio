@@ -49,7 +49,7 @@ defineProps({
     </div>
 
     <div class="text-gray-500 text-sm mt-0 grow-0">
-      Обновлено: {{ useFormatDateTime(project.updatedAt) }}
+      Обновлено: {{ useFormatDateTime(project.pushedAt) }}
     </div>
   </div>
 </template>

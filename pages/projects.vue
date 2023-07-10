@@ -17,19 +17,20 @@ const excludedRepos = [
 // Stuff I want to always show on the top of the page:
 const pinnedRepos = [
   "nuxt-content-portfolio", "drf-nuxt-library", "drf-vue-eshop", "rust-webserver", "rust-newsletter",
-  "drf-nuxt-bookmarks", "journal", "object-snake",
+  "drf-nuxt-bookmarks", "journal", "object-snake", "js-color-lines",
 ];
 
 const query = gql`
 {
   viewer {
-    repositories(first:50, privacy:PUBLIC, orderBy: {field:UPDATED_AT, direction:DESC})  {
+    repositories(first:50, privacy:PUBLIC, orderBy: {field:PUSHED_AT, direction:DESC})  {
       totalCount
       nodes {
         id
         name
         createdAt
         updatedAt
+        pushedAt
         description
         primaryLanguage {
           name
@@ -91,8 +92,8 @@ const gitHubMiscRepos = computed(() => {
     Мои личные проекты
   </h1>
   <p class="text-base text-gray-900 p-2 italic">
-    Репозитороии автора на GitHub, в порядке последних обновлений: сверху то, над чем сейчас идёт активная работа, либо
-    просто относительно недавно обновлено.
+    Репозитороии автора на GitHub, в порядке последних коммитов: сверху то, над чем сейчас идёт активная работа, либо
+    просто относительно недавно обновлено. Актуальные данные подкачиваются через GitHub API.
     Цвет рамки карточки проекта соответствует цвету языка на GitHub.
   </p>
 
@@ -104,13 +105,13 @@ const gitHubMiscRepos = computed(() => {
     Самое любимое
   </h2>
   <section v-if="gitHubPinnedRepos.length" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-4">
-    <GitHubRepoCard v-for="project in gitHubPinnedRepos" :key="project.id" :project="project" />
+    <GitHubRepoCard v-for="project in gitHubPinnedRepos" :key="`project-fav-${project.id}`" :project="project" />
   </section>
 
   <h2 class="text-3xl font-semi-bold mt-8">
     Остальные репозитории
   </h2>
   <section v-if="gitHubMiscRepos.length" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-4">
-    <GitHubRepoCard v-for="project in gitHubMiscRepos" :key="project.id" :project="project" />
+    <GitHubRepoCard v-for="project in gitHubMiscRepos" :key="`project-misc-${project.id}`" :project="project" />
   </section>
 </template>
