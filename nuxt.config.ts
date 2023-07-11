@@ -38,6 +38,14 @@ export default defineNuxtConfig({
     // https://v2.nuxt.com/docs/configuration-glossary/configuration-build/#transpile
     transpile: ["tslib"],
   },
+  routeRules: {
+    // Reference: https://nuxt.com/docs/guide/concepts/rendering#hybrid-rendering
+    // swr 300 means: cache these routes for 300 sec. We don't want to query GitHub API too often.
+    "/": { swr: 300 },
+    "/projects/**": { swr: 300 },
+    "/projects/": { swr: 300 },
+    "/projects": { swr: 300 },
+  },
   content: {
     // https://content.nuxtjs.org/api/configuration
     highlight: {
