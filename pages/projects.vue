@@ -60,16 +60,16 @@ const gitHubMiscRepos = computed(() => {
     Цвет рамки карточки проекта соответствует цвету языка на GitHub.
   </p>
 
-  <Alert v-if="error">
+  <Alert v-if="error" class="mt-4">
     Произошла ошибка! Пожалуйста, обновите страницу. {{ error }}
   </Alert>
 
-  <h2 class="text-3xl font-semi-bold mt-4">
+  <h2 class="text-3xl font-semi-bold mt-4 mb-4">
     Самое любимое
   </h2>
   <GitHubRepoCardList v-if="gitHubPinnedRepos.length" :repositories="gitHubPinnedRepos" />
 
-  <h2 class="text-3xl font-semi-bold mt-8">
+  <h2 class="text-3xl font-semi-bold mt-8 mb-4">
     Остальные репозитории
   </h2>
   <GitHubRepoCardList v-if="gitHubMiscRepos.length" :repositories="gitHubMiscRepos" />

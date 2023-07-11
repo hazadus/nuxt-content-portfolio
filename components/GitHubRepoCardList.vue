@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-  <section class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-4">
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
     <GitHubRepoCard v-for="repo in repositories" :key="`repo-${repo.id}`" :project="repo" />
   </section>
 </template>

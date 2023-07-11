@@ -68,12 +68,12 @@ topicIcons.set("graphql", "logos:graphql");
       </p>
     </div>
 
-    <div v-if="project.homepageUrl" class="mb-2">
+    <div v-if="project.homepageUrl" class="mb-3">
       <Icon name="akar-icons:link-chain" class="mr-1" />
       <a :href="project.homepageUrl" class="hover:underline">{{ project.homepageUrl }}</a>
     </div>
 
-    <div v-if="project.repositoryTopics.nodes.length">
+    <div v-if="project.repositoryTopics.nodes.length" class="mb-2">
       <span v-for="topic in project.repositoryTopics.nodes" :key="`topic-${topic.topic.name}`"
         class="inline-block text-sm bg-indigo-200 rounded px-2 mr-2 mb-2">
         <Icon v-if="topicIcons.has(topic.topic.name)" :name="topicIcons.get(topic.topic.name)" /> {{ topic.topic.name }}
