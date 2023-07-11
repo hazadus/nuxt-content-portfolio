@@ -1,5 +1,6 @@
-<script setup>
+<script setup lang="ts">
 import { getAllRepositoriesInfo } from "@/useGitHubApi";
+import AlertBox from "~/components/AlertBox.vue";
 
 const pageTitle = "Проекты";
 
@@ -27,6 +28,7 @@ const { data, error } = await getAllRepositoriesInfo();
 // All repos excluding thos in `excludedRepos` list
 const gitHubRepos = computed(() => {
   if (data.value) {
+    // @ts-ignore
     return data.value.viewer.repositories.nodes.filter((repo) => !excludedRepos.includes(repo.name));
   } else {
     return [];
@@ -35,11 +37,13 @@ const gitHubRepos = computed(() => {
 
 // Only "pinned" repos list
 const gitHubPinnedRepos = computed(() => {
+  // @ts-ignore
   return gitHubRepos.value.filter((repo) => pinnedRepos.includes(repo.name));
 });
 
 // All other repos list
 const gitHubMiscRepos = computed(() => {
+  // @ts-ignore
   return gitHubRepos.value.filter((repo) => !pinnedRepos.includes(repo.name));
 });
 </script>
@@ -60,9 +64,9 @@ const gitHubMiscRepos = computed(() => {
     Цвет рамки карточки проекта соответствует цвету языка на GitHub.
   </p>
 
-  <Alert v-if="error" class="mt-4">
+  <AlertBox v-if="error" alertType="warning" class="mt-4">
     Произошла ошибка! Пожалуйста, обновите страницу. {{ error }}
-  </Alert>
+  </AlertBox>
 
   <h2 class="text-3xl font-semi-bold mt-4 mb-4">
     Самое любимое

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { getAllRepositoriesInfo } from "@/useGitHubApi";
 import { Breadcrumb } from "@/types";
+import AlertBox from "~/components/AlertBox.vue";
 
 const pageTitle = "Приветствую на Hazadus.ru!";
 
@@ -36,9 +37,9 @@ const latestGitHubRepos = computed(() => {
       Проекты в работе
     </h2>
 
-    <Alert v-if="error" class="mt-4">
+    <AlertBox v-if="error" alertType="warning" class="mt-4">
       Произошла ошибка! Пожалуйста, обновите страницу. {{ error }}
-    </Alert>
+    </AlertBox>
 
     <GitHubRepoCardList v-if="latestGitHubRepos.length" :repositories="latestGitHubRepos" />
 
