@@ -23,10 +23,10 @@ const breadcrumbs: Breadcrumb[] = [
 
   <section>
     <h1 class="text-4xl font-bold mt-8">
-      Об этом сайте
+      Об этом сайте и его авторе
     </h1>
     <p class="text-base text-gray-900 p-2 italic">
-      Зачем он нужен и как работает...
+      Зачем он нужен, как работает, и кто его сделал...
     </p>
 
     <p class="mt-4">
@@ -42,7 +42,7 @@ const breadcrumbs: Breadcrumb[] = [
       нового опыта и знаний, интересно пересматривать свой код, и находить возможность его улучшить.
     </p>
 
-    <h2 class="text-2xl mt-8 font-semibold">
+    <h2 class="text-2xl mt-8 font-semibold" id="contacts">
       Связаться с автором
     </h2>
     <p class="mt-4">
@@ -79,7 +79,7 @@ const breadcrumbs: Breadcrumb[] = [
       <a href="http://library.hazadus.ru/lists/2/details/" class="underline">недавно прочитал</a>.
     </p>
 
-    <h2 class="text-2xl mt-8 font-semibold">
+    <h2 class="text-2xl mt-8 font-semibold" id="site">
       Реализация сайта
     </h2>
     <p class="mt-4">

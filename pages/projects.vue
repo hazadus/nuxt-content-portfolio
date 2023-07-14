@@ -68,12 +68,12 @@ const gitHubMiscRepos = computed(() => {
     Произошла ошибка! Пожалуйста, обновите страницу. {{ error }}
   </AlertBox>
 
-  <h2 class="text-3xl font-semi-bold mt-4 mb-4">
+  <h2 class="text-3xl font-semi-bold mt-4 mb-4" id="favorites">
     Самое любимое
   </h2>
   <GitHubRepoCardList v-if="gitHubPinnedRepos.length" :repositories="gitHubPinnedRepos" />
 
-  <h2 class="text-3xl font-semi-bold mt-8 mb-4">
+  <h2 class="text-3xl font-semi-bold mt-8 mb-4" id="misc">
     Остальные репозитории
   </h2>
   <GitHubRepoCardList v-if="gitHubMiscRepos.length" :repositories="gitHubMiscRepos" />
