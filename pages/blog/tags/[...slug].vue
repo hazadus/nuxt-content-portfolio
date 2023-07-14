@@ -10,7 +10,11 @@ const breadcrumbs: Breadcrumb[] = [
     url: "/blog/",
   },
   {
-    title: `Все посты с меткой "${slug}"`,
+    title: "Все теги",
+    url: "/blog/tags/",
+  },
+  {
+    title: `Посты с меткой "${slug}"`,
     url: null,
   },
 ];
@@ -18,13 +22,13 @@ const breadcrumbs: Breadcrumb[] = [
 
 <template>
   <Title>
-    Все посты с меткой &laquo;{{ slug }}&raquo; | Блог | Hazadus.ru
+    Посты с меткой &laquo;{{ slug }}&raquo; | Блог | Hazadus.ru
   </Title>
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
   <h1 class="text-4xl font-bold mt-8">
-    Все посты с меткой &laquo;{{ slug }}&raquo;
+    Посты с меткой &laquo;{{ slug }}&raquo;
   </h1>
 
   <PostList :filterByTag="slug" />
