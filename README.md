@@ -1,10 +1,10 @@
 # nuxt-content-portfolio
 
-Nuxt 3 + Content module + Tailwind CSS + GraphQL + Redis personal web site.
+Nuxt 3 + Content module + Tailwind CSS + GraphQL + Redis personal web site, running at [https://hazadus.ru](https://hazadus.ru).
 
 ## Configuration
 
-**NB**: 2 Gb RAM needed to build and run the container.
+**NB**: 2 Gb RAM needed to build and run the container on VDS.
 
 Required environment variables to run the project:
 
@@ -17,6 +17,11 @@ Required environment variables to run the project:
 - [TailwindUI navbars](https://tailwindui.com/components/application-ui/navigation/navbars)
 - [Tailwind Starter Kit](https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation)
 - [GitHub GraphQL API Explorer](https://docs.github.com/en/graphql/overview/explorer)
+- [Hybrid Rendering in Nuxt.js 3](https://vueschool.io/articles/vuejs-tutorials/hybrid-rendering-in-nuxt-js-3/)
+
+### Issues
+
+- [static target support for non-platform targets #603](https://github.com/unjs/nitro/issues/603): `"/": { swr: 300 }` does not work as expected.
 
 ## Modules / Libraries used:
 
