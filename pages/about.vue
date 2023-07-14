@@ -21,6 +21,8 @@ const breadcrumbs: Breadcrumb[] = [
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
+  <ParticlesAnimation />
+
   <section>
     <h1 class="text-4xl font-bold mt-8">
       Об этом сайте
