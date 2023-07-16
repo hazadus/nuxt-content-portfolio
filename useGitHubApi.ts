@@ -1,4 +1,4 @@
-const query = gql`
+const queryAllRepos = gql`
   {
     viewer {
       repositories(
@@ -42,6 +42,34 @@ const query = gql`
   }
 `;
 
+const queryLatestOpenIssues = gql`
+  query {
+    viewer {
+      issues(
+        first: 50
+        states: OPEN
+        orderBy: { field: UPDATED_AT, direction: DESC }
+      ) {
+        nodes {
+          id
+          isPinned
+          title
+          repository {
+            name
+            url
+          }
+          url
+          updatedAt
+        }
+      }
+    }
+  }
+`;
+
 export async function getAllRepositoriesInfo() {
-  return useAsyncQuery(query);
+  return useAsyncQuery(queryAllRepos);
+}
+
+export async function getLatestOpenIssuesInfo() {
+  return useAsyncQuery(queryLatestOpenIssues);
 }
