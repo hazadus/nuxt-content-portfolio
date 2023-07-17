@@ -67,7 +67,7 @@
 
       <div class="sm:flex sm:items-center sm:justify-between">
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          &copy; 2022 - 2023 hazadus.
+          &copy; 2022 - 2023 hazadus &middot; <a href="/dash/">🚀</a>
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <a href="https://hazadus.ru/rss.xml" class="text-gray-500 hover:text-gray-400">

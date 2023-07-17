@@ -53,6 +53,11 @@ const { data: topIssues, error: issuesError } = await getLatestOpenIssuesInfo();
           </a>
         </li>
         <li>
+          <a href="https://webmaster.yandex.ru/site/https:hazadus.ru:443/dashboard/" class="hover:underline">
+            Яндекс Вебмастер
+          </a>
+        </li>
+        <li>
           <a href="https://mail.timeweb.com/mailbox/directory/27758" class="hover:underline">
             Timeweb Mail
           </a>
@@ -70,6 +75,12 @@ const { data: topIssues, error: issuesError } = await getLatestOpenIssuesInfo();
         <li>
           <Icon name="logos:youtube-icon" class="mr-1" />
           <a href="https://www.youtube.com/feed/subscriptions" class="hover:underline">YouTube Subscriptions
+          </a>
+        </li>
+        <li>
+          <Icon name="logos:google-icon" class="mr-1" />
+          <a href="https://search.google.com/search-console?resource_id=sc-domain%3Ahazadus.ru&hl=ru"
+            class="hover:underline">Google Search Console
           </a>
         </li>
       </ul>

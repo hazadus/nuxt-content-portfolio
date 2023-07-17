@@ -27,8 +27,10 @@ const navigation = [
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
-            <img class="block h-8 w-auto shadow rounded-full max-w-full align-middle border-none"
-              src="~/assets/images/bear-in-sweater.jpg" alt="Hazadus.ru" />
+            <a href="/">
+              <img class="block h-8 w-auto shadow rounded-full max-w-full align-middle border-none"
+                src="~/assets/images/bear-in-sweater.jpg" alt="Hazadus.ru" />
+            </a>
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
