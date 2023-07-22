@@ -20,7 +20,7 @@ const excludedRepos = [
 // Stuff I want to always show on the top of the page:
 const pinnedRepos = [
   "nuxt-content-portfolio", "drf-nuxt-library", "drf-vue-eshop", "rust-webserver", "rust-newsletter",
-  "drf-nuxt-bookmarks", "journal", "object-snake", "js-color-lines",
+  "drf-nuxt-bookmarks", "journal", "nuxt-trello-board",
 ];
 
 const { data, error } = await getAllRepositoriesInfo();
