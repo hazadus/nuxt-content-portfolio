@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useTagsPageUrl } from "@/urls";
-
 const props = defineProps({
   title: {
     type: String,
@@ -17,7 +15,7 @@ const anchorClasses = props.size == "large" ? "inline-block bg-indigo-200 rounde
 </script>
 
 <template>
-  <a :href="useTagsPageUrl(props.title)" :class="anchorClasses">
+  <a :href="buildTagPageUrl(props.title)" :class="anchorClasses">
     <Icon name="mdi:tag" /> {{ props.title }}
   </a>
 </template>
