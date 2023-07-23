@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { getAllRepositoriesInfo } from "@/useGitHubApi";
 import { Breadcrumb } from "@/types";
-import AlertBox from "~/components/AlertBox.vue";
 
 const pageTitle = "Приветствую на Hazadus.ru!";
 
@@ -12,7 +10,7 @@ const breadcrumbs: Breadcrumb[] = [
   },
 ];
 
-const { data, error } = await getAllRepositoriesInfo();
+const { data, error } = await fetchAllRepositoriesInfo();
 
 // Return two repos with latest pushes.
 const latestGitHubRepos = computed(() => {

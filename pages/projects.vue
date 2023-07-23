@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { getAllRepositoriesInfo } from "@/useGitHubApi";
-import AlertBox from "~/components/AlertBox.vue";
-
 const pageTitle = "Проекты";
 
 const breadcrumbs = [
@@ -23,7 +20,7 @@ const pinnedRepos = [
   "drf-nuxt-bookmarks", "journal", "nuxt-trello-board",
 ];
 
-const { data, error } = await getAllRepositoriesInfo();
+const { data, error } = await fetchAllRepositoriesInfo();
 
 // All repos excluding thos in `excludedRepos` list
 const gitHubRepos = computed(() => {

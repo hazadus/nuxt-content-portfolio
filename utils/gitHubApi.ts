@@ -66,10 +66,18 @@ const queryLatestOpenIssues = gql`
   }
 `;
 
-export async function getAllRepositoriesInfo() {
+/**
+ * Fetch all my repositories from GitHub API.
+ * @returns
+ */
+export async function fetchAllRepositoriesInfo() {
   return useAsyncQuery(queryAllRepos);
 }
 
-export async function getLatestOpenIssuesInfo() {
+/**
+ *  Fetch my 50 latest issues from GitHub API.
+ * @returns
+ */
+export async function fetchLatestOpenIssuesInfo() {
   return useAsyncQuery(queryLatestOpenIssues);
 }

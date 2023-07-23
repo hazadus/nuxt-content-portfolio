@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { getAllRepositoriesInfo, getLatestOpenIssuesInfo } from "@/useGitHubApi";
 import { Breadcrumb, BlogPost } from "@/types";
 
 const breadcrumbs: Breadcrumb[] = [
@@ -17,8 +16,8 @@ const { data: postDrafts } = await useAsyncData("posts", () => {
   return query.find();
 });
 
-const { data: allRepos, error: reposError } = await getAllRepositoriesInfo();
-const { data: topIssues, error: issuesError } = await getLatestOpenIssuesInfo();
+const { data: allRepos, error: reposError } = await fetchAllRepositoriesInfo();
+const { data: topIssues, error: issuesError } = await fetchLatestOpenIssuesInfo();
 </script>
 
 <template>
