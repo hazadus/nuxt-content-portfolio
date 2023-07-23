@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useViewCount } from "@/api";
 import { Breadcrumb } from "@/types";
 
 const { path } = useRoute();
@@ -10,7 +9,7 @@ const { data } = await useAsyncData(`content-${path}`, () =>
     .findOne()
 );
 
-const viewCount = await useViewCount(path);
+const viewCount = await getViewCount(path);
 const pageTitle = data.value?.title + " | Блог | Hazadus.ru";
 
 const breadcrumbs: Breadcrumb[] = [

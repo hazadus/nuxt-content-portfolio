@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { Breadcrumb } from "@/types";
-import { useViewCount } from "@/api";
 
 const pageTitle = "О сайте";
 
-const viewCount = await useViewCount("about");
+const viewCount = await getViewCount("about");
 
 const breadcrumbs: Breadcrumb[] = [
   {
