@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useFormatDateTime } from "@/utils";
-
 defineProps({
   project: {
     type: Object,
@@ -83,7 +81,7 @@ topicIcons.set("graphql", "logos:graphql");
     </div>
 
     <div class="text-gray-500 text-sm mt-0 grow-0">
-      Обновлено: {{ useFormatDateTime(project.pushedAt) }}
+      Обновлено: {{ formatDateTime(project.pushedAt) }}
     </div>
   </div>
 </template>

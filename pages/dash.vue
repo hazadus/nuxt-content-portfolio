@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { getAllRepositoriesInfo, getLatestOpenIssuesInfo } from "@/useGitHubApi";
-import { useFormatDateTime } from "@/utils";
 import { Breadcrumb, BlogPost } from "@/types";
 
 const breadcrumbs: Breadcrumb[] = [
@@ -141,7 +140,7 @@ const { data: topIssues, error: issuesError } = await getLatestOpenIssuesInfo();
           <Icon name="mdi:source-repository" class="mr-1" /><a :href="repo.url" class="hover:underline">
             {{ repo.name }}
           </a>
-          <span class="text-gray-300">&nbsp;&middot; {{ useFormatDateTime(repo.pushedAt) }}</span>
+          <span class="text-gray-300">&nbsp;&middot; {{ formatDateTime(repo.pushedAt) }}</span>
         </li>
       </ul>
     </div>

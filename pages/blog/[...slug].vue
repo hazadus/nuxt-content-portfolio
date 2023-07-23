@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useFormatDate } from "@/utils";
 import { useViewCount } from "@/api";
 import { Breadcrumb } from "@/types";
 
@@ -45,7 +44,7 @@ useSeoMeta({
     <ContentRenderer :value="data" class="prose my-10 mx-auto max-w-4xl" />
 
     <div class="my-8 mx-auto max-w-4xl">
-      Опубликовано: {{ useFormatDate(data.date) }} | Просмотров: {{ viewCount }}
+      Опубликовано: {{ formatDate(data.date) }} | Просмотров: {{ viewCount }}
     </div>
     <div class="my-8 mx-auto max-w-4xl">
       <Tag :title="tag" v-for="tag in data.tags" :key="`tag-${tag}`" />
