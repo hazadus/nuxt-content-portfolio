@@ -60,6 +60,11 @@ const { data: topIssues, error: issuesError } = await fetchLatestOpenIssuesInfo(
             Timeweb Mail
           </a>
         </li>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/plus/collections" class="hover:underline">
+            MDN Article Collection
+          </a>
+        </li>
       </ul>
     </div>
     <div class="p-4 bg-white rounded-lg shadow-md overflow-hidden">
@@ -94,6 +99,11 @@ const { data: topIssues, error: issuesError } = await fetchLatestOpenIssuesInfo(
         <li>
           <a href="https://bookmarks.hazadus.ru/" class="hover:underline">
             Bookmarks
+          </a>
+        </li>
+        <li>
+          <a href="https://library.hazadus.ru/" class="hover:underline">
+            Library
           </a>
         </li>
         <li>
