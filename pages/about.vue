@@ -55,6 +55,7 @@ const breadcrumbs: Breadcrumb[] = [
       <a href="https://github.com/hazadus/" class="underline">GitHub</a> /
       <Icon name="ion:logo-stackoverflow" />
       <a href="https://stackoverflow.com/users/20197519/hazadus" class="underline">StackOverflow</a> /
+      <a href="https://dev.to/hazadus" class="underline">Dev.to</a> /
       <a href="https://www.codewars.com/users/hazadus" class="underline">CodeWars</a>&nbsp;
       <img src="https://www.codewars.com/users/hazadus/badges/micro" class="inline-block" /> /
       <Icon name="bi:steam" />
