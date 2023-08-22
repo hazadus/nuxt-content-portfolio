@@ -97,6 +97,11 @@ const { data: topIssues, error: issuesError } = await fetchLatestOpenIssuesInfo(
           </a>
         </li>
         <li>
+          <a href="http://boards.hazadus.ru/" class="hover:underline">
+            Трололо
+          </a>
+        </li>
+        <li>
           <a href="https://bookmarks.hazadus.ru/" class="hover:underline">
             Bookmarks
           </a>

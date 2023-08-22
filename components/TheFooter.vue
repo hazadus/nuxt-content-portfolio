@@ -39,6 +39,9 @@
                 <a href="/about/#site" class="hover:underline">Этот сайт</a>
               </li>
               <li class="mb-4">
+                <a href="http://boards.hazadus.ru" class="hover:underline">Трололо</a>
+              </li>
+              <li class="mb-4">
                 <a href="http://library.hazadus.ru" class="hover:underline">Library</a>
               </li>
               <li class="mb-4">
