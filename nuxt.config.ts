@@ -68,7 +68,7 @@ export default defineNuxtConfig({
   routeRules: {
     // Reference: https://nuxt.com/docs/guide/concepts/rendering#hybrid-rendering
     // swr 300 means: cache these routes for 300 sec. We don't want to query GitHub API too often.
-    "/": { swr: true },
+    // "/": { swr: true },
     // NB: does not work as expected, commented out for time being.
     // Issue: https://github.com/unjs/nitro/issues/603
     //"/projects": { swr: 600 },
