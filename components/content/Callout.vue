@@ -25,7 +25,10 @@ defineProps({
         </svg>
       </div>
       <div>
-        <p class="font-bold" v-if="title.length">
+        <p
+          v-if="title.length"
+          class="font-bold"
+        >
           {{ title }}
         </p>
         <p class="text-base">

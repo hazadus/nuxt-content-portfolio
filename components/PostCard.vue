@@ -10,9 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <div
-    class="bg-white rounded-lg shadow-md overflow-hidden hover:opacity-80 flex flex-col"
-  >
+  <div class="bg-white rounded-lg shadow-md overflow-hidden hover:opacity-80 flex flex-col">
     <a :href="post._path">
       <img
         :src="`/images/blog/${post.cover}`"
@@ -21,7 +19,10 @@ defineProps({
       />
     </a>
     <div class="p-6 grow flex flex-col">
-      <a class="flex-none hover:underline" :href="post._path">
+      <a
+        class="flex-none hover:underline"
+        :href="post._path"
+      >
         <h2 class="text-xl font-bold mb-2">
           {{ post.title }}
         </h2>
