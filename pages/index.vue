@@ -24,37 +24,48 @@ const latestGitHubRepos = computed(() => {
 </script>
 
 <template>
-  <Title>
-    {{ pageTitle }} | Hazadus.ru
-  </Title>
+  <Title> {{ pageTitle }} | Hazadus.ru </Title>
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
   <section class="mt-8">
-    <h2 class="text-3xl font-bold mb-8">
-      Проекты в работе
-    </h2>
+    <h2 class="text-3xl font-bold mb-8">Проекты в работе</h2>
 
-    <AlertBox v-if="error" alertType="warning" class="mt-4">
+    <AlertBox
+      v-if="error"
+      alertType="warning"
+      class="mt-4"
+    >
       Произошла ошибка! Пожалуйста, обновите страницу. {{ error }}
     </AlertBox>
 
-    <GitHubRepoCardList v-if="latestGitHubRepos.length" :repositories="latestGitHubRepos" />
+    <GitHubRepoCardList
+      v-if="latestGitHubRepos.length"
+      :repositories="latestGitHubRepos"
+    />
 
     <div class="text-base text-right">
-      <a href="/projects/" class="italic hover:underline">Смотреть все проекты...</a>
+      <a
+        href="/projects/"
+        class="italic hover:underline"
+      >
+        Смотреть все проекты...
+      </a>
     </div>
   </section>
 
   <section class="mt-8">
-    <h2 class="text-3xl font-bold">
-      Недавние заметки в блоге
-    </h2>
+    <h2 class="text-3xl font-bold">Недавние заметки в блоге</h2>
 
     <PostList :limit="3" />
 
     <div class="text-base text-right mb-8">
-      <a href="/blog/" class="italic hover:underline">Смотреть все посты...</a>
+      <a
+        href="/blog/"
+        class="italic hover:underline"
+      >
+        Смотреть все посты...
+      </a>
     </div>
   </section>
 </template>

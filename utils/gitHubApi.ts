@@ -1,11 +1,7 @@
 const queryAllRepos = gql`
   {
     viewer {
-      repositories(
-        first: 50
-        privacy: PUBLIC
-        orderBy: { field: PUSHED_AT, direction: DESC }
-      ) {
+      repositories(first: 50, privacy: PUBLIC, orderBy: { field: PUSHED_AT, direction: DESC }) {
         totalCount
         nodes {
           id
@@ -45,11 +41,7 @@ const queryAllRepos = gql`
 const queryLatestOpenIssues = gql`
   query {
     viewer {
-      issues(
-        first: 50
-        states: OPEN
-        orderBy: { field: UPDATED_AT, direction: DESC }
-      ) {
+      issues(first: 50, states: OPEN, orderBy: { field: UPDATED_AT, direction: DESC }) {
         nodes {
           id
           isPinned
