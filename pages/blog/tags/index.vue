@@ -3,7 +3,7 @@ import { Breadcrumb, BlogPost } from "@/types";
 
 const breadcrumbs: Breadcrumb[] = [
   {
-    title: "Блог",
+    title: "Посты",
     url: "/blog/",
   },
   {
@@ -28,7 +28,7 @@ posts.value?.forEach((post) => {
 </script>
 
 <template>
-  <Title> Все теги | Блог | Hazadus.ru </Title>
+  <Title> Все теги | Посты | Hazadus.ru </Title>
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 

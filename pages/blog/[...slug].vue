@@ -6,11 +6,11 @@ const { path } = useRoute();
 const { data } = await useAsyncData(`content-${path}`, () => queryContent().where({ _path: path }).findOne());
 
 const viewCount = await getViewCount(path);
-const pageTitle = data.value?.title + " | Блог | Hazadus.ru";
+const pageTitle = data.value?.title + " | Посты | Hazadus.ru";
 
 const breadcrumbs: Breadcrumb[] = [
   {
-    title: "Блог",
+    title: "Посты",
     url: "/blog/",
   },
   {
