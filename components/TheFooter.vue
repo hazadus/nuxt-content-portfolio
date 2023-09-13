@@ -14,7 +14,73 @@
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-16 sm:grid-cols-4">
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Блог</h2>
+            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Разработки</h2>
+            <ul class="text-gray-400">
+              <li class="mb-4">
+                <a
+                  href="/projects/"
+                  class="hover:underline"
+                >
+                  Проекты
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/repos/"
+                  class="hover:underline"
+                >
+                  Репо
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Мои сайты</h2>
+            <ul class="text-gray-400">
+              <li class="mb-4">
+                <a
+                  href="http://boards.hazadus.ru"
+                  class="hover:underline"
+                >
+                  Трололо
+                </a>
+              </li>
+              <li class="mb-4">
+                <a
+                  href="http://bookmarks.hazadus.ru"
+                  class="hover:underline"
+                >
+                  Bookmarks
+                </a>
+              </li>
+              <li class="mb-4">
+                <a
+                  href="http://library.hazadus.ru"
+                  class="hover:underline"
+                >
+                  Library
+                </a>
+              </li>
+              <li class="mb-4">
+                <a
+                  href="https://next-bredit.vercel.app/"
+                  class="hover:underline"
+                >
+                  Бредит
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://stats.hazadus.ru"
+                  class="hover:underline"
+                >
+                  Stats
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Посты</h2>
             <ul class="text-gray-400">
               <li class="mb-4">
                 <a
@@ -35,82 +101,16 @@
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Репо</h2>
-            <ul class="text-gray-400">
-              <li class="mb-4">
-                <a
-                  href="/repos/#projects"
-                  class="hover:underline"
-                >
-                  Проекты
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/repos/#misc"
-                  class="hover:underline"
-                >
-                  Всякая всячина
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Мои сайты</h2>
-            <ul class="text-gray-400">
-              <li class="mb-4">
-                <a
-                  href="/about/#site"
-                  class="hover:underline"
-                >
-                  Этот сайт
-                </a>
-              </li>
-              <li class="mb-4">
-                <a
-                  href="http://boards.hazadus.ru"
-                  class="hover:underline"
-                >
-                  Трололо
-                </a>
-              </li>
-              <li class="mb-4">
-                <a
-                  href="https://next-bredit.vercel.app/"
-                  class="hover:underline"
-                >
-                  Бредит
-                </a>
-              </li>
-              <li class="mb-4">
-                <a
-                  href="http://library.hazadus.ru"
-                  class="hover:underline"
-                >
-                  Library
-                </a>
-              </li>
-              <li class="mb-4">
-                <a
-                  href="http://bookmarks.hazadus.ru"
-                  class="hover:underline"
-                >
-                  Bookmarks
-                </a>
-              </li>
-              <li>
-                <a
-                  href="http://stats.hazadus.ru"
-                  class="hover:underline"
-                >
-                  Stats
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
             <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Автор</h2>
             <ul class="text-gray-400">
+              <li class="mb-4">
+                <a
+                  href="/about/"
+                  class="hover:underline"
+                >
+                  О себе
+                </a>
+              </li>
               <li class="mb-4">
                 <a
                   href="/about/#contacts"
