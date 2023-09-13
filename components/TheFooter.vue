@@ -35,22 +35,22 @@
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Проекты</h2>
+            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Репо</h2>
             <ul class="text-gray-400">
               <li class="mb-4">
                 <a
-                  href="/projects/#favorites"
+                  href="/repos/#projects"
                   class="hover:underline"
                 >
-                  Избранные
+                  Проекты
                 </a>
               </li>
               <li>
                 <a
-                  href="/projects/#misc"
+                  href="/repos/#misc"
                   class="hover:underline"
                 >
-                  Прочие
+                  Всякая всячина
                 </a>
               </li>
             </ul>

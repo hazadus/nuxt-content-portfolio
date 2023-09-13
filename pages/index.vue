@@ -29,7 +29,7 @@ const latestGitHubRepos = computed(() => {
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
   <section class="mt-8">
-    <h2 class="text-3xl font-bold mb-8">Проекты в работе</h2>
+    <h2 class="text-3xl font-bold mb-8">Репо в работе</h2>
 
     <AlertBox
       v-if="error"
@@ -46,16 +46,16 @@ const latestGitHubRepos = computed(() => {
 
     <div class="text-base text-right">
       <a
-        href="/projects/"
+        href="/repos/"
         class="italic hover:underline"
       >
-        Смотреть все проекты...
+        Смотреть все репо...
       </a>
     </div>
   </section>
 
   <section class="mt-8">
-    <h2 class="text-3xl font-bold">Недавние заметки в блоге</h2>
+    <h2 class="text-3xl font-bold">Недавние посты</h2>
 
     <PostList :limit="3" />
 

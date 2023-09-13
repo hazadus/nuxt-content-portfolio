@@ -5,10 +5,11 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 const route = useRoute();
 
 const navigation = [
-  { name: "Home", href: "/", current: route.path == "/" },
-  { name: "Blog", href: "/blog/", current: route.path.includes("/blog/") },
-  { name: "Projects", href: "/projects/", current: route.path == "/projects/" },
-  { name: "About", href: "/about/", current: route.path == "/about/" },
+  { name: "Главная", href: "/", current: route.path == "/" },
+  { name: "Проекты", href: "/projects/", current: route.path == "/projects/" },
+  { name: "Репо", href: "/repos/", current: route.path == "/repos/" },
+  { name: "Посты", href: "/blog/", current: route.path.includes("/blog/") },
+  { name: "О себе", href: "/about/", current: route.path == "/about/" },
 ];
 </script>
 
