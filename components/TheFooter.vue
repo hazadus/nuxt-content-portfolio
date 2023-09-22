@@ -63,10 +63,10 @@
               </li>
               <li class="mb-4">
                 <a
-                  href="https://next-bredit.vercel.app/"
+                  href="http://messenger.hazadus.ru"
                   class="hover:underline"
                 >
-                  Бредит
+                  Messenger
                 </a>
               </li>
               <li>
