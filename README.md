@@ -30,3 +30,7 @@ Required environment variables to run the project:
 ### Issues
 
 - [static target support for non-platform targets #603](https://github.com/unjs/nitro/issues/603): `"/": { swr: 300 }` does not work as expected.
+
+## Repo Activity
+
+![Alt](https://repobeats.axiom.co/api/embed/55d1fd732b2bf8d5160a3699e1525378aa41885d.svg "Repobeats analytics image")
