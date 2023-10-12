@@ -5,11 +5,11 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 const route = useRoute();
 
 const navigation = [
-  { name: "Главная", href: "/", current: route.path == "/" },
-  { name: "Проекты", href: "/projects/", current: route.path == "/projects/" },
-  { name: "Репо", href: "/repos/", current: route.path == "/repos/" },
-  { name: "Посты", href: "/blog/", current: route.path.includes("/blog/") },
-  { name: "О себе", href: "/about/", current: route.path == "/about/" },
+  { name: "Главная", href: "/", current: route.path == "/", external: true },
+  { name: "Проекты", href: "/projects/", current: route.path == "/projects/", external: false },
+  { name: "Репо", href: "/repos/", current: route.path == "/repos/", external: true },
+  { name: "Посты", href: "/blog/", current: route.path.includes("/blog/"), external: false },
+  { name: "О себе", href: "/about/", current: route.path == "/about/", external: false },
 ];
 </script>
 
@@ -51,10 +51,11 @@ const navigation = [
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
-              <a
+              <NuxtLink
                 v-for="item in navigation"
                 :key="item.name"
-                :href="item.href"
+                :to="item.href"
+                :external="item.external"
                 :class="[
                   item.current
                     ? 'bg-gray-900 text-white'
@@ -62,7 +63,7 @@ const navigation = [
                   'rounded-md px-3 py-2 text-sm font-medium',
                 ]"
                 :aria-current="item.current ? 'page' : undefined"
-                >{{ item.name }}</a
+                >{{ item.name }}</NuxtLink
               >
             </div>
           </div>

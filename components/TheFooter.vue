@@ -17,12 +17,12 @@
             <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Разработки</h2>
             <ul class="text-gray-400">
               <li class="mb-4">
-                <a
-                  href="/projects/"
+                <NuxtLink
+                  to="/projects/"
                   class="hover:underline"
                 >
                   Проекты
-                </a>
+                </NuxtLink>
               </li>
               <li>
                 <a
@@ -92,20 +92,20 @@
             <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Посты</h2>
             <ul class="text-gray-400">
               <li class="mb-4">
-                <a
-                  href="/blog/"
+                <NuxtLink
+                  to="/blog/"
                   class="hover:underline"
                 >
                   Все посты
-                </a>
+                </NuxtLink>
               </li>
               <li>
-                <a
-                  href="/blog/tags/"
+                <NuxtLink
+                  to="/blog/tags/"
                   class="hover:underline"
                 >
                   Тэги
-                </a>
+                </NuxtLink>
               </li>
             </ul>
           </div>
@@ -113,28 +113,28 @@
             <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Автор</h2>
             <ul class="text-gray-400">
               <li class="mb-4">
-                <a
-                  href="/about/"
+                <NuxtLink
+                  to="/about/"
                   class="hover:underline"
                 >
                   О себе
-                </a>
+                </NuxtLink>
               </li>
               <li class="mb-4">
-                <a
-                  href="/about/#contacts"
+                <NuxtLink
+                  to="/about/#contacts"
                   class="hover:underline"
                 >
                   Контакты
-                </a>
+                </NuxtLink>
               </li>
               <li>
-                <a
-                  href="/about/"
+                <NuxtLink
+                  to="/about/"
                   class="hover:underline"
                 >
                   Инвентарь
-                </a>
+                </NuxtLink>
               </li>
             </ul>
           </div>
