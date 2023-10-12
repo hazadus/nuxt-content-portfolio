@@ -47,7 +47,7 @@ useSeoMeta({
         to="/about/#contact"
         class="hover:underline"
       >
-        Hazadus
+        Александр Голдовский
       </NuxtLink>
       &middot; Опубликовано: {{ formatDate(data.date) }} &middot; Просмотров:
       {{ viewCount }}
