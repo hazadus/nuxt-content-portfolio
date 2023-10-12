@@ -28,6 +28,7 @@ const pinnedRepos = [
   "drf-nuxt-bookmarks",
   "journal",
   "nuxt-trello-board",
+  "django-rss-reader",
 ];
 
 const { data, error } = await fetchAllRepositoriesInfo();

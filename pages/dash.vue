@@ -160,6 +160,15 @@ const { data: topIssues, error: issuesError } = await fetchLatestOpenIssuesInfo(
         </li>
         <li>
           <a
+            href="http://rss.hazadus.ru/"
+            class="hover:underline"
+          >
+            RSS Reader</a
+          >
+          🏗️
+        </li>
+        <li>
+          <a
             href="http://messenger.hazadus.ru/"
             class="hover:underline"
           >

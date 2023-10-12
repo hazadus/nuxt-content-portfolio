@@ -47,6 +47,15 @@
               </li>
               <li class="mb-4">
                 <a
+                  href="http://rss.hazadus.ru"
+                  class="hover:underline"
+                >
+                  RSS Reader</a
+                >
+                🏗️
+              </li>
+              <li class="mb-4">
+                <a
                   href="http://bookmarks.hazadus.ru"
                   class="hover:underline"
                 >
