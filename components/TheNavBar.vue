@@ -2,15 +2,13 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
-const route = useRoute();
-
-const navigation = [
-  { name: "Главная", href: "/", current: route.path == "/", external: true },
-  { name: "Проекты", href: "/projects/", current: route.path == "/projects/", external: false },
-  { name: "Репо", href: "/repos/", current: route.path == "/repos/", external: true },
-  { name: "Посты", href: "/blog/", current: route.path.includes("/blog/"), external: false },
-  { name: "О себе", href: "/about/", current: route.path == "/about/", external: false },
-];
+const navigation = computed(() => [
+  { name: "Главная", href: "/", current: useRoute().path == "/", external: true },
+  { name: "Проекты", href: "/projects/", current: useRoute().path == "/projects/", external: false },
+  { name: "Репо", href: "/repos/", current: useRoute().path == "/repos/", external: true },
+  { name: "Посты", href: "/blog/", current: useRoute().path.includes("/blog/"), external: false },
+  { name: "О себе", href: "/about/", current: useRoute().path == "/about/", external: false },
+]);
 </script>
 
 <template>
