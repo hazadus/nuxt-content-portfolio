@@ -28,26 +28,24 @@ const breadcrumbs: Breadcrumb[] = [
           профессионально.
         </p>
 
+        <p class="mt-4">На этома сайте можно ознакомиться с моими проектами и другими наработками.</p>
+
         <p class="mt-4">
-          Подробный рассказ о себе, своих навыках и целях добавлю в ближайшее время! А пока, на сайте можно
-          ознакомиться с моими проектами и другими наработками.
+          Технологии, в которых я совершенствуюсь сейчас:
+          <Icon name="logos:python" /> Python, <Icon name="logos:postgresql" /> PostgreSQL,
+          <Icon name="logos:django-icon" /> Django, Celery, Redis, Nginx, Docker, Git, CI/CD.
         </p>
 
         <p class="mt-4">
-          Основные технологии, в которых я совершенствуюсь сейчас:
-          <Icon name="logos:python" /> Python, <Icon name="logos:django-icon" /> Django,
-          <Icon name="logos:postgresql" /> PostgreSQL, <Icon name="logos:typescript-icon" /> TypeScript,
-          <Icon name="logos:nuxt-icon" /> Nuxt, <Icon name="logos:vue" /> Vue, Git, Docker, CI/CD.
-        </p>
-
-        <p class="mt-4">
-          Работал с: Next.js, React, MongoDB, Mongoose, Prisma, Apollo Client/Server, Redis, Nginx, Node, ...
+          Кроме того, в своих проектах работаю с: <Icon name="logos:typescript-icon" /> TypeScript,
+          <Icon name="logos:nuxt-icon" /> Nuxt, <Icon name="logos:vue" /> Vue, Tailwind, Chakra UI, Next.js,
+          React, MongoDB, Mongoose, Prisma, Apollo Client/Server, Node, и др.
         </p>
 
         <p class="mt-4">Неторопливо изучаю в своё удовольствие: <Icon name="logos:rust" /> Rust.</p>
 
         <p class="mt-4">
-          Книги:
+          Люблю хорошую литературу о разработке:
           <a
             href="http://library.hazadus.ru/lists/3/details/"
             class="underline"
