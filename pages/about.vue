@@ -135,18 +135,6 @@ const breadcrumbs: Breadcrumb[] = [
         </div>
         <div class="flex flex-col lg:col-span-2 rounded-lg shadow-md px-4 py-8">
           <Icon
-            name="entypo-social:linkedin-with-circle"
-            size="60px"
-            class="mx-auto mb-2"
-          />
-          <a
-            class="mx-auto"
-            href="https://www.linkedin.com/in/%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-%D0%B3%D0%BE%D0%BB%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9-b10273291"
-            >LinkedIn</a
-          >
-        </div>
-        <div class="flex flex-col lg:col-span-2 rounded-lg shadow-md px-4 py-8">
-          <Icon
             name="jam:stackoverflow-circle"
             size="60px"
             class="mx-auto mb-2"
@@ -159,14 +147,26 @@ const breadcrumbs: Breadcrumb[] = [
         </div>
         <div class="flex flex-col lg:col-span-2 rounded-lg shadow-md px-4 py-8">
           <Icon
-            name="bi:steam"
+            name="mdi:mastodon"
             size="60px"
             class="mx-auto mb-2"
           />
           <a
             class="mx-auto"
-            href="https://steamcommunity.com/id/hazadus/"
-            >Steam</a
+            href="https://fosstodon.org/@hazadus"
+            >Mastodon</a
+          >
+        </div>
+        <div class="flex flex-col lg:col-span-2 rounded-lg shadow-md px-4 py-8">
+          <Icon
+            name="entypo-social:linkedin-with-circle"
+            size="60px"
+            class="mx-auto mb-2"
+          />
+          <a
+            class="mx-auto"
+            href="https://www.linkedin.com/in/%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-%D0%B3%D0%BE%D0%BB%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9-b10273291"
+            >LinkedIn</a
           >
         </div>
       </div>

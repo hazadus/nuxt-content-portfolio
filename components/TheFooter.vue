@@ -194,6 +194,15 @@
             />
           </a>
           <a
+            href="https://fosstodon.org/@hazadus"
+            class="text-gray-500 hover:text-gray-400"
+          >
+            <Icon
+              name="mdi:mastodon"
+              size="1.5rem"
+            />
+          </a>
+          <a
             href="https://steamcommunity.com/id/hazadus/"
             class="text-gray-500 hover:text-gray-400"
           >
