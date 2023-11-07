@@ -19,6 +19,7 @@ const excludedRepos = [
   "pySkillboxMessenger",
   "aiogram-bot-demo",
   "rusty-llama",
+  "asyncio-learn",
 ];
 
 // Stuff I want to always show on the top of the page:
