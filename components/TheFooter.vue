@@ -3,14 +3,14 @@
     <div class="mx-auto max-w-screen-xl">
       <div class="md:flex md:justify-between lg:pr-10">
         <div class="mb-6 md:mb-0">
-          <a
-            href="/"
+          <NuxtLink
+            to="/"
             class="flex items-center"
           >
             <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-300">
               hazadus.ru
             </span>
-          </a>
+          </NuxtLink>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-16 sm:grid-cols-4">
           <div>

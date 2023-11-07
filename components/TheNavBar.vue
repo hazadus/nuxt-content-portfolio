@@ -3,7 +3,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
 const navigation = computed(() => [
-  { name: "Главная", href: "/", current: useRoute().path == "/", external: true },
+  { name: "Главная", href: "/", current: useRoute().path == "/", external: false },
   { name: "Проекты", href: "/projects/", current: useRoute().path == "/projects/", external: false },
   { name: "Репо", href: "/repos/", current: useRoute().path == "/repos/", external: true },
   { name: "Посты", href: "/blog/", current: useRoute().path.includes("/blog/"), external: false },
@@ -39,13 +39,13 @@ const navigation = computed(() => [
         </div>
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex flex-shrink-0 items-center">
-            <a href="/">
+            <NuxtLink to="/">
               <img
                 class="block h-8 w-auto shadow rounded-full max-w-full align-middle border-none"
                 src="~/assets/images/bear-in-sweater.jpg"
                 alt="Hazadus.ru"
               />
-            </a>
+            </NuxtLink>
           </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
