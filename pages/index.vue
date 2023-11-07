@@ -9,18 +9,6 @@ const breadcrumbs: Breadcrumb[] = [
     url: null,
   },
 ];
-
-const { data, error } = await fetchAllRepositoriesInfo();
-
-// Return two repos with latest pushes.
-const latestGitHubRepos = computed(() => {
-  if (data.value) {
-    // @ts-ignore
-    return data.value.viewer.repositories.nodes.slice(0, 2);
-  } else {
-    return [];
-  }
-});
 </script>
 
 <template>
@@ -29,28 +17,15 @@ const latestGitHubRepos = computed(() => {
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
   <section class="mt-8">
-    <h2 class="text-3xl font-bold mb-8">Репо в работе</h2>
-
-    <AlertBox
-      v-if="error"
-      alertType="warning"
-      class="mt-4"
-    >
-      Произошла ошибка! Пожалуйста, обновите страницу. {{ error }}
-    </AlertBox>
-
-    <GitHubRepoCardList
-      v-if="latestGitHubRepos.length"
-      :repositories="latestGitHubRepos"
-    />
+    <h2 class="text-3xl font-bold mb-8">Проекты в работе</h2>
 
     <div class="text-base text-right">
-      <a
-        href="/repos/"
+      <NuxtLink
+        to="/projects/"
         class="italic hover:underline"
       >
-        Смотреть все репо...
-      </a>
+        Смотреть все проекты...
+      </NuxtLink>
     </div>
   </section>
 
@@ -60,12 +35,12 @@ const latestGitHubRepos = computed(() => {
     <PostList :limit="3" />
 
     <div class="text-base text-right mb-8">
-      <a
+      <NuxtLink
         href="/blog/"
         class="italic hover:underline"
       >
         Смотреть все посты...
-      </a>
+      </NuxtLink>
     </div>
   </section>
 </template>
