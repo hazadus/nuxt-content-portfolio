@@ -137,7 +137,7 @@ const breadcrumbs: Breadcrumb[] = [
             class="mx-auto mb-2"
           />
           <a
-            class="mx-auto"
+            class="mx-auto hover:underline"
             href="https://t.me/Hazadus"
             >Telegram</a
           >
@@ -149,7 +149,7 @@ const breadcrumbs: Breadcrumb[] = [
             class="mx-auto mb-2"
           />
           <a
-            class="mx-auto"
+            class="mx-auto hover:underline"
             href="mailto:hazadus7@gmail.com"
             >Email</a
           >
@@ -161,7 +161,7 @@ const breadcrumbs: Breadcrumb[] = [
             class="mx-auto mb-2"
           />
           <a
-            class="mx-auto"
+            class="mx-auto hover:underline"
             href="https://github.com/hazadus/"
             >GitHub</a
           >
@@ -173,7 +173,7 @@ const breadcrumbs: Breadcrumb[] = [
             class="mx-auto mb-2"
           />
           <a
-            class="mx-auto"
+            class="mx-auto hover:underline"
             href="https://fosstodon.org/@hazadus"
             >Mastodon</a
           >
@@ -185,7 +185,7 @@ const breadcrumbs: Breadcrumb[] = [
             class="mx-auto mb-2"
           />
           <a
-            class="mx-auto"
+            class="mx-auto hover:underline"
             href="https://stackoverflow.com/users/20197519/hazadus"
             >StackOverflow</a
           >
@@ -197,28 +197,83 @@ const breadcrumbs: Breadcrumb[] = [
             class="mx-auto mb-2"
           />
           <a
-            class="mx-auto"
+            class="mx-auto hover:underline"
             href="https://www.linkedin.com/in/%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-%D0%B3%D0%BE%D0%BB%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9-b10273291"
             >LinkedIn</a
           >
         </div>
       </div>
     </div>
-
-    <p class="mt-8 mb-8 text-gray-300">Просмотров странички: {{ viewCount }}</p>
   </section>
 
-  <!-- 
   <section>
     <div class="px-4 max-w-screen-xl">
       <h2
         class="text-2xl mt-8 mb-4 font-semibold"
-        id="contacts"
+        id="tools"
       >
         Инвентарь
       </h2>
 
-      <p>Инфа о моём "инструментарии".</p>
+      <p class="mb-2">
+        Периодически узнаю о разных интересных инструментах на сайтах разработчиков, поэтому здесь тоже
+        перечислю программы, которыми каждый день пользуюсь сам. Наверняка, вы найдёте тут что-то полезное для
+        себя.
+      </p>
+
+      <ul class="list-disc list-inside">
+        <li>
+          IDE:
+          <a
+            href="https://www.jetbrains.com/ru-ru/pycharm/"
+            class="underline"
+            >PyCharm Pro</a
+          >,
+          <a
+            href="https://code.visualstudio.com/"
+            class="underline"
+            >VS Code</a
+          >
+        </li>
+        <li>
+          Терминал:
+          <a
+            href="https://app.warp.dev/referral/2K4PXZ"
+            class="underline"
+            >Warp</a
+          >
+        </li>
+        <li>
+          Браузеры: Safari, Firefox,
+          <a
+            href="https://arc.net/"
+            class="underline"
+            >Arc</a
+          >
+        </li>
+        <li>
+          База знаний:
+          <a
+            href="https://notion.so"
+            class="underline"
+            >Notion</a
+          >
+        </li>
+        <li>
+          RSS:
+          <a
+            href="https://netnewswire.com/"
+            class="underline"
+            >NetNewsWire</a
+          >, свой
+          <a
+            href="https://rss.hazadus.ru"
+            class="underline"
+            >RSS Reader</a
+          >
+        </li>
+      </ul>
     </div>
-  </section> 
---></template>
+    <p class="mt-8 mb-8 text-gray-300">Просмотров странички: {{ viewCount }}</p>
+  </section>
+</template>
