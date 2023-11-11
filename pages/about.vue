@@ -28,18 +28,37 @@ const breadcrumbs: Breadcrumb[] = [
           профессионально.
         </p>
 
-        <p class="mt-4">На этом сайте можно ознакомиться с моими проектами и другими наработками.</p>
+        <p class="mt-4">
+          На этом сайте можно ознакомиться с моими
+          <NuxtLink
+            to="/projects/"
+            class="underline"
+            >проектами</NuxtLink
+          >
+          и
+          <a
+            href="/repos/"
+            class="underline"
+            >другими наработками</a
+          >.
+        </p>
 
         <p class="mt-4">
           Технологии, в которых я совершенствуюсь сейчас:
-          <Icon name="logos:python" /> Python, <Icon name="logos:postgresql" /> PostgreSQL,
-          <Icon name="logos:django-icon" /> Django, Celery, Redis, Nginx, Docker, Git, CI/CD.
+          <Icon name="logos:python" /> Python, asyncio,
+          <Icon name="simple-icons:aiohttp" />
+          aiohttp, <Icon name="logos:postgresql" /> PostgreSQL, <Icon name="logos:django-icon" /> Django,
+          Celery, <Icon name="logos:redis" /> Redis, <Icon name="logos:nginx" /> Nginx,
+          <Icon name="logos:docker-icon" /> Docker, <Icon name="logos:docker-icon" /> Git, CI/CD.
         </p>
 
         <p class="mt-4">
           Кроме того, в своих проектах работаю с: <Icon name="logos:typescript-icon" /> TypeScript,
-          <Icon name="logos:nuxt-icon" /> Nuxt, <Icon name="logos:vue" /> Vue, Tailwind, Chakra UI, Next.js,
-          React, MongoDB, Mongoose, Prisma, Apollo Client/Server, Node, и др.
+          <Icon name="logos:nuxt-icon" /> Nuxt, <Icon name="logos:vue" /> Vue,
+          <Icon name="logos:nextjs-icon" /> Next.js, <Icon name="logos:react" /> React,
+          <Icon name="logos:docker-icon" /> Tailwind, Chakra UI, <Icon name="logos:mongodb-icon" /> MongoDB,
+          Mongoose, <Icon name="logos:prisma" /> Prisma, <Icon name="logos:apollostack" /> Apollo
+          Client/Server, <Icon name="logos:nodejs-icon-alt" /> Node, и др.
         </p>
 
         <p class="mt-4">Неторопливо изучаю в своё удовольствие: <Icon name="logos:rust" /> Rust.</p>
@@ -62,6 +81,20 @@ const breadcrumbs: Breadcrumb[] = [
             href="http://library.hazadus.ru/lists/2/details/"
             class="underline"
             >недавно прочитал</a
+          >.
+        </p>
+
+        <p class="mt-4">
+          Коллекционирую
+          <a
+            href="https://www.discogs.com/user/hazadus"
+            class="underline"
+            >винил</a
+          >, люблю
+          <a
+            href="https://steamcommunity.com/id/hazadus/"
+            class="underline"
+            >игры</a
           >.
         </p>
       </div>
@@ -135,18 +168,6 @@ const breadcrumbs: Breadcrumb[] = [
         </div>
         <div class="flex flex-col lg:col-span-2 rounded-lg shadow-md px-4 py-8">
           <Icon
-            name="jam:stackoverflow-circle"
-            size="60px"
-            class="mx-auto mb-2"
-          />
-          <a
-            class="mx-auto"
-            href="https://stackoverflow.com/users/20197519/hazadus"
-            >StackOverflow</a
-          >
-        </div>
-        <div class="flex flex-col lg:col-span-2 rounded-lg shadow-md px-4 py-8">
-          <Icon
             name="mdi:mastodon"
             size="60px"
             class="mx-auto mb-2"
@@ -155,6 +176,18 @@ const breadcrumbs: Breadcrumb[] = [
             class="mx-auto"
             href="https://fosstodon.org/@hazadus"
             >Mastodon</a
+          >
+        </div>
+        <div class="flex flex-col lg:col-span-2 rounded-lg shadow-md px-4 py-8">
+          <Icon
+            name="jam:stackoverflow-circle"
+            size="60px"
+            class="mx-auto mb-2"
+          />
+          <a
+            class="mx-auto"
+            href="https://stackoverflow.com/users/20197519/hazadus"
+            >StackOverflow</a
           >
         </div>
         <div class="flex flex-col lg:col-span-2 rounded-lg shadow-md px-4 py-8">
@@ -176,19 +209,6 @@ const breadcrumbs: Breadcrumb[] = [
   </section>
 
   <!-- 
-  <section>
-    <div class="px-4 max-w-screen-xl">
-      <h2
-        class="text-2xl mt-8 mb-4 font-semibold"
-        id="contacts"
-      >
-        Оставьте мне сообщение
-      </h2>
-
-      <p>Тут будет форма для связи...</p>
-    </div>
-  </section>
-
   <section>
     <div class="px-4 max-w-screen-xl">
       <h2
