@@ -217,62 +217,153 @@ const breadcrumbs: Breadcrumb[] = [
 
       <p class="mb-2">
         Периодически узнаю о разных интересных инструментах на сайтах разработчиков, поэтому здесь тоже
-        перечислю программы, которыми каждый день пользуюсь сам. Наверняка, вы найдёте тут что-то полезное для
-        себя.
+        перечислю любимые программы, которыми каждый день пользуюсь сам. Наверняка, вы найдёте тут что-то
+        полезное для себя.
       </p>
 
-      <ul class="list-disc list-inside">
-        <li>
-          IDE:
-          <a
-            href="https://www.jetbrains.com/ru-ru/pycharm/"
-            class="underline"
-            >PyCharm Pro</a
-          >,
-          <a
-            href="https://code.visualstudio.com/"
-            class="underline"
-            >VS Code</a
-          >
-        </li>
-        <li>
-          Терминал:
-          <a
-            href="https://app.warp.dev/referral/2K4PXZ"
-            class="underline"
-            >Warp</a
-          >
-        </li>
-        <li>
-          Браузеры: Safari, Firefox,
-          <a
-            href="https://arc.net/"
-            class="underline"
-            >Arc</a
-          >
-        </li>
-        <li>
-          База знаний:
-          <a
-            href="https://notion.so"
-            class="underline"
-            >Notion</a
-          >
-        </li>
-        <li>
-          RSS:
-          <a
-            href="https://netnewswire.com/"
-            class="underline"
-            >NetNewsWire</a
-          >, свой
-          <a
-            href="https://rss.hazadus.ru"
-            class="underline"
-            >RSS Reader</a
-          >
-        </li>
-      </ul>
+      <div class="grid max-w-screen-xl lg:px-4 mx-auto gap-2 lg:gap-8 grid-cols-1 lg:grid-cols-12">
+        <div class="flex flex-col lg:col-span-4 rounded-lg shadow-md px-4 py-4">
+          <h3 class="font-semibold mb-2">Dev Tools</h3>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <a
+                href="https://www.jetbrains.com/ru-ru/pycharm/"
+                class="underline"
+                >PyCharm Pro</a
+              >,
+              <a
+                href="https://code.visualstudio.com/"
+                class="underline"
+                >VS Code</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://app.warp.dev/referral/2K4PXZ"
+                class="underline"
+                >Warp</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.docker.com/products/docker-desktop/"
+                class="underline"
+                >Docker Desktop</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/jonas/tig"
+                class="underline"
+                >tig</a
+              >,
+              <a
+                href="https://github.com/ogham/exa"
+                class="underline"
+                >exa</a
+              >,
+              <a
+                href="https://github.com/tmux/tmux"
+                class="underline"
+                >tmux</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.sourcetreeapp.com/"
+                class="underline"
+                >Sourcetree</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col lg:col-span-4 rounded-lg shadow-md px-4 py-4">
+          <h3 class="font-semibold mb-2">Mac Apps</h3>
+
+          <ul class="list-disc list-inside">
+            <li>
+              Браузеры: Safari, Firefox,
+              <a
+                href="https://arc.net/"
+                class="underline"
+                >Arc</a
+              >
+            </li>
+            <li>
+              База знаний:
+              <a
+                href="https://notion.so"
+                class="underline"
+                >Notion</a
+              >
+            </li>
+            <li>
+              RSS:
+              <a
+                href="https://netnewswire.com/"
+                class="underline"
+                >NetNewsWire</a
+              >
+            </li>
+            <li>
+              Clipboard:
+              <a
+                href="https://maccy.app/"
+                class="underline"
+                >Maccy</a
+              >
+            </li>
+            <li>
+              Menu:
+              <a
+                href="https://bjango.com/mac/istatmenus/"
+                class="underline"
+                >iStat Menus</a
+              >,
+              <a
+                href="https://www.macbartender.com/"
+                class="underline"
+                >Bartender</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col lg:col-span-4 rounded-lg shadow-md px-4 py-4">
+          <h3 class="font-semibold mb-2">SaaS</h3>
+
+          <ul class="list-disc list-inside">
+            <li>
+              <a
+                href="https://gist.github.com/hazadus"
+                class="underline"
+                >GitHub Gists</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://track.toggl.com/"
+                class="underline"
+                >Toggl Track</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://rss.hazadus.ru"
+                class="underline"
+                >RSS Reader</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://bookmarks.hazadus.ru"
+                class="underline"
+                >Bookmarks</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
     <p class="mt-8 mb-8 text-gray-300">Просмотров странички: {{ viewCount }}</p>
   </section>
