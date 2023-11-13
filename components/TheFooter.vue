@@ -195,6 +195,7 @@
           </a>
           <a
             href="https://fosstodon.org/@hazadus"
+            rel="me"
             class="text-gray-500 hover:text-gray-400"
           >
             <Icon
