@@ -52,13 +52,13 @@ defineProps({
               clip-rule="evenodd"
             ></path>
           </svg>
-          <a
+          <NuxtLink
             v-if="breadcrumb.url"
-            :href="breadcrumb.url"
+            :to="breadcrumb.url"
             class="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2"
           >
             {{ breadcrumb.title }}
-          </a>
+          </NuxtLink>
           <span
             v-else
             class="ml-1 text-sm font-medium text-gray-500 md:ml-2"

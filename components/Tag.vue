@@ -18,10 +18,10 @@ const anchorClasses =
 </script>
 
 <template>
-  <a
-    :href="buildTagPageUrl(props.title)"
+  <NuxtLink
+    :to="buildTagPageUrl(props.title)"
     :class="anchorClasses"
   >
     <Icon name="mdi:tag" /> {{ props.title }}
-  </a>
+  </NuxtLink>
 </template>
