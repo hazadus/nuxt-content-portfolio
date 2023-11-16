@@ -5,7 +5,7 @@ published: true
 date: 2023-11-16
 cover: deploy-with-github-actions.webp
 tags:
-  - CI/CD
+  - CICD
   - GitHub
   - SSH
   - Docker
