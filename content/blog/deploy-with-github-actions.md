@@ -61,7 +61,7 @@ cat ~/.ssh/github | pbcopy
 
 В поле "Name" вводим `SSH_PRIVATE_KEY`. В поле "Secret" вставляем приватный ключ из буфера обмена.
 
-![Screenshot 1](/content/blog/deploy-with-github-actions-screen-1.png)
+![Screenshot 1](/images/blog/deploy-with-github-actions-screen-1.png)
 
 Аналогично, создаём ещё две переменные: `SSH_HOST` с IP-адресом VDS, и `SSH_USER` с именем пользователя для входа по SSH.
 
@@ -142,7 +142,7 @@ update:
 
 Теперь, когда всё готово, достаточно сделать коммит в ветку `main` и отправить изменения на GitHub: действие будет запущено автоматически! За ходом его выполнения можно наблюдать на вкладке "Actions" репозитория.
 
-![Screenshot 2](/content/blog/deploy-with-github-actions-screen-2.png)
+![Screenshot 2](/images/blog/deploy-with-github-actions-screen-2.png)
 
 ## Подведение итогов
 
