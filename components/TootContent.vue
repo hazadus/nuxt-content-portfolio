@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { MastoToot } from "@/types";
+import { useTimeAgo } from "@vueuse/core";
 
-defineProps({
+const props = defineProps({
   toot: {
     type: Object as PropType<MastoToot>,
     required: true,
   },
 });
+
+const timeAgo = useTimeAgo(new Date(props.toot.created_at));
 </script>
 
 <template>
@@ -24,7 +27,13 @@ defineProps({
           >{{ toot.account.display_name }}</a
         >
       </div>
-      <div>Time Ago</div>
+      <div class="text-sm text-gray-400 underline">
+        <a
+          :href="toot.url"
+          target="_blank"
+          >{{ timeAgo }}</a
+        >
+      </div>
     </div>
 
     <div
