@@ -65,5 +65,37 @@ const timeAgo = useTimeAgo(new Date(props.toot.created_at));
       </div>
       <div class="px-2 mb-2 text-sm text-gray-400">{{ toot.card.description }}</div>
     </div>
+
+    <div class="pt-4 flex items-center text-gray-500">
+      <Icon
+        name="octicon:reply"
+        class="mr-1"
+      />
+      <a
+        class="mr-2"
+        :href="toot.url"
+        target="_blank"
+        >{{ toot.replies_count }}</a
+      >
+      <Icon
+        name="zondicons:repost"
+        class="mr-1"
+      />
+      <a
+        class="mr-2"
+        :href="toot.url"
+        target="_blank"
+        >{{ toot.reblogs_count }}</a
+      >
+      <Icon
+        name="material-symbols:star-rounded"
+        class="mr-1"
+      />
+      <a
+        :href="toot.url"
+        target="_blank"
+        >{{ toot.favourites_count }}</a
+      >
+    </div>
   </div>
 </template>

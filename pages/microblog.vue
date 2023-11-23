@@ -30,7 +30,7 @@ onMounted(async () => {
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
-  <h1 class="text-4xl font-bold mt-8">Микроблог</h1>
+  <h1 class="text-4xl font-bold mt-8">Микроблог <Icon name="logos:mastodon-icon" /></h1>
 
   <p class="text-base text-gray-900 p-4">
     Ниже 20 последних статусов в Мастодоне... Ссылка на годную статью про Мастодон... Инвайт на подписку.
@@ -43,7 +43,7 @@ onMounted(async () => {
     <div
       v-for="toot in toots"
       :key="toot.id"
-      class="mb-1 px-4 py-4 rounded-lg shadow-md"
+      class="mb-2 px-4 py-4 rounded-lg shadow-md"
     >
       <TootContent
         v-if="toot.content"
