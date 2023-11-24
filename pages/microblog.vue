@@ -1,15 +1,5 @@
 <script setup lang="ts">
 import { Breadcrumb, MastoToot } from "@/types";
-import TootContent from "~/components/TootContent.vue";
-
-async function fetchAllToots() {
-  const endPoint = `https://fosstodon.org/api/v1/accounts/109570713393752841/statuses`;
-
-  // Reference: https://nuxt.com/docs/api/utils/dollarfetch
-  return await $fetch<MastoToot[]>(endPoint, {
-    method: "GET",
-  });
-}
 
 const breadcrumbs: Breadcrumb[] = [
   {
@@ -19,6 +9,15 @@ const breadcrumbs: Breadcrumb[] = [
 ];
 
 const toots: Ref<MastoToot[]> = ref([]);
+
+async function fetchAllToots() {
+  const endPoint = `https://fosstodon.org/api/v1/accounts/109570713393752841/statuses`;
+
+  // Reference: https://nuxt.com/docs/api/utils/dollarfetch
+  return await $fetch<MastoToot[]>(endPoint, {
+    method: "GET",
+  });
+}
 
 onMounted(async () => {
   toots.value = await fetchAllToots();
@@ -38,35 +37,13 @@ onMounted(async () => {
 
   <section
     v-if="toots.length"
-    class="max-w-[580px] mb-8"
+    class="mb-8"
   >
-    <div
+    <TootCard
       v-for="toot in toots"
+      :toot="toot"
       :key="toot.id"
-      class="mb-2 px-4 py-4 rounded-lg shadow-md"
-    >
-      <TootContent
-        v-if="toot.content"
-        :toot="toot"
-      />
-
-      <template v-if="toot.reblog">
-        <div class="mb-4 text-gray-400">
-          <Icon
-            name="mdi:tumblr-reblog"
-            class="mr-1"
-          />
-          <a
-            :href="toot.account.url"
-            class="underline"
-            >{{ toot.account.display_name }}</a
-          >
-          зарепостил:
-        </div>
-
-        <TootContent :toot="toot.reblog" />
-      </template>
-    </div>
+    />
   </section>
   <section
     v-else
