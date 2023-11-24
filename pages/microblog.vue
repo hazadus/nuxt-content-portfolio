@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Breadcrumb, MastoToot } from "@/types";
+import { fetchAllToots } from "@/utils/mastodonApi";
 
 const breadcrumbs: Breadcrumb[] = [
   {
@@ -9,15 +10,6 @@ const breadcrumbs: Breadcrumb[] = [
 ];
 
 const toots: Ref<MastoToot[]> = ref([]);
-
-async function fetchAllToots() {
-  const endPoint = `https://fosstodon.org/api/v1/accounts/109570713393752841/statuses`;
-
-  // Reference: https://nuxt.com/docs/api/utils/dollarfetch
-  return await $fetch<MastoToot[]>(endPoint, {
-    method: "GET",
-  });
-}
 
 onMounted(async () => {
   toots.value = await fetchAllToots();
