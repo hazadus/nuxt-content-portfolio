@@ -7,6 +7,12 @@ const navigation = computed(() => [
   { name: "Проекты", href: "/projects/", current: useRoute().path == "/projects/", external: false },
   { name: "Репо", href: "/repos/", current: useRoute().path == "/repos/", external: true },
   { name: "Посты", href: "/blog/", current: useRoute().path.includes("/blog/"), external: false },
+  {
+    name: "Микроблог",
+    href: "/microblog/",
+    current: useRoute().path.includes("/microblog/"),
+    external: false,
+  },
   { name: "О себе", href: "/about/", current: useRoute().path == "/about/", external: false },
 ]);
 </script>

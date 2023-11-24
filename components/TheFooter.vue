@@ -128,6 +128,14 @@
                   Контакты
                 </NuxtLink>
               </li>
+              <li class="mb-4">
+                <NuxtLink
+                  to="/microblog/"
+                  class="hover:underline"
+                >
+                  Микроблог
+                </NuxtLink>
+              </li>
               <li>
                 <NuxtLink
                   to="/about/#tools"
@@ -149,33 +157,6 @@
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <a
-            href="https://hazadus.ru/rss.xml"
-            class="text-gray-500 hover:text-gray-400"
-          >
-            <Icon
-              name="material-symbols:rss-feed"
-              size="1.5rem"
-            />
-          </a>
-          <a
-            href="https://github.com/hazadus"
-            class="text-gray-500 hover:text-gray-400"
-          >
-            <Icon
-              name="octicon:mark-github-16"
-              size="1.5rem"
-            />
-          </a>
-          <a
-            href="https://stackoverflow.com/users/20197519/hazadus"
-            class="text-gray-500 hover:text-gray-400"
-          >
-            <Icon
-              name="ion:logo-stackoverflow"
-              size="1.5rem"
-            />
-          </a>
-          <a
             href="https://t.me/hazadus"
             class="text-gray-500 hover:text-gray-400"
           >
@@ -194,12 +175,39 @@
             />
           </a>
           <a
+            href="https://github.com/hazadus"
+            class="text-gray-500 hover:text-gray-400"
+          >
+            <Icon
+              name="octicon:mark-github-16"
+              size="1.5rem"
+            />
+          </a>
+          <a
             href="https://fosstodon.org/@hazadus"
             rel="me"
             class="text-gray-500 hover:text-gray-400"
           >
             <Icon
               name="mdi:mastodon"
+              size="1.5rem"
+            />
+          </a>
+          <a
+            href="https://hazadus.ru/rss.xml"
+            class="text-gray-500 hover:text-gray-400"
+          >
+            <Icon
+              name="material-symbols:rss-feed"
+              size="1.5rem"
+            />
+          </a>
+          <a
+            href="https://stackoverflow.com/users/20197519/hazadus"
+            class="text-gray-500 hover:text-gray-400"
+          >
+            <Icon
+              name="ion:logo-stackoverflow"
               size="1.5rem"
             />
           </a>

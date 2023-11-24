@@ -1,3 +1,14 @@
+<script setup lang="ts">
+import { useTootStore } from "~/store/tootStore";
+
+const tootStore = useTootStore();
+
+onMounted(() => {
+  // Preload toots here to avoid waiting on Microblog page.
+  tootStore.initializeStore();
+});
+</script>
+
 <template>
   <div class="flex flex-col min-h-screen">
     <TheNavBar />

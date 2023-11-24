@@ -1,4 +1,4 @@
-# nuxt-content-portfolio
+# Hazadus.ru
 
 My personal web site, running at [https://hazadus.ru](https://hazadus.ru).
 
@@ -17,6 +17,7 @@ Required environment variables to run the project:
 - `@nuxtjs/tailwindcss`
 - `@tailwindcss/typography` https://tailwindcss.com/docs/typography-plugin
 - `nuxt-icon`
+- `@vueuse/core`
 - `@nuxtjs/apollo` https://apollo.nuxtjs.org
 - `rss` https://www.npmjs.com/package/rss
 

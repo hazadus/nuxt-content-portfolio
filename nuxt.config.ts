@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "nuxt-icon",
     "@nuxtjs/apollo",
+    "@pinia/nuxt",
   ],
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
