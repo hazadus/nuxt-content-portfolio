@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="mb-2 px-4 py-4 rounded-lg shadow-md max-w-[580px]">
+  <div class="mb-2 px-4 py-4 rounded-lg shadow-lg sm:max-w-[580px]">
     <TootContent
       v-if="toot.content"
       :toot="toot"

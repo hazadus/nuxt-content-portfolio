@@ -40,7 +40,7 @@ const timeAgo = useTimeAgo(new Date(props.toot.created_at));
     <!-- Toot content -->
     <div
       v-html="toot.content"
-      class="prose"
+      class="prose w-100 overflow-clip"
     ></div>
 
     <!-- Media attachments, if any -->
