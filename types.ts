@@ -34,6 +34,14 @@ interface MastoAccount {
   statuses_count: number;
 }
 
+interface MastoMediaAttachment {
+  id: string;
+  type: string;
+  url: string;
+  preview_url: string;
+  description: string;
+}
+
 export interface MastoToot {
   id: string;
   created_at: Date;
@@ -44,6 +52,7 @@ export interface MastoToot {
   content: string; // contains HTML!
   reblog: MastoToot | null;
   account: MastoAccount;
+  media_attachments: MastoMediaAttachment[];
   tags: MastoTag[];
   card: MastoLinkCard | null;
 }

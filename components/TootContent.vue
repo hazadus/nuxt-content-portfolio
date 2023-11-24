@@ -14,6 +14,7 @@ const timeAgo = useTimeAgo(new Date(props.toot.created_at));
 
 <template>
   <div class="flex flex-col">
+    <!-- Avatar, author name, and time of creation -->
     <div class="flex mb-2 w-100">
       <img
         :src="toot.account.avatar"
@@ -36,14 +37,47 @@ const timeAgo = useTimeAgo(new Date(props.toot.created_at));
       </div>
     </div>
 
+    <!-- Toot content -->
     <div
       v-html="toot.content"
-      class="prose mb-2"
+      class="prose"
     ></div>
 
+    <!-- Media attachments, if any -->
+    <!-- Show first image in "full"-->
+    <div
+      v-if="toot.media_attachments.length"
+      class="flex justify-center mt-2"
+    >
+      <a
+        :href="toot.media_attachments[0].url"
+        target="_blank"
+      >
+        <img :src="toot.media_attachments[0].preview_url"
+      /></a>
+    </div>
+
+    <!-- Show the rest of the images in two-column view -->
+    <div
+      v-if="toot.media_attachments.length > 1"
+      class="columns-2"
+    >
+      <a
+        v-for="image in toot.media_attachments.slice(1)"
+        :key="image.id"
+        :href="image.url"
+        target="_blank"
+      >
+        <img
+          :src="image.preview_url"
+          class="flex w-full"
+      /></a>
+    </div>
+
+    <!-- Preview card, if any -->
     <div
       v-if="toot.card"
-      class="flex flex-col border border-gray-300 rounded-lg"
+      class="flex flex-col border border-gray-300 rounded-lg mt-4"
     >
       <img
         v-if="toot.card.image"
@@ -66,6 +100,7 @@ const timeAgo = useTimeAgo(new Date(props.toot.created_at));
       <div class="px-2 mb-2 text-sm text-gray-400">{{ toot.card.description }}</div>
     </div>
 
+    <!-- Bottom bar with answers, boosts, favorites counts -->
     <div class="pt-4 flex items-center text-gray-500">
       <Icon
         name="octicon:reply"
