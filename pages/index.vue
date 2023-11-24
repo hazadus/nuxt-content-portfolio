@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Breadcrumb } from "@/types";
+import { useTootStore } from "~/store/tootStore";
 
 const pageTitle = "Приветствую на Hazadus.ru!";
 
@@ -9,6 +10,9 @@ const breadcrumbs: Breadcrumb[] = [
     url: null,
   },
 ];
+
+// Initialized in `app.vue`.
+const tootStore = useTootStore();
 </script>
 
 <template>
@@ -75,17 +79,42 @@ const breadcrumbs: Breadcrumb[] = [
     </div>
   </section>
 
-  <section class="mt-8">
+  <section class="my-8">
     <h2 class="text-3xl font-bold">Недавние посты</h2>
 
     <PostList :limit="3" />
 
-    <div class="text-base text-right mb-8">
+    <div class="text-base text-right">
       <NuxtLink
         href="/blog/"
         class="italic hover:underline"
       >
         Смотреть все посты...
+      </NuxtLink>
+    </div>
+  </section>
+
+  <section
+    class="my-8"
+    v-if="tootStore.toots.length"
+  >
+    <h2 class="text-3xl font-bold mb-8">Новое в микроблоге <Icon name="logos:mastodon-icon" /></h2>
+
+    <div class="md:columns-2">
+      <TootCard
+        v-for="toot in tootStore.toots.slice(0, 4)"
+        :key="toot.id"
+        :toot="toot"
+        class="break-inside-avoid-column"
+      />
+    </div>
+
+    <div class="text-base text-right mt-8">
+      <NuxtLink
+        href="/microblog/"
+        class="italic hover:underline"
+      >
+        Смотреть ленту...
       </NuxtLink>
     </div>
   </section>

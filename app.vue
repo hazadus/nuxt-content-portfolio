@@ -4,7 +4,7 @@ import { useTootStore } from "~/store/tootStore";
 const tootStore = useTootStore();
 
 onMounted(() => {
-  // Preload toots here to avoid waiting on Microblog page.
+  // Preload toots here to avoid waiting on Microblog and index page.
   tootStore.initializeStore();
 });
 </script>
