@@ -61,11 +61,17 @@ onMounted(async () => {
             class="underline"
             >{{ toot.account.display_name }}</a
           >
-          продвинул:
+          зарепостил:
         </div>
 
         <TootContent :toot="toot.reblog" />
       </template>
     </div>
+  </section>
+  <section
+    v-else
+    class="w-100 h-96 flex justify-center items-center"
+  >
+    <SpinnerIndicator />
   </section>
 </template>
