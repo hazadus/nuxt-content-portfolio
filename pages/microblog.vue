@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Breadcrumb, MastoToot } from "@/types";
-import { fetchAllToots } from "@/utils/mastodonApi";
+import { Breadcrumb } from "@/types";
+import { useTootStore } from "~/store/tootStore";
 
 const breadcrumbs: Breadcrumb[] = [
   {
@@ -9,10 +9,10 @@ const breadcrumbs: Breadcrumb[] = [
   },
 ];
 
-const toots: Ref<MastoToot[]> = ref([]);
+const tootStore = useTootStore();
 
-onMounted(async () => {
-  toots.value = await fetchAllToots();
+onMounted(() => {
+  tootStore.initializeStore();
 });
 </script>
 
@@ -40,11 +40,11 @@ onMounted(async () => {
   </p>
 
   <section
-    v-if="toots.length"
+    v-if="tootStore.toots.length"
     class="mb-8"
   >
     <TootCard
-      v-for="toot in toots"
+      v-for="toot in tootStore.toots"
       :toot="toot"
       :key="toot.id"
     />
