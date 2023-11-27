@@ -53,8 +53,8 @@ const timeAgo = useTimeAgo(new Date(props.toot.created_at));
         :href="toot.media_attachments[0].url"
         target="_blank"
       >
-        <img :src="toot.media_attachments[0].preview_url"
-      /></a>
+        <img :src="toot.media_attachments[0].preview_url" />
+      </a>
     </div>
 
     <!-- Show the rest of the images in two-column view -->
@@ -71,7 +71,8 @@ const timeAgo = useTimeAgo(new Date(props.toot.created_at));
         <img
           :src="image.preview_url"
           class="flex w-full"
-      /></a>
+        />
+      </a>
     </div>
 
     <!-- Preview card, if any -->
@@ -82,7 +83,7 @@ const timeAgo = useTimeAgo(new Date(props.toot.created_at));
       <img
         v-if="toot.card.image"
         :src="toot.card.image"
-        class="mb-2 rounded-tl-lg rounded-tr-lg"
+        class="mb-2 rounded-tl-lg rounded-tr-lg h-64 object-cover"
       />
       <div
         v-if="toot.card.provider_name"

@@ -102,7 +102,7 @@ const tootStore = useTootStore();
 
     <div class="md:columns-2">
       <TootCard
-        v-for="toot in tootStore.toots.slice(0, 4)"
+        v-for="toot in tootStore.toots.slice(0, 5)"
         :key="toot.id"
         :toot="toot"
         class="break-inside-avoid-column"
