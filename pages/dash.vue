@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Breadcrumb, BlogPost } from "@/types";
+import type { Breadcrumb, BlogPost } from "@/types";
 
 const breadcrumbs: Breadcrumb[] = [
   {

@@ -1,4 +1,4 @@
-import { MastoToot } from "@/types";
+import type { MastoToot } from "@/types";
 import { fetchAllToots } from "@/utils/mastodonApi";
 import { defineStore } from "pinia";
 

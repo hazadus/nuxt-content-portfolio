@@ -1,4 +1,4 @@
-import { MastoToot } from "@/types";
+import type { MastoToot } from "@/types";
 
 /**
  * Fetch 20 latest toots from my Mastodon feed.

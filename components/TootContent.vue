@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MastoToot } from "@/types";
+import type { MastoToot } from "@/types";
 import { useTimeAgo } from "@vueuse/core";
 
 const props = defineProps({
