@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Breadcrumb } from "@/types";
+import type { Breadcrumb } from "@/types";
 
 const route = useRoute();
 const slug = route.params.slug[0];

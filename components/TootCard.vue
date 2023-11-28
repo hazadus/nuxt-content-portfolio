@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MastoToot } from "@/types";
+import type { MastoToot } from "@/types";
 
 defineProps({
   toot: {
