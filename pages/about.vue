@@ -3,6 +3,18 @@ import type { Breadcrumb } from "@/types";
 
 const pageTitle = "О себе";
 
+useSeoMeta({
+  description: "Инфа обо мне и контакты для связи.",
+  ogTitle: pageTitle,
+  ogDescription: "Инфа обо мне и контакты для связи.",
+  ogUrl: "https://hazadus.ru/about/",
+  ogImage: "/images/amgold_profile_pic.jpg",
+  twitterTitle: pageTitle,
+  twitterDescription: "Инфа обо мне и контакты для связи.",
+  twitterCard: "summary",
+  twitterImage: "/images/amgold_profile_pic.jpg",
+});
+
 const viewCount = await getViewCount("about");
 
 const breadcrumbs: Breadcrumb[] = [

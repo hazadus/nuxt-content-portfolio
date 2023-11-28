@@ -1,6 +1,18 @@
 <script setup lang="ts">
 const pageTitle = "Репо";
 
+useSeoMeta({
+  description: "Каталог моих репо на GitHub.",
+  ogTitle: pageTitle,
+  ogDescription: "Каталог моих репо на GitHub.",
+  ogUrl: "https://hazadus.ru/repos/",
+  ogImage: "/images/ogImage.jpg",
+  twitterTitle: pageTitle,
+  twitterDescription: "Каталог моих репо на GitHub.",
+  twitterCard: "summary",
+  twitterImage: "/images/ogImage.jpg",
+});
+
 const breadcrumbs = [
   {
     title: pageTitle,

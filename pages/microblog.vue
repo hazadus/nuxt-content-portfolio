@@ -2,9 +2,23 @@
 import type { Breadcrumb } from "@/types";
 import { useTootStore } from "~/store/tootStore";
 
+const pageTitle = "Микроблог";
+
+useSeoMeta({
+  description: "Свежие статусы из моей ленты на Мастодоне.",
+  ogTitle: pageTitle,
+  ogDescription: "Свежие статусы из моей ленты на Мастодоне.",
+  ogUrl: "https://hazadus.ru/microblog/",
+  ogImage: "/images/ogImage.jpg",
+  twitterTitle: pageTitle,
+  twitterDescription: "Свежие статусы из моей ленты на Мастодоне.",
+  twitterCard: "summary",
+  twitterImage: "/images/ogImage.jpg",
+});
+
 const breadcrumbs: Breadcrumb[] = [
   {
-    title: "Микроблог",
+    title: pageTitle,
     url: null,
   },
 ];
@@ -17,7 +31,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <Title> Микроблог | Hazadus.ru </Title>
+  <Title> {{ pageTitle }} | Hazadus.ru </Title>
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 

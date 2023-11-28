@@ -1,6 +1,18 @@
 <script setup lang="ts">
 const pageTitle = "Проекты";
 
+useSeoMeta({
+  description: "Страничка о моих личных проектах.",
+  ogTitle: pageTitle,
+  ogDescription: "Страничка о моих личных проектах.",
+  ogUrl: "https://hazadus.ru/projects/",
+  ogImage: "/images/ogImage.jpg",
+  twitterTitle: pageTitle,
+  twitterDescription: "Страничка о моих личных проектах.",
+  twitterCard: "summary",
+  twitterImage: "/images/ogImage.jpg",
+});
+
 const breadcrumbs = [
   {
     title: pageTitle,
@@ -16,9 +28,9 @@ const breadcrumbs = [
 
   <h1 class="text-4xl font-bold mt-8">Личные проекты</h1>
   <p class="text-base text-gray-900 p-2">
-    Я обожаю делать веб-приложения, и обычно одновременно работаю над двумя-тремя, переключаясь и дорабатывая
-    их по мере обретения новых знаний и появления вдохновения! Ниже я подробно расскажу о приложениях, которые
-    запущены и благополучно работают.
+    Я обожаю делать веб-приложения, и обычно одновременно работаю над несколькими, переключаясь и дорабатывая
+    их по мере обретения новых знаний и появления вдохновения! Здесь я подробно расскажу о приложениях,
+    которые запущены и благополучно работают.
   </p>
 
   <!-- RSS Reader -->

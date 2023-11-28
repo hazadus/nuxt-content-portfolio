@@ -18,6 +18,21 @@ const breadcrumbs: Breadcrumb[] = [
     url: null,
   },
 ];
+
+const pageTitle = `Посты с меткой "${slug}" | Посты | Hazadus.ru`;
+const pageDescription = `Все посты на сайте с меткой "${slug}".`;
+
+useSeoMeta({
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogUrl: "https://hazadus.ru/blog/tags/" + slug,
+  ogImage: "/images/ogImage.jpg",
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterCard: "summary",
+  twitterImage: "/images/ogImage.jpg",
+});
 </script>
 
 <template>

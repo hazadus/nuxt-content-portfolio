@@ -1,9 +1,23 @@
 <script setup lang="ts">
 import type { Breadcrumb, BlogPost } from "@/types";
 
+const pageTitle = "Dashboard";
+
+useSeoMeta({
+  description: "Мой личный дашборд.",
+  ogTitle: pageTitle,
+  ogDescription: "Мой личный дашборд.",
+  ogUrl: "https://hazadus.ru/dash/",
+  ogImage: "/images/ogImage.jpg",
+  twitterTitle: pageTitle,
+  twitterDescription: "Мой личный дашборд.",
+  twitterCard: "summary",
+  twitterImage: "/images/ogImage.jpg",
+});
+
 const breadcrumbs: Breadcrumb[] = [
   {
-    title: "Dashboard",
+    title: pageTitle,
     url: null,
   },
 ];
@@ -19,7 +33,7 @@ const { data: topIssues, error: issuesError } = await fetchLatestOpenIssuesInfo(
 </script>
 
 <template>
-  <Title> Dashboard | Hazadus.ru </Title>
+  <Title> {{ pageTitle }} | Hazadus.ru </Title>
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 

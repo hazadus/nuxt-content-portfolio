@@ -1,6 +1,18 @@
 <script setup lang="ts">
 import type { Breadcrumb, BlogPost } from "@/types";
 
+useSeoMeta({
+  description: "Все теги к постам.",
+  ogTitle: "Все теги | Посты | Hazadus.ru",
+  ogDescription: "Все теги к постам.",
+  ogUrl: "https://hazadus.ru/blog/tags/",
+  ogImage: "/images/ogImage.jpg",
+  twitterTitle: "Все теги | Посты | Hazadus.ru",
+  twitterDescription: "Все теги к постам.",
+  twitterCard: "summary",
+  twitterImage: "/images/ogImage.jpg",
+});
+
 const breadcrumbs: Breadcrumb[] = [
   {
     title: "Посты",

@@ -2,9 +2,7 @@
 import type { Breadcrumb } from "@/types";
 
 const { path } = useRoute();
-
 const { data } = await useAsyncData(`content-${path}`, () => queryContent().where({ _path: path }).findOne());
-
 const viewCount = await getViewCount(path);
 const pageTitle = data.value?.title + " | Посты | Hazadus.ru";
 
@@ -21,10 +19,15 @@ const breadcrumbs: Breadcrumb[] = [
 
 useSeoMeta({
   title: pageTitle,
-  ogTitle: pageTitle,
   description: data.value?.description,
+  ogTitle: pageTitle,
   ogDescription: data.value?.description,
+  ogUrl: "https://hazadus.ru" + path,
   ogImage: "https://hazadus.ru/images/blog/" + data.value?.cover,
+  twitterTitle: pageTitle,
+  twitterDescription: data.value?.description,
+  twitterCard: "summary",
+  twitterImage: "https://hazadus.ru/images/blog/" + data.value?.cover,
 });
 </script>
 

@@ -1,6 +1,19 @@
 <script setup lang="ts">
 import { useTootStore } from "~/store/tootStore";
 
+useHead({
+  htmlAttrs: {
+    lang: "ru",
+  },
+  link: [
+    {
+      rel: "icon",
+      type: "image/png",
+      href: "/favicon-32x32.png",
+    },
+  ],
+});
+
 const tootStore = useTootStore();
 
 onMounted(() => {

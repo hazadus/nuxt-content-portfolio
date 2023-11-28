@@ -4,6 +4,18 @@ import { useTootStore } from "~/store/tootStore";
 
 const pageTitle = "Приветствую на Hazadus.ru!";
 
+useSeoMeta({
+  description: "Моя домашнаяя страница.",
+  ogTitle: "Hazadus.ru",
+  ogDescription: "Моя домашнаяя страница.",
+  ogUrl: "https://hazadus.ru",
+  ogImage: "/images/ogImage.jpg",
+  twitterTitle: "Hazadus.ru",
+  twitterDescription: "Моя домашнаяя страница.",
+  twitterCard: "summary",
+  twitterImage: "/images/ogImage.jpg",
+});
+
 const breadcrumbs: Breadcrumb[] = [
   {
     title: pageTitle,
@@ -16,7 +28,7 @@ const tootStore = useTootStore();
 </script>
 
 <template>
-  <Title> {{ pageTitle }} | Hazadus.ru </Title>
+  <Title> Hazadus.ru </Title>
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
