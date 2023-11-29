@@ -19,7 +19,8 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      script: [
+      // Exclude Umami tracker in development mode
+      script: process.env.NODE_ENV == "development" ? [] : [
         {
           src: "https://stats.hazadus.ru/script.js",
           async: true,
