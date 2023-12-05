@@ -30,7 +30,7 @@ const { data: posts } = await useAsyncData("posts", () => {
 </script>
 
 <template>
-  <section class="grid md:grid-cols-3 mt-8 mb-8 gap-10">
+  <section class="grid md:grid-cols-2 xl:grid-cols-3 mt-8 mb-8 gap-10">
     <PostCard
       v-for="post in posts"
       :key="`post-${post._id}`"
