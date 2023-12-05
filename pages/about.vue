@@ -52,6 +52,11 @@ const breadcrumbs: Breadcrumb[] = [
             href="/repos/"
             class="underline"
             >другими наработками</a
+          >. Иногда я пишу небольшие
+          <NuxtLink
+            to="/blog/"
+            class="underline"
+            >посты</NuxtLink
           >.
         </p>
 
@@ -73,7 +78,8 @@ const breadcrumbs: Breadcrumb[] = [
           Client/Server, <Icon name="logos:nodejs-icon-alt" /> Node, и др.
         </p>
 
-        <p class="mt-4">Неторопливо изучаю в своё удовольствие: <Icon name="logos:rust" /> Rust.</p>
+        <p class="mt-4">Неторопливо изучаю в своё удовольствие: <Icon name="logos:go" /> Go.</p>
+        <p class="mt-4">Внимательно слежу за развитием экосистемы <Icon name="logos:rust" /> Rust.</p>
 
         <p class="mt-4">
           Люблю хорошую литературу о разработке:
@@ -129,17 +135,6 @@ const breadcrumbs: Breadcrumb[] = [
       >
         Связаться со мной
       </h2>
-
-      <p class="mb-8">
-        Буду рад получить сообщение от вас в
-        <a
-          class="underline"
-          href="http://messenger.hazadus.ru"
-          >своём мессенджере</a
-        >
-        (вход с аккаунтом Google), ищите меня там под ником <b>hazadus</b>. Или, воспользуйтесь любым из более
-        традиционных способов, по ссылкам ниже.
-      </p>
 
       <div class="grid max-w-screen-xl lg:px-4 mx-auto gap-2 lg:gap-8 grid-cols-2 lg:grid-cols-12">
         <div class="flex flex-col lg:col-span-2 rounded-lg shadow-md px-4 py-8">
@@ -308,6 +303,11 @@ const breadcrumbs: Breadcrumb[] = [
                 href="https://notion.so"
                 class="underline"
                 >Notion</a
+              >,
+              <a
+                href="https://obsidian.md/"
+                class="underline"
+                >Obsidian</a
               >
             </li>
             <li>
