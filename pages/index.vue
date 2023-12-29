@@ -5,13 +5,13 @@ import { useTootStore } from "~/store/tootStore";
 const pageTitle = "Приветствую на Hazadus.ru!";
 
 useSeoMeta({
-  description: "Моя домашнаяя страница.",
+  description: "Моя домашняя страница.",
   ogTitle: "Hazadus.ru",
-  ogDescription: "Моя домашнаяя страница.",
+  ogDescription: "Моя домашняя страница.",
   ogUrl: "https://hazadus.ru",
   ogImage: "/images/ogImage.jpg",
   twitterTitle: "Hazadus.ru",
-  twitterDescription: "Моя домашнаяя страница.",
+  twitterDescription: "Моя домашняя страница.",
   twitterCard: "summary",
   twitterImage: "/images/ogImage.jpg",
 });
