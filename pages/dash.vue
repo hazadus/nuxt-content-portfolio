@@ -183,14 +183,6 @@ const { data: topIssues, error: issuesError } = await fetchLatestOpenIssuesInfo(
         </li>
         <li>
           <a
-            href="http://messenger.hazadus.ru/"
-            class="hover:underline"
-          >
-            Messenger
-          </a>
-        </li>
-        <li>
-          <a
             href="http://boards.hazadus.ru/"
             class="hover:underline"
           >

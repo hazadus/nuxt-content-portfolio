@@ -70,14 +70,6 @@
                   Library
                 </a>
               </li>
-              <li class="mb-4">
-                <a
-                  href="http://messenger.hazadus.ru"
-                  class="hover:underline"
-                >
-                  Messenger
-                </a>
-              </li>
               <li>
                 <a
                   href="http://stats.hazadus.ru"
