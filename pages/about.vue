@@ -36,8 +36,7 @@ const breadcrumbs: Breadcrumb[] = [
         <h1 class="text-4xl font-bold mb-2">Привет, меня зовут Александр! 👋</h1>
 
         <p class="mt-4">
-          В свободное время я занимаюсь разработкой full stack web-приложений. Моя цель – делать это
-          профессионально.
+          В свободное время я занимаюсь разработкой web-приложений. Моя цель – делать это профессионально.
         </p>
 
         <p class="mt-4">
@@ -62,20 +61,16 @@ const breadcrumbs: Breadcrumb[] = [
 
         <p class="mt-4">
           Технологии, в которых я совершенствуюсь сейчас:
-          <Icon name="logos:python" /> Python, asyncio,
-          <Icon name="simple-icons:aiohttp" />
-          aiohttp, <Icon name="logos:postgresql" /> PostgreSQL, <Icon name="logos:django-icon" /> Django,
-          Celery, <Icon name="logos:redis" /> Redis, <Icon name="logos:nginx" /> Nginx,
-          <Icon name="logos:docker-icon" /> Docker, <Icon name="logos:docker-icon" /> Git, CI/CD.
+          <Icon name="logos:python" /> Python, <Icon name="logos:postgresql" /> PostgreSQL,
+          <Icon name="logos:django-icon" /> Django, Celery, <Icon name="logos:redis" /> Redis,
+          <Icon name="logos:nginx" /> Nginx, <Icon name="logos:docker-icon" /> Docker,
+          <Icon name="logos:git-icon" /> Git, CI/CD.
         </p>
 
         <p class="mt-4">
           Кроме того, в своих проектах работаю с: <Icon name="logos:typescript-icon" /> TypeScript,
-          <Icon name="logos:nuxt-icon" /> Nuxt, <Icon name="logos:vue" /> Vue,
-          <Icon name="logos:nextjs-icon" /> Next.js, <Icon name="logos:react" /> React,
-          <Icon name="logos:docker-icon" /> Tailwind, Chakra UI, <Icon name="logos:mongodb-icon" /> MongoDB,
-          Mongoose, <Icon name="logos:prisma" /> Prisma, <Icon name="logos:apollostack" /> Apollo
-          Client/Server, <Icon name="logos:nodejs-icon-alt" /> Node, и др.
+          <Icon name="logos:nuxt-icon" /> Nuxt, <Icon name="logos:docker-icon" /> Tailwind,
+          <Icon name="logos:mongodb-icon" /> MongoDB, Mongoose, и др.
         </p>
 
         <p class="mt-4">Неторопливо изучаю в своё удовольствие: <Icon name="logos:go" /> Go.</p>
