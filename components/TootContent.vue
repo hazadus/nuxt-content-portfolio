@@ -21,11 +21,12 @@ const timeAgo = useTimeAgo(new Date(props.toot.created_at));
         class="w-12 rounded-md mr-2"
       />
       <div class="grow">
+        <!-- Regexp stuff below removes icon codes (like :python:, :django:, :verified:) from usernames -->
         <a
           :href="toot.account.url"
           class="font-semibold"
           target="_blank"
-          >{{ toot.account.display_name }}</a
+          >{{ toot.account.display_name.replaceAll(/:\w+:/g, "") }}</a
         >
       </div>
       <div class="text-sm text-gray-400 underline">
@@ -83,15 +84,15 @@ const timeAgo = useTimeAgo(new Date(props.toot.created_at));
       <img
         v-if="toot.card.image"
         :src="toot.card.image"
-        class="mb-2 rounded-tl-lg rounded-tr-lg h-64 object-cover"
+        class="rounded-tl-lg rounded-tr-lg h-64 object-cover"
       />
       <div
         v-if="toot.card.provider_name"
-        class="mb-1 px-2 text-gray-400"
+        class="mt-2 px-2 text-gray-400"
       >
         {{ toot.card.provider_name }}
       </div>
-      <div class="text-xl font-semibold mb-2 px-2 underline">
+      <div class="text-xl font-semibold mt-2 mb-2 px-2 underline">
         <a
           :href="toot.card.url"
           target="_blank"
