@@ -46,7 +46,7 @@ posts.value?.forEach((post) => {
 
   <h1 class="text-4xl font-bold mt-8 mb-8">Все теги</h1>
 
-  <section>
+  <section class="min-h-96">
     <Tag
       v-for="(tag, i) in tags"
       :key="`tag-id-${i}`"
