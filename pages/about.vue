@@ -225,7 +225,8 @@ const breadcrumbs: Breadcrumb[] = [
 
       <div class="grid max-w-screen-xl lg:px-4 mx-auto gap-2 lg:gap-8 grid-cols-1 lg:grid-cols-12">
         <div class="flex flex-col lg:col-span-4 rounded-lg shadow-md px-4 py-4">
-          <h3 class="font-semibold mb-2">Dev Tools</h3>
+          <h3 class="font-semibold mb-1">Dev Tools</h3>
+          <div class="mb-2 text-gray-500 text-sm">Любимые инструменты для разработки софта</div>
 
           <ul class="list-disc list-inside">
             <li>
@@ -281,7 +282,8 @@ const breadcrumbs: Breadcrumb[] = [
           </ul>
         </div>
         <div class="flex flex-col lg:col-span-4 rounded-lg shadow-md px-4 py-4">
-          <h3 class="font-semibold mb-2">Mac Apps</h3>
+          <h3 class="font-semibold mb-1">Mac Apps</h3>
+          <div class="mb-2 text-gray-500 text-sm">Программы для мака, без которых не жизнь</div>
 
           <ul class="list-disc list-inside">
             <li>
@@ -337,9 +339,17 @@ const breadcrumbs: Breadcrumb[] = [
           </ul>
         </div>
         <div class="flex flex-col lg:col-span-4 rounded-lg shadow-md px-4 py-4">
-          <h3 class="font-semibold mb-2">SaaS</h3>
+          <h3 class="font-semibold mb-1">SaaS</h3>
+          <div class="mb-2 text-gray-500 text-sm">Веб-приложения на (почти) каждый день</div>
 
           <ul class="list-disc list-inside">
+            <li>
+              <a
+                href="https://uptimerobot.com/"
+                class="underline"
+                >UptimeRobot</a
+              >
+            </li>
             <li>
               <a
                 href="https://gist.github.com/hazadus"
