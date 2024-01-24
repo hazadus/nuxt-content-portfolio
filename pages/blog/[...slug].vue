@@ -63,5 +63,13 @@ useSeoMeta({
         :title="tag"
       />
     </div>
+
+    <div class="my-8 mx-auto max-w-4xl border-t">
+      <PostList
+        list-type="simple"
+        :limit="5"
+        :exclude-path="path"
+      />
+    </div>
   </template>
 </template>
