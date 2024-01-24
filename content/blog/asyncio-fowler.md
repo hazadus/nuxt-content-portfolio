@@ -34,7 +34,7 @@ tags:
 В целом, книга отлично подошла мне для системного, основательного изучения обозначенной темы "с нуля" – побольше бы такой качественной литературы!
 
 ## Дополнительные материалы
-- Профиль автора на Mastodon: [@mattfowler@fosstodon.org](https://fosstodon.org/@mattfowler)
+- Профиль автора книги на Mastodon: [@mattfowler@fosstodon.org](https://fosstodon.org/@mattfowler)
 - Мой [репо с примерами](https://github.com/hazadus/asyncio-learn) из книги
 - [Python 3.12 Preview: Subinterpreters](https://realpython.com/python312-subinterpreters/)
 - Купить книгу в [Лабиринте](https://www.labirint.ru/books/900476/)
