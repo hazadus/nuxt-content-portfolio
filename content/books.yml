@@ -1,0 +1,14 @@
+books:
+  - id: 1
+    title: Fluent Python
+    author: Luciano Romalho
+    publisher: ?
+    year: ?
+    url: ?
+    reviewURL: ?
+    tags: ?
+    status: ?
+    dateFinished: ?
+  - id: 2
+    title: Clean Code
+    author: Robert Martin

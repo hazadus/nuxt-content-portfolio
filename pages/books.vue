@@ -21,6 +21,8 @@ const breadcrumbs: Breadcrumb[] = [
     url: null,
   },
 ];
+
+const books = await queryContent("/books").findOne();
 </script>
 
 <template>
@@ -31,4 +33,5 @@ const breadcrumbs: Breadcrumb[] = [
   <h1 class="text-4xl font-bold mt-8">Книжная полка</h1>
 
   <p class="text-base text-gray-900 p-4">Книги, которые я читаю или хочу прочитать.</p>
+  <pre>{{ books }}</pre>
 </template>
