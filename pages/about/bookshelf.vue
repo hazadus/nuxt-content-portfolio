@@ -40,9 +40,14 @@ const booksPlanned = computed(() => books.filter((item) => item.status == "plann
 
   <h1 class="text-4xl font-bold mt-8">Книжная полка</h1>
 
-  <p class="text-base text-gray-900 p-4">Техническая литература, которую я читаю или хочу прочитать.</p>
+  <p class="text-base text-gray-900 p-4">
+    Будучи большим любителем технической литературы, как правило я читаю несколько книг одновременно. По
+    возможности, предпочитаю бумажные издания, но при отсутствии твердой копии читаю PDFы. Всегда делаю много
+    заметок, а в последнее время стараюсь подводить итоги прочитанного. В этом разделе я веду учёт
+    прочитанного, а также свой бэклог - это мотивирует читать ещё больше, и качественнее!
+  </p>
 
-  <section class="mb-2">
+  <section class="mb-10">
     <h2 class="text-2xl font-semibold">Читаю</h2>
     <BookCard
       v-for="book in booksReading"
@@ -52,7 +57,7 @@ const booksPlanned = computed(() => books.filter((item) => item.status == "plann
     />
   </section>
 
-  <section class="mb-2">
+  <section class="mb-10">
     <h2 class="text-2xl font-semibold">Прочитано</h2>
     <BookCard
       v-for="book in booksRead"
@@ -62,7 +67,7 @@ const booksPlanned = computed(() => books.filter((item) => item.status == "plann
     />
   </section>
 
-  <section class="mb-2">
+  <section class="mb-4">
     <h2 class="text-2xl font-semibold">Планирую прочитать</h2>
     <BookCard
       v-for="book in booksPlanned"
