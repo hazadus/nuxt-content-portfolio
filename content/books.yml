@@ -1,14 +1,16 @@
 books:
   - id: 1
-    title: Fluent Python
-    author: Luciano Romalho
-    publisher: ?
-    year: ?
-    url: ?
-    reviewURL: ?
-    tags: ?
-    status: ?
-    dateFinished: ?
+    title: Fluent Python, 2nd Edition
+    author: Luciano Ramalho
+    publisher: O'Reilly
+    year: 2022
+    url: https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/
+    reviewURL:
+    tags:
+      - Python
+      - Programming
+    status: reading
+    dateFinished:
   - id: 2
     title: Clean Code
     author: Robert Martin

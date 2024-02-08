@@ -128,6 +128,14 @@
                   Микроблог
                 </NuxtLink>
               </li>
+              <li class="mb-4">
+                <NuxtLink
+                  to="/about/bookshelf/"
+                  class="hover:underline"
+                >
+                  Читаю
+                </NuxtLink>
+              </li>
               <li>
                 <NuxtLink
                   to="/about/#tools"

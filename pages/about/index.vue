@@ -60,41 +60,17 @@ const breadcrumbs: Breadcrumb[] = [
         </p>
 
         <p class="mt-4">
-          Технологии, в которых я совершенствуюсь сейчас:
+          Мои основные навыки:
           <Icon name="logos:python" /> Python, <Icon name="logos:postgresql" /> PostgreSQL,
           <Icon name="logos:django-icon" /> Django, Celery, <Icon name="logos:redis" /> Redis,
           <Icon name="logos:nginx" /> Nginx, <Icon name="logos:docker-icon" /> Docker,
-          <Icon name="logos:git-icon" /> Git, CI/CD.
+          <Icon name="logos:git-icon" /> Git.
         </p>
 
         <p class="mt-4">
-          Кроме того, в своих проектах работаю с: <Icon name="logos:typescript-icon" /> TypeScript,
+          Также владею: <Icon name="logos:typescript-icon" /> TypeScript,
           <Icon name="logos:nuxt-icon" /> Nuxt, <Icon name="logos:docker-icon" /> Tailwind,
           <Icon name="logos:mongodb-icon" /> MongoDB, Mongoose, и др.
-        </p>
-
-        <p class="mt-4">Неторопливо изучаю в своё удовольствие: <Icon name="logos:go" /> Go.</p>
-        <p class="mt-4">Внимательно слежу за развитием экосистемы <Icon name="logos:rust" /> Rust.</p>
-
-        <p class="mt-4">
-          Люблю хорошую литературу о разработке:
-          <a
-            href="http://library.hazadus.ru/lists/3/details/"
-            class="underline"
-            >читаю</a
-          >
-          /
-          <a
-            href="http://library.hazadus.ru/lists/5/details/"
-            class="underline"
-            >хочу прочитать</a
-          >
-          /
-          <a
-            href="http://library.hazadus.ru/lists/2/details/"
-            class="underline"
-            >недавно прочитал</a
-          >.
         </p>
 
         <p class="mt-4">
@@ -118,6 +94,32 @@ const breadcrumbs: Breadcrumb[] = [
           alt="Boards screenshot"
           class="rounded-full w-60 h-60 mb-3 mx-auto"
         />
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid max-w-screen-xl lg:px-4 mx-auto gap-2 lg:gap-8 grid-cols-3 md:grid-cols-12">
+      <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
+        <NuxtLink
+          to="/about/bookshelf/"
+          class="font-semibold mb-1 hover:underline"
+          >Читаю</NuxtLink
+        >
+        <div class="mb-2 text-gray-500 text-sm">
+          Техническая литература: что читаю, прочитал, планирую читать.
+        </div>
+      </div>
+      <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
+        <h3 class="font-semibold mb-1">Вишлист</h3>
+        <div class="mb-2 text-gray-500 text-sm">Хочу освоить</div>
+        <div>FastAPI <Icon name="logos:go" /> Go <Icon name="logos:rust" /> Rust</div>
+      </div>
+      <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
+        <h3 class="font-semibold mb-1">Инвентарь</h3>
+      </div>
+      <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
+        <h3 class="font-semibold mb-1">Блогролл</h3>
       </div>
     </div>
   </section>

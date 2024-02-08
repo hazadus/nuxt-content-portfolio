@@ -13,7 +13,6 @@ const navigation = computed(() => [
     current: useRoute().path.includes("/microblog/"),
     external: false,
   },
-  { name: "Книги", href: "/books/", current: useRoute().path == "/books/", external: false },
   { name: "О себе", href: "/about/", current: useRoute().path == "/about/", external: false },
 ]);
 </script>
