@@ -14,5 +14,49 @@ books:
     status: reading
     dateFinished:
   - id: 2
-    title: Clean Code
-    author: Robert Martin
+    author: Bob Gregory, Harry Percival
+    title: Architecture Patterns with Python
+    publisher: O'Reilly
+    year: 2020
+    description: Short description of the book.
+    url: https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/
+    coverUrl: http://library.hazadus.ru/media/CACHE/images/images/covers/9781492052203/c10c7d4b2af26add3193de84bf5c892e.jpg
+    reviewURL:
+    tags:
+      - Python
+      - Patterns
+      - Development
+      - TDD
+      - DDD
+    status: reading
+    dateFinished: 2023-05-20
+  - id: 3
+    author: Antonio Melé
+    title: Django 4 By Example
+    publisher: Packt
+    year: 2022
+    description: Short description of the book.
+    url: https://www.packtpub.com/product/django-4-by-example-fourth-edition/9781801813051
+    coverUrl: http://library.hazadus.ru/media/CACHE/images/images/covers/mele_django4/bd1028dc312004a70f838f18bbd7a826.jpg
+    reviewURL:
+    tags:
+      - Django
+      - Python
+      - Development
+    status: read
+    dateFinished:
+  - id: 4
+    author: Mariano Anaya
+    title: Clean Code in Python
+    publisher: Packt
+    year: 2020
+    description: The book discusses object-oriented programming in Python and shows you how to use objects with descriptors and generators. It will also show you the design principles of software testing and how to resolve problems by implementing software design patterns in your code. In the concluding chapter, we break down a monolithic application into a microservices-based one starting from the code as the basis for a solid platform. By the end of this clean code book, you will be proficient in applying industry-approved coding practices to design clean, sustainable, and readable real-world Python code.
+    url: https://www.packtpub.com/product/clean-code-in-python-second-edition/9781800560215
+    coverUrl: http://library.hazadus.ru/media/CACHE/images/images/covers/Mariano_Anaya-Clean_Code_in_Python-2nd_Edition-Packt_Publishing_Ltd_2021/09e86a1aeb6a7eb9f4fb3c86eb049315.jpg
+    reviewURL:
+    tags:
+      - Python
+      - Development
+      - Refactoring
+    status: planned
+    dateFinished:

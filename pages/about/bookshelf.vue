@@ -1,20 +1,5 @@
 <script setup lang="ts">
-import type { Breadcrumb } from "@/types";
-
-interface Book {
-  id: number;
-  author: string;
-  title: string;
-  publisher: string;
-  year: number;
-  description: string | null;
-  url: string;
-  coverUrl: string;
-  reviewUrl: string | null;
-  tags: Array<string>;
-  status: string /* TODO: refactor to dedicated type. */;
-  dateFinished: Date | null;
-}
+import type { Book, Breadcrumb } from "@/types";
 
 const pageTitle = "Читаю";
 
@@ -41,7 +26,11 @@ const breadcrumbs: Breadcrumb[] = [
   },
 ];
 
-const { books } = await queryContent<{ books: Array<Book> }>("/books").findOne();
+const booksData = await queryContent<{ books: Array<Book> }>("/books").find();
+const books = booksData[0].books;
+const booksReading = computed(() => books.filter((item) => item.status == "reading"));
+const booksRead = computed(() => books.filter((item) => item.status == "read"));
+const booksPlanned = computed(() => books.filter((item) => item.status == "planned"));
 </script>
 
 <template>
@@ -51,47 +40,35 @@ const { books } = await queryContent<{ books: Array<Book> }>("/books").findOne()
 
   <h1 class="text-4xl font-bold mt-8">Книжная полка</h1>
 
-  <p class="text-base text-gray-900 p-4">
-    Техническая литература, которую я читаю или хочу прочитать:
-    <a
-      href="http://library.hazadus.ru/lists/3/details/"
-      class="underline"
-      >читаю</a
-    >
-    /
-    <a
-      href="http://library.hazadus.ru/lists/5/details/"
-      class="underline"
-      >хочу прочитать</a
-    >
-    /
-    <a
-      href="http://library.hazadus.ru/lists/2/details/"
-      class="underline"
-      >недавно прочитал</a
-    >.
-  </p>
+  <p class="text-base text-gray-900 p-4">Техническая литература, которую я читаю или хочу прочитать.</p>
 
   <section class="mb-2">
     <h2 class="text-2xl font-semibold">Читаю</h2>
-
-    <!-- TODO: refactor to BookCard component -->
-    <div
-      v-for="book in books.filter((item) => item.status == 'reading')"
+    <BookCard
+      v-for="book in booksReading"
       :key="`book-id-${book.id}`"
-    >
-      <div>
-        <a>{{ book.title }}</a>
-      </div>
-      <div>{{ book.author }} &middot; {{ book.publisher }} &middot; {{ book.year }}</div>
-    </div>
+      :book="book"
+      class="mb-2"
+    />
   </section>
 
   <section class="mb-2">
     <h2 class="text-2xl font-semibold">Прочитано</h2>
+    <BookCard
+      v-for="book in booksRead"
+      :key="`book-id-${book.id}`"
+      :book="book"
+      class="mb-2"
+    />
   </section>
 
   <section class="mb-2">
     <h2 class="text-2xl font-semibold">Планирую прочитать</h2>
+    <BookCard
+      v-for="book in booksPlanned"
+      :key="`book-id-${book.id}`"
+      :book="book"
+      class="mb-2"
+    />
   </section>
 </template>

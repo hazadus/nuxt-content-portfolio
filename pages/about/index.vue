@@ -92,7 +92,7 @@ const breadcrumbs: Breadcrumb[] = [
       <div class="hidden lg:mt-0 lg:col-span-3 lg:flex">
         <img
           src="/images/amgold_profile_pic.jpg"
-          alt="Boards screenshot"
+          alt="Author photo"
           class="rounded-full w-60 h-60 mb-3 mx-auto"
         />
       </div>
