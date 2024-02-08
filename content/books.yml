@@ -1,10 +1,12 @@
 books:
   - id: 1
-    title: Fluent Python, 2nd Edition
     author: Luciano Ramalho
+    title: Fluent Python, 2nd Edition
     publisher: O'Reilly
     year: 2022
+    description: Short description of the book.
     url: https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/
+    coverUrl: http://library.hazadus.ru/media/CACHE/images/images/covers/fluent_python/485e0af2fb2ed9969b7893f93f70f129.jpg
     reviewURL:
     tags:
       - Python

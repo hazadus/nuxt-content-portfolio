@@ -79,7 +79,8 @@ const breadcrumbs: Breadcrumb[] = [
             href="https://www.discogs.com/user/hazadus"
             class="underline"
             >винил</a
-          >, люблю
+          >
+          с 2006 г., люблю
           <a
             href="https://steamcommunity.com/id/hazadus/"
             class="underline"
