@@ -30,7 +30,23 @@ books:
       - DDD
     status: reading
     dateFinished: 2023-05-20
-  - id: 3
+  - id: 101
+    author: Mariano Anaya
+    title: Clean Code in Python
+    publisher: Packt
+    year: 2020
+    description: The book discusses object-oriented programming in Python and shows you how to use objects with descriptors and generators. It will also show you the design principles of software testing and how to resolve problems by implementing software design patterns in your code. In the concluding chapter, we break down a monolithic application into a microservices-based one starting from the code as the basis for a solid platform. By the end of this clean code book, you will be proficient in applying industry-approved coding practices to design clean, sustainable, and readable real-world Python code.
+    url: https://www.packtpub.com/product/clean-code-in-python-second-edition/9781800560215
+    coverUrl: /images/books/clean-code-in-python.jpg
+    reviewURL:
+    tags:
+      - Python
+      - Development
+      - Refactoring
+    status: planned
+    dateFinished:
+
+  - id: 211
     author: Antonio Melé
     title: Django 4 By Example
     publisher: Packt
@@ -45,18 +61,59 @@ books:
       - Development
     status: read
     dateFinished:
-  - id: 4
-    author: Mariano Anaya
-    title: Clean Code in Python
-    publisher: Packt
-    year: 2020
-    description: The book discusses object-oriented programming in Python and shows you how to use objects with descriptors and generators. It will also show you the design principles of software testing and how to resolve problems by implementing software design patterns in your code. In the concluding chapter, we break down a monolithic application into a microservices-based one starting from the code as the basis for a solid platform. By the end of this clean code book, you will be proficient in applying industry-approved coding practices to design clean, sustainable, and readable real-world Python code.
-    url: https://www.packtpub.com/product/clean-code-in-python-second-edition/9781800560215
-    coverUrl: /images/books/clean-code-in-python.jpg
+  - id: 215
+    author: William Vincent
+    title: Django for Beginners
+    publisher: Leanpub
+    year: 2022
+    description: Django for Beginners is a project-based introduction to Django, the popular Python-based web framework. Suitable for total beginners who have never built a website before as well as professional programmers looking for a fast-paced guide to modern web development and Django fundamentals.
+    url: https://leanpub.com/djangoforbeginners
+    coverUrl: /images/books/django-for-beginners.jpg
     reviewURL:
     tags:
       - Python
+      - Django
+    status: read
+    dateFinished:
+  - id: 216
+    author: Daniel Greenfield, Audrey Greenfield
+    title: Two Scoops of Django 3.x
+    publisher: Two Scoops Press
+    year: 2021
+    description: In Two Scoops of Django we introduce you to various tips, tricks, patterns, code snippets, and techniques that we’ve picked up over the years.
+    url: https://www.feldroy.com/books/two-scoops-of-django-3-x
+    coverUrl: /images/books/two-scoops-of-django-3x.jpg
+    reviewURL:
+    tags:
+      - Python
+      - Django
+    status: read
+    dateFinished:
+  - id: 217
+    author: Роберт Мартин
+    title: Идеальный программист
+    publisher: Питер
+    year: 2022
+    description: Всех программистов, которые добиваются успеха в мире разработки ПО, отличает один общий признак: они больше всего заботятся о качестве создаваемого программного обеспечения.
+    url: http://library.hazadus.ru/books/3/details/
+    coverUrl: /images/books/clean-coder.jpg
+    reviewURL:
+    tags:
       - Development
+    status: read
+    dateFinished:
+  - id: 218
+    author: Роберт Мартин
+    title: Чистый код
+    publisher: Питер
+    year: 2022
+    description: Плохой код может работать, но он будет мешать развитию проекта и компании-разработчика, требуя дополнительные ресурсы на поддержку и «укрощение».
+    url: https://www.piter.com/product/chistyy-kod-sozdanie-analiz-i-refaktoring-biblioteka-programmista-45ccca
+    coverUrl: /images/books/clean-code.jpg
+    reviewURL:
+    tags:
+      - Development
+      - Programming
       - Refactoring
-    status: planned
+    status: read
     dateFinished:
