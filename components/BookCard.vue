@@ -31,6 +31,12 @@ defineProps({
           >{{ tag }}</span
         >
       </div>
+      <div
+        v-if="book.description"
+        class="pt-2 text-sm"
+      >
+        {{ book.description }}
+      </div>
     </div>
 
     <div class="hidden md:mt-0 md:col-span-3 md:flex">

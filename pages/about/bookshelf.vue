@@ -47,8 +47,10 @@ const booksPlanned = computed(() => books.filter((item) => item.status == "plann
     прочитанного, а также свой бэклог - это мотивирует читать ещё больше, и качественнее!
   </p>
 
-  <section class="mb-10">
-    <h2 class="text-2xl font-semibold">Читаю</h2>
+  <section class="mb-20">
+    <h2 class="text-2xl font-semibold">
+      Читаю <span class="text-gray-500">{{ booksReading.length }}</span>
+    </h2>
     <BookCard
       v-for="book in booksReading"
       :key="`book-id-${book.id}`"
@@ -57,10 +59,12 @@ const booksPlanned = computed(() => books.filter((item) => item.status == "plann
     />
   </section>
 
-  <section class="mb-10">
-    <h2 class="text-2xl font-semibold">Прочитано</h2>
+  <section class="mb-20">
+    <h2 class="text-2xl font-semibold">
+      Планирую прочитать <span class="text-gray-500">{{ booksPlanned.length }}</span>
+    </h2>
     <BookCard
-      v-for="book in booksRead"
+      v-for="book in booksPlanned"
       :key="`book-id-${book.id}`"
       :book="book"
       class="mb-2"
@@ -68,9 +72,11 @@ const booksPlanned = computed(() => books.filter((item) => item.status == "plann
   </section>
 
   <section class="mb-4">
-    <h2 class="text-2xl font-semibold">Планирую прочитать</h2>
+    <h2 class="text-2xl font-semibold">
+      Прочитано <span class="text-gray-500">{{ booksRead.length }}</span>
+    </h2>
     <BookCard
-      v-for="book in booksPlanned"
+      v-for="book in booksRead"
       :key="`book-id-${book.id}`"
       :book="book"
       class="mb-2"
