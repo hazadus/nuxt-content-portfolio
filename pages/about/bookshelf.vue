@@ -28,9 +28,19 @@ const breadcrumbs: Breadcrumb[] = [
 
 const booksData = await queryContent<{ books: Array<Book> }>("/books").find();
 const books = booksData[0].books;
-const booksReading = computed(() => books.filter((item) => item.status == "reading"));
-const booksRead = computed(() => books.filter((item) => item.status == "read"));
-const booksPlanned = computed(() => books.filter((item) => item.status == "planned"));
+const booksReading = books.filter((item) => item.status == "reading");
+const booksRead = books.filter((item) => item.status == "read");
+const booksPlanned = books.filter((item) => item.status == "planned");
+
+const tags: string[] = [];
+books.forEach((book) =>
+  book.tags.forEach((tag) => {
+    if (!tags.includes(tag)) {
+      tags.push(tag);
+    }
+  }),
+);
+const selectedTags: Ref<string[]> = ref([]);
 </script>
 
 <template>
@@ -46,6 +56,31 @@ const booksPlanned = computed(() => books.filter((item) => item.status == "plann
     заметок, а в последнее время стараюсь подводить итоги прочитанного. В этом разделе я веду учёт
     прочитанного, а также свой бэклог - это мотивирует читать ещё больше, и качественнее!
   </p>
+
+  <section class="mb-20 bg-white rounded-lg shadow-md p-4">
+    <h2 class="text-2xl font-semibold mb-2">Фильтры</h2>
+    <div class="flex flex-wrap">
+      <span class="mr-2">Метки:</span>
+      <span
+        v-for="tag in tags"
+        :key="`filter-tag-id-${tag}`"
+        class="px-2 py-0 mb-1 mr-1 text-sm rounded-lg bg-gray-200 cursor-pointer"
+        :on-click="
+          () => {
+            console.log(tag);
+            if (selectedTags.includes(tag)) {
+              selectedTags = selectedTags.filter((item) => item != tag);
+            } else {
+              selectedTags.push(tag);
+            }
+          }
+        "
+        :style="selectedTags.includes(tag) ? { color: 'red' } : { color: 'blue' }"
+        >{{ tag }}</span
+      >
+    </div>
+    <div>{{ selectedTags }}</div>
+  </section>
 
   <section class="mb-20">
     <h2 class="text-2xl font-semibold">
