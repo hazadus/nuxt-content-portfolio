@@ -46,6 +46,22 @@ books:
     dateFinished:
 
   - id: 101
+    author: Bill Lubanovic
+    title: FastAPI
+    publisher: O'Reilly
+    year: 2023
+    description: Книга выглядит очень аппетитно! Издана недавно, да и в целом по FastAPI отдельных книг мне больше пока не попадалось. Надеюсь, она поможет мне хорошенько освоиться с этим фреймворком.
+    url: https://www.oreilly.com/library/view/fastapi/9781098135492/
+    coverUrl: /images/books/fastapi.jpeg
+    reviewURL:
+    tags:
+      - Python
+      - REST
+      - API
+      - FastAPI
+    status: planned
+    dateFinished:
+  - id: 102
     author: Mariano Anaya
     title: Clean Code in Python
     publisher: Packt
@@ -60,12 +76,12 @@ books:
       - Refactoring
     status: planned
     dateFinished:
-  - id: 102
+  - id: 103
     author: Jon Bodner
     title: Learning Go. An Idiomatic Approach to Real-World Go Programming
     publisher: O’Reilly
     year: 2021
-    description: Частично уже прочитал эту книгу, и изученный материал понравился. В целом ожидаю узнать об идиоматичном использовании Go для разработки реальных приложений и в результате попробовать что-то запилить самостоятельно.
+    description: Частично уже прочитал эту книгу, и изученный материал понравился. В целом ожидаю узнать об идиоматичном использовании Go для разработки реальных приложений и в результате попробовать что-то запилить самостоятельно. Уже успело выйти второе издание, так что и с ним надо будет ознакомиться.
     url: http://library.hazadus.ru/books/82/details/
     coverUrl: /images/books/learning-go.jpg
     reviewURL:
