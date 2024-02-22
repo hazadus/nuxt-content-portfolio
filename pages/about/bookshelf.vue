@@ -41,6 +41,38 @@ books.forEach((book) =>
   }),
 );
 const selectedTags: Ref<string[]> = ref([]);
+
+const isFilterActive = computed(() => selectedTags.value.length != 0);
+const resetFilter = () => {
+  selectedTags.value = [];
+};
+
+const hasAllTags = (bookTags: string[], checkHasTags: string[]) => {
+  return checkHasTags.length == bookTags.filter((item) => checkHasTags.includes(item)).length;
+};
+
+const filteredBooks = computed(() => {
+  return books.filter((book) => hasAllTags(book.tags, selectedTags.value));
+});
+
+/**
+ * Возвращает список тегов, которые есть у книг, имеющих ВСЕ выбранные теги.
+ */
+const filteredTags = computed(() => {
+  if (selectedTags.value.length != 0) {
+    const remainingTags: string[] = [];
+    filteredBooks.value.forEach((book) =>
+      book.tags.forEach((tag) => {
+        if (!remainingTags.includes(tag)) {
+          remainingTags.push(tag);
+        }
+      }),
+    );
+    return remainingTags;
+  } else {
+    return tags;
+  }
+});
 </script>
 
 <template>
@@ -62,10 +94,10 @@ const selectedTags: Ref<string[]> = ref([]);
     <div class="flex flex-wrap">
       <span class="mr-2">Метки:</span>
       <span
-        v-for="tag in tags"
+        v-for="tag in filteredTags"
         :key="`filter-tag-id-${tag}`"
-        class="px-2 py-0 mb-1 mr-1 text-sm rounded-lg bg-gray-200 cursor-pointer"
-        :on-click="
+        class="px-2 py-0 mb-1 mr-1 text-sm rounded-lg cursor-pointer"
+        @click="
           () => {
             console.log(tag);
             if (selectedTags.includes(tag)) {
@@ -75,14 +107,39 @@ const selectedTags: Ref<string[]> = ref([]);
             }
           }
         "
-        :style="selectedTags.includes(tag) ? { color: 'red' } : { color: 'blue' }"
+        :class="{
+          [`bg-gray-200`]: !selectedTags.includes(tag),
+          [`bg-purple-200`]: selectedTags.includes(tag),
+        }"
         >{{ tag }}</span
       >
     </div>
-    <div>{{ selectedTags }}</div>
+    <div class="mt-2">
+      <span
+        v-if="isFilterActive"
+        class="px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer"
+        @click="resetFilter"
+        >Сбросить фильтр</span
+      >
+    </div>
   </section>
 
-  <section class="mb-20">
+  <section v-if="isFilterActive">
+    <h2 class="text-2xl font-semibold">
+      Подходящие книги <span class="text-gray-500">{{ filteredBooks.length }}</span>
+    </h2>
+    <BookCard
+      v-for="book in filteredBooks"
+      :key="`filtered-book-id-${book.id}`"
+      :book="book"
+      class="mb-2"
+    />
+  </section>
+
+  <section
+    v-if="!isFilterActive"
+    class="mb-20"
+  >
     <h2 class="text-2xl font-semibold">
       Читаю <span class="text-gray-500">{{ booksReading.length }}</span>
     </h2>
@@ -94,7 +151,10 @@ const selectedTags: Ref<string[]> = ref([]);
     />
   </section>
 
-  <section class="mb-20">
+  <section
+    v-if="!isFilterActive"
+    class="mb-20"
+  >
     <h2 class="text-2xl font-semibold">
       Планирую прочитать <span class="text-gray-500">{{ booksPlanned.length }}</span>
     </h2>
@@ -106,7 +166,10 @@ const selectedTags: Ref<string[]> = ref([]);
     />
   </section>
 
-  <section class="mb-4">
+  <section
+    v-if="!isFilterActive"
+    class="mb-4"
+  >
     <h2 class="text-2xl font-semibold">
       Прочитано <span class="text-gray-500">{{ booksRead.length }}</span>
     </h2>
