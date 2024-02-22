@@ -112,15 +112,22 @@ const breadcrumbs: Breadcrumb[] = [
         </div>
       </div>
       <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
-        <h3 class="font-semibold mb-1">Вишлист</h3>
+        <h3 class="font-semibold mb-1">Вишлист знаний</h3>
         <div class="mb-2 text-gray-500 text-sm">Хочу освоить</div>
-        <div>FastAPI <Icon name="logos:go" /> Go <Icon name="logos:rust" /> Rust</div>
+        <div>
+          <Icon name="logos:fastapi-icon" /> FastAPI <Icon name="logos:go" /> Go
+          <Icon name="logos:rust" /> Rust
+        </div>
       </div>
       <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
-        <h3 class="font-semibold mb-1">Инвентарь</h3>
+        <h3 class="font-semibold mb-1 text-gray-600">Инвентарь</h3>
+        <div class="mb-2 text-gray-500 text-sm">См. ниже, скоро будет отдельный раздел.</div>
       </div>
       <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
-        <h3 class="font-semibold mb-1">Блогролл</h3>
+        <h3 class="font-semibold mb-1 text-gray-600">Блогролл</h3>
+        <div class="mb-2 text-gray-500 text-sm">
+          В разработке. Здесь я хочу поделиться ссылками на качественные технические блоги.
+        </div>
       </div>
     </div>
   </section>
@@ -348,6 +355,13 @@ const breadcrumbs: Breadcrumb[] = [
           <ul class="list-disc list-inside">
             <li>
               <a
+                href="https://omnivore.app"
+                class="underline"
+                >Omnivore</a
+              >
+            </li>
+            <li>
+              <a
                 href="https://uptimerobot.com/"
                 class="underline"
                 >UptimeRobot</a
@@ -372,13 +386,6 @@ const breadcrumbs: Breadcrumb[] = [
                 href="https://rss.hazadus.ru"
                 class="underline"
                 >RSS Reader</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://bookmarks.hazadus.ru"
-                class="underline"
-                >Bookmarks</a
               >
             </li>
           </ul>

@@ -39,12 +39,14 @@ defineProps({
       </div>
     </div>
 
-    <div class="hidden md:mt-0 md:col-span-3 md:flex">
-      <img
-        :src="book.coverUrl"
-        :alt="`${book.title} cover`"
-        class="w-40 mx-auto"
-      />
+    <div class="hidden md:mt-0 md:col-span-3 md:flex justify-center">
+      <a :href="book.url">
+        <img
+          :src="book.coverUrl"
+          :alt="`${book.title} cover`"
+          class="w-40 mx-auto"
+        />
+      </a>
     </div>
   </div>
 </template>

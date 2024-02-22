@@ -41,6 +41,7 @@ books:
     reviewURL:
     tags:
       - Development
+      - Inspiration
     status: reading
     dateFinished:
   - id: 4
@@ -48,7 +49,7 @@ books:
     title: Learning Go. An Idiomatic Approach to Real-World Go Programming
     publisher: O’Reilly
     year: 2021
-    description: Есть заметки. Author Jon Bodner introduces the design patterns experienced Go developers have adopted and explores the rationale for using them. 
+    description: Есть заметки. Author Jon Bodner introduces the design patterns experienced Go developers have adopted and explores the rationale for using them.
     url: http://library.hazadus.ru/books/82/details/
     coverUrl: /images/books/learning-go.jpg
     reviewURL:
@@ -180,7 +181,7 @@ books:
     title: Django 3 Web Development Cookbook
     publisher: Packt
     year: 2020
-    description: You'll learn how to build models, views, forms, and templates for your web apps and then integrate JavaScript in your Django apps to add more features. 
+    description: You'll learn how to build models, views, forms, and templates for your web apps and then integrate JavaScript in your Django apps to add more features.
     url: https://www.packtpub.com/free-ebook/django-3-web-development-cookbook-fourth-edition/9781838987428
     coverUrl: /images/books/django-3-web-dev-cookbook.jpg
     reviewURL:

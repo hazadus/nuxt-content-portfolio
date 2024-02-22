@@ -90,9 +90,8 @@ const filteredTags = computed(() => {
   </p>
 
   <section class="mb-20 bg-white rounded-lg shadow-md p-4">
-    <h2 class="text-2xl font-semibold mb-2">Фильтры</h2>
+    <h2 class="text-2xl font-semibold mb-2">Фильтр по темам</h2>
     <div class="flex flex-wrap">
-      <span class="mr-2">Метки:</span>
       <span
         v-for="tag in filteredTags"
         :key="`filter-tag-id-${tag}`"
@@ -114,9 +113,11 @@ const filteredTags = computed(() => {
         >{{ tag }}</span
       >
     </div>
-    <div class="mt-2">
+    <div
+      class="mt-4"
+      v-if="isFilterActive"
+    >
       <span
-        v-if="isFilterActive"
         class="px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer"
         @click="resetFilter"
         >Сбросить фильтр</span
