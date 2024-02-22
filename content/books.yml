@@ -4,7 +4,7 @@ books:
     title: Fluent Python, 2nd Edition
     publisher: O'Reilly
     year: 2022
-    description: Short description of the book.
+    description: Внушительный труд Ромальо посвящен идиоматичному использованию языка. Обилие интересных примеров, ссылок на дополнительные материалы (в конце *каждой* главы присутствует раздел *Further reading* - обожаю такое!) заставляет читать прорабатывать книгу неспешно и вдумчиво. После половины книги есть ощущение, что она обязательно станет настольной.
     url: https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/
     coverUrl: /images/books/fluent-python.jpg
     reviewURL:
@@ -18,7 +18,7 @@ books:
     title: Architecture Patterns with Python
     publisher: O'Reilly
     year: 2020
-    description: Short description of the book.
+    description: Ожидания - узнать о современных паттернах построения сервисов на Python.
     url: https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/
     coverUrl: /images/books/architecture-patterns-with-python.jpg
     reviewURL:
@@ -32,7 +32,7 @@ books:
     dateFinished: 2023-05-20
   - id: 3
     author: Стив Макконнелл
-    title: Совершенный код. Практическое руководство по разработке программного обеспечения
+    title: Этот том надолго поселится в категории "читаю", потому как возвращаюсь я к нему снова и снова, перечитывая те или иные главы. Скажу так, когда мне грустно, я частенько открываю эту книгу, и она регулярно приносит вдохновение!..
     publisher: БХВ-Петербург
     year: 2022
     description: Книга состоит из 35 глав, предметного указателя и библиографии.
@@ -42,20 +42,6 @@ books:
     tags:
       - Development
       - Inspiration
-    status: reading
-    dateFinished:
-  - id: 4
-    author: Jon Bodner
-    title: Learning Go. An Idiomatic Approach to Real-World Go Programming
-    publisher: O’Reilly
-    year: 2021
-    description: Есть заметки. Author Jon Bodner introduces the design patterns experienced Go developers have adopted and explores the rationale for using them.
-    url: http://library.hazadus.ru/books/82/details/
-    coverUrl: /images/books/learning-go.jpg
-    reviewURL:
-    tags:
-      - Go
-      - Programming
     status: reading
     dateFinished:
 
@@ -74,13 +60,27 @@ books:
       - Refactoring
     status: planned
     dateFinished:
+  - id: 102
+    author: Jon Bodner
+    title: Learning Go. An Idiomatic Approach to Real-World Go Programming
+    publisher: O’Reilly
+    year: 2021
+    description: Частично уже прочитал эту книгу, и изученный материал понравился. В целом ожидаю узнать об идиоматичном использовании Go для разработки реальных приложений и в результате попробовать что-то запилить самостоятельно.
+    url: http://library.hazadus.ru/books/82/details/
+    coverUrl: /images/books/learning-go.jpg
+    reviewURL:
+    tags:
+      - Go
+      - Programming
+    status: planned
+    dateFinished:
 
   - id: 204
     author: Мэтью Фаулер
     title: Asyncio и конкурентное программирование на Python
     publisher: ДМК Пресс
     year: 2022
-    description: См. обзор.
+    description: См. мой [пост с впечатлениями о книге](https://hazadus.ru/blog/asyncio-fowler).
     url: https://dmkpress.com/catalog/computer/programming/python/978-5-93700-166-5/
     coverUrl: /images/books/fowler-python-asyncio.jpg
     reviewURL: /blog/asyncio-fowler

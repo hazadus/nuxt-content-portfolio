@@ -4,13 +4,13 @@ import type { Book, Breadcrumb } from "@/types";
 const pageTitle = "Читаю";
 
 useSeoMeta({
-  description: "Книги, которые мне интересны.",
+  description: "Моя книжная полка.",
   ogTitle: pageTitle,
-  ogDescription: "Книги, которые мне интересны.",
+  ogDescription: "Моя книжная полка.",
   ogUrl: "https://hazadus.ru/books/",
   ogImage: "/images/ogImage.jpg",
   twitterTitle: pageTitle,
-  twitterDescription: "Книги, которые мне интересны.",
+  twitterDescription: "Моя книжная полка.",
   twitterCard: "summary",
   twitterImage: "/images/ogImage.jpg",
 });
