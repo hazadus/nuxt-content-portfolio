@@ -35,11 +35,14 @@ defineProps({
         v-if="book.description"
         class="pt-2 text-sm"
       >
-        {{ book.description }}
+        <MarkdownStringRenderer
+          :markdownString="book.description"
+          class="prose max-w-2xl"
+        />
       </div>
     </div>
 
-    <div class="hidden md:mt-0 md:col-span-3 md:flex justify-center">
+    <div class="hidden md:mt-0 md:col-span-3 md:flex justify-center items-center">
       <a :href="book.url">
         <img
           :src="book.coverUrl"
