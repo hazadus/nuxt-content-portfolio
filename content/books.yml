@@ -1,0 +1,296 @@
+books:
+  - id: 1
+    author: Luciano Ramalho
+    title: Fluent Python, 2nd Edition
+    publisher: O'Reilly
+    year: 2022
+    description: Внушительный труд Ромальо посвящен идиоматичному использованию языка. Обилие интересных примеров, ссылок на дополнительные материалы (в конце *каждой* главы присутствует раздел *Further reading* - обожаю такое!) заставляет читать прорабатывать книгу неспешно и вдумчиво. После половины книги есть ощущение, что она обязательно станет настольной.
+    url: https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/
+    coverUrl: /images/books/fluent-python.jpg
+    reviewURL:
+    tags:
+      - Python
+      - Programming
+    status: reading
+    dateFinished:
+  - id: 2
+    author: Bob Gregory, Harry Percival
+    title: Architecture Patterns with Python
+    publisher: O'Reilly
+    year: 2020
+    description: Ожидания - узнать о современных паттернах построения сервисов на Python.
+    url: https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/
+    coverUrl: /images/books/architecture-patterns-with-python.jpg
+    reviewURL:
+    tags:
+      - Python
+      - Patterns
+      - Development
+      - TDD
+      - DDD
+    status: reading
+    dateFinished: 2023-05-20
+  - id: 3
+    author: Стив Макконнелл
+    title: Этот том надолго поселится в категории "читаю", потому как возвращаюсь я к нему снова и снова, перечитывая те или иные главы. Скажу так, когда мне грустно, я частенько открываю эту книгу, и она регулярно приносит вдохновение!..
+    publisher: БХВ-Петербург
+    year: 2022
+    description: Книга состоит из 35 глав, предметного указателя и библиографии.
+    url: http://library.hazadus.ru/books/81/details/
+    coverUrl: /images/books/macconell.jpg
+    reviewURL:
+    tags:
+      - Development
+      - Inspiration
+    status: reading
+    dateFinished:
+
+  - id: 101
+    author: Mariano Anaya
+    title: Clean Code in Python
+    publisher: Packt
+    year: 2020
+    description: The book discusses object-oriented programming in Python and shows you how to use objects with descriptors and generators. It will also show you the design principles of software testing and how to resolve problems by implementing software design patterns in your code. In the concluding chapter, we break down a monolithic application into a microservices-based one starting from the code as the basis for a solid platform. By the end of this clean code book, you will be proficient in applying industry-approved coding practices to design clean, sustainable, and readable real-world Python code.
+    url: https://www.packtpub.com/product/clean-code-in-python-second-edition/9781800560215
+    coverUrl: /images/books/clean-code-in-python.jpg
+    reviewURL:
+    tags:
+      - Python
+      - Development
+      - Refactoring
+    status: planned
+    dateFinished:
+  - id: 102
+    author: Jon Bodner
+    title: Learning Go. An Idiomatic Approach to Real-World Go Programming
+    publisher: O’Reilly
+    year: 2021
+    description: Частично уже прочитал эту книгу, и изученный материал понравился. В целом ожидаю узнать об идиоматичном использовании Go для разработки реальных приложений и в результате попробовать что-то запилить самостоятельно.
+    url: http://library.hazadus.ru/books/82/details/
+    coverUrl: /images/books/learning-go.jpg
+    reviewURL:
+    tags:
+      - Go
+      - Programming
+    status: planned
+    dateFinished:
+
+  - id: 204
+    author: Мэтью Фаулер
+    title: Asyncio и конкурентное программирование на Python
+    publisher: ДМК Пресс
+    year: 2022
+    description: См. мой [пост с впечатлениями о книге](https://hazadus.ru/blog/asyncio-fowler).
+    url: https://dmkpress.com/catalog/computer/programming/python/978-5-93700-166-5/
+    coverUrl: /images/books/fowler-python-asyncio.jpg
+    reviewURL: /blog/asyncio-fowler
+    tags:
+      - Python
+      - asyncio
+      - Programming
+    status: read
+    dateFinished: 2023-12-01
+  - id: 205
+    author: Борис Черный
+    title: Профессиональный TypeScript
+    publisher: Питер
+    year: 2021
+    description: Книга оставила смешанные чувства. Теория, практика, но ничего не освещено достаточно полно. Не для новичков.
+    url: https://www.piter.com/product_by_id/199950936
+    coverUrl: /images/books/pro-typescript.jpg
+    reviewURL:
+    tags:
+      - TypeScript
+      - Programming
+    status: read
+    dateFinished:
+  - id: 206
+    author: Уильям Шоттс
+    title: Командная строка Linux. Полное руководство
+    publisher: Питер
+    year: 2020
+    description: Международный бестселлер «Командная строка Linux» поможет преодолеть путь от первых робких щелчков по клавишам до уверенного создания полноценных программ для последней версии bash — наиболее популярной командной оболочки Linux.
+    url: https://www.piter.com/product_by_id/147022828
+    coverUrl: /images/books/linux-cli.jpg
+    reviewURL:
+    tags:
+      - Linux
+    status: read
+    dateFinished:
+  - id: 207
+    author: Гарри Персиваль
+    title: Python. Разработка на основе тестирования
+    publisher: ДМК Пресс
+    year: 2018
+    description: Значительная часть книги устарела.
+    url: https://dmkpress.com/catalog/computer/programming/python/978-5-97060-594-3/
+    coverUrl: /images/books/obey-the-testing-goat.jpg
+    reviewURL:
+    tags:
+      - Python
+      - Django
+      - TDD
+      - Development
+      - Selenium
+    status: read
+    dateFinished:
+  - id: 208
+    author: Роберт Мартин
+    title: Чистый Agile. Основы гибкости
+    publisher: Питер
+    year: 2022
+    description: «Чистый Agile» устраняет недопонимание и путаницу, которые за годы существования Agile усложнили его применение по сравнению с изначальным замыслом. Цитаты http://library.hazadus.ru/books/77/notes/
+    url: https://www.piter.com/product/chistyy-agile-osnovy-gibkosti
+    coverUrl: /images/books/martin-agile.jpg
+    reviewURL:
+    tags:
+      - Agile
+      - Inspiration
+    status: read
+    dateFinished:
+  - id: 209
+    author: Джефф Сазерленд
+    title: Scrum. Революционный метод управления проектами
+    publisher: Манн, Иванов и Фербер
+    year: 2022
+    description: Книга основателя методики Scrum, которая поможет вам реализовывать проекты в несколько раз быстрее и эффективнее.
+    url: https://www.mann-ivanov-ferber.ru/books/scrum/
+    coverUrl: /images/books/scrum.jpg
+    reviewURL:
+    tags:
+      - Scrum
+      - Agile
+    status: read
+    dateFinished: 2023-06-13
+  - id: 210
+    author: Steve Klabnik, Carol Nichols
+    title: The Rust Programming Language
+    publisher: No Starch Press
+    year: 2018
+    description: The Rust Programming Language is the official book on Rust, an open-source, community-developed systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. This is the undisputed go-to guide to Rust, written by two members of the Rust core team, with feedback and contributions from 42 members of the community.
+    url: https://doc.rust-lang.org/book/
+    coverUrl: /images/books/rust-book.jpg
+    reviewURL:
+    tags:
+      - Rust
+      - Programming
+    status: read
+    dateFinished: 2023-05-25
+  - id: 211
+    author: Aidas Bendoraitis, Jake Kronika
+    title: Django 3 Web Development Cookbook
+    publisher: Packt
+    year: 2020
+    description: You'll learn how to build models, views, forms, and templates for your web apps and then integrate JavaScript in your Django apps to add more features.
+    url: https://www.packtpub.com/free-ebook/django-3-web-development-cookbook-fourth-edition/9781838987428
+    coverUrl: /images/books/django-3-web-dev-cookbook.jpg
+    reviewURL:
+    tags:
+      - Django
+      - Python
+    status: read
+    dateFinished: 2023-05-22
+  - id: 212
+    author: Antonio Melé
+    title: Django 4 By Example
+    publisher: Packt
+    year: 2022
+    description: Short description of the book.
+    url: https://www.packtpub.com/product/django-4-by-example-fourth-edition/9781801813051
+    coverUrl: /images/books/django-4-by-example.jpg
+    reviewURL:
+    tags:
+      - Django
+      - Python
+      - Development
+    status: read
+    dateFinished:
+  - id: 213
+    author: William Vincent
+    title: Django for APIs
+    publisher: Leanpub
+    year: 2022
+    description: Django for APIs is a project-based guide to building modern web APIs with Django & Django REST Framework. It is suitable for beginners who have never built an API before as well as professional programmers looking for a fast-paced introduction to Django fundamentals and best practices.
+    url: http://library.hazadus.ru/books/29/details/
+    coverUrl: /images/books/django-for-apis.jpg
+    reviewURL:
+    tags:
+      - Python
+      - Django
+      - DRF
+      - API
+      - REST
+    status: read
+    dateFinished:
+  - id: 214
+    author: William Vincent
+    title: Django for Professionals
+    publisher: Leanpub
+    year: 2022
+    description: Once you have learned the basics of Django there is a massive gap between building simple "toy apps" and what it takes to build a "production-ready" web application suitable for deployment to thousands or even millions of users.
+    url: https://leanpub.com/djangoforprofessionals
+    coverUrl: /images/books/django-for-professionals.jpg
+    reviewURL:
+    tags:
+      - Python
+      - Django
+    status: read
+    dateFinished:
+  - id: 215
+    author: William Vincent
+    title: Django for Beginners
+    publisher: Leanpub
+    year: 2022
+    description: Django for Beginners is a project-based introduction to Django, the popular Python-based web framework. Suitable for total beginners who have never built a website before as well as professional programmers looking for a fast-paced guide to modern web development and Django fundamentals.
+    url: https://leanpub.com/djangoforbeginners
+    coverUrl: /images/books/django-for-beginners.jpg
+    reviewURL:
+    tags:
+      - Python
+      - Django
+    status: read
+    dateFinished:
+  - id: 216
+    author: Daniel Greenfield, Audrey Greenfield
+    title: Two Scoops of Django 3.x
+    publisher: Two Scoops Press
+    year: 2021
+    description: In Two Scoops of Django we introduce you to various tips, tricks, patterns, code snippets, and techniques that we’ve picked up over the years.
+    url: https://www.feldroy.com/books/two-scoops-of-django-3-x
+    coverUrl: /images/books/two-scoops-of-django-3x.jpg
+    reviewURL:
+    tags:
+      - Python
+      - Django
+    status: read
+    dateFinished:
+  - id: 217
+    author: Роберт Мартин
+    title: Идеальный программист
+    publisher: Питер
+    year: 2022
+    description: Всех программистов, которые добиваются успеха в мире разработки ПО, отличает один общий признак - они больше всего заботятся о качестве создаваемого программного обеспечения.
+    url: http://library.hazadus.ru/books/3/details/
+    coverUrl: /images/books/clean-coder.jpg
+    reviewURL:
+    tags:
+      - Development
+      - Inspiration
+    status: read
+    dateFinished:
+  - id: 218
+    author: Роберт Мартин
+    title: Чистый код
+    publisher: Питер
+    year: 2022
+    description: Плохой код может работать, но он будет мешать развитию проекта и компании-разработчика, требуя дополнительные ресурсы на поддержку и «укрощение».
+    url: https://www.piter.com/product/chistyy-kod-sozdanie-analiz-i-refaktoring-biblioteka-programmista-45ccca
+    coverUrl: /images/books/clean-code.jpg
+    reviewURL:
+    tags:
+      - Development
+      - Programming
+      - Refactoring
+      - Inspiration
+    status: read
+    dateFinished:

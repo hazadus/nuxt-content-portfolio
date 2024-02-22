@@ -56,3 +56,20 @@ export interface MastoToot {
   tags: MastoTag[];
   card: MastoLinkCard | null;
 }
+
+type BookStatus = "read" | "reading" | "planned";
+
+export interface Book {
+  id: number;
+  author: string;
+  title: string;
+  publisher: string;
+  year: number;
+  description: string | null;
+  url: string;
+  coverUrl: string;
+  reviewUrl: string | null;
+  tags: Array<string>;
+  status: BookStatus;
+  dateFinished: Date | null;
+}
