@@ -56,7 +56,13 @@ const breadcrumbs: Breadcrumb[] = [
             to="/blog/"
             class="underline"
             >посты</NuxtLink
-          >.
+          >. В
+          <NuxtLink
+            to="/microblog/"
+            class="underline"
+            >микроблоге</NuxtLink
+          >
+          вы найдёте ссылки на хорошие материалы и новости о разработке. Там много интересного!
         </p>
 
         <p class="mt-4">
@@ -68,9 +74,10 @@ const breadcrumbs: Breadcrumb[] = [
         </p>
 
         <p class="mt-4">
-          Также владею: <Icon name="logos:typescript-icon" /> TypeScript,
-          <Icon name="logos:nuxt-icon" /> Nuxt, <Icon name="logos:docker-icon" /> Tailwind,
-          <Icon name="logos:mongodb-icon" /> MongoDB, Mongoose, и др.
+          Также владею: <Icon name="devicon:flask" /> Flask, <Icon name="simple-icons:pydantic" /> Pydantic,
+          <Icon name="logos:typescript-icon" /> TypeScript, <Icon name="logos:nuxt-icon" /> Nuxt,
+          <Icon name="logos:docker-icon" /> Tailwind, <Icon name="logos:mongodb-icon" /> MongoDB, Mongoose, и
+          др.
         </p>
 
         <p class="mt-4">
@@ -102,37 +109,66 @@ const breadcrumbs: Breadcrumb[] = [
   <section>
     <div class="grid max-w-screen-xl lg:px-4 mx-auto gap-2 lg:gap-8 grid-cols-3 md:grid-cols-12">
       <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
-        <NuxtLink
-          to="/about/bookshelf/"
-          class="font-semibold mb-1 hover:underline"
-          >Читаю</NuxtLink
-        >
+        <div class="mb-1">
+          <Icon
+            name="emojione:books"
+            class="mr-2"
+          />
+          <NuxtLink
+            to="/about/bookshelf/"
+            class="font-semibold hover:underline"
+            >Читаю</NuxtLink
+          >
+        </div>
         <div class="mb-2 text-gray-500 text-sm">
-          Техническая литература: что читаю, прочитал, планирую читать.
+          Одно из давних увлечений - техническая литература. Здесь я отмечаю, что читаю, прочитал, планирую
+          читать.
         </div>
       </div>
       <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
-        <h3 class="font-semibold mb-1">Вишлист знаний</h3>
-        <div class="mb-2 text-gray-500 text-sm">Хочу освоить</div>
-        <div>
-          <Icon name="logos:fastapi-icon" /> FastAPI <Icon name="logos:go" /> Go
-          <Icon name="logos:rust" /> Rust
+        <div class="mb-1">
+          <Icon
+            name="noto:brain"
+            class="mr-2"
+          />
+          <h3 class="font-semibold mb-1 inline-block">Вишлист знаний</h3>
+        </div>
+        <div class="mb-2 text-gray-500 text-sm">Хочу освоить в этом году:</div>
+        <div><Icon name="logos:fastapi-icon" /> FastAPI <Icon name="logos:go" /> Go</div>
+      </div>
+      <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
+        <div class="mb-1">
+          <Icon
+            name="noto:hammer-and-wrench"
+            class="mr-2"
+          />
+          <NuxtLink
+            to="/about/inventory/"
+            class="font-semibold mb-1 hover:underline"
+            >Инвентарь</NuxtLink
+          >
+        </div>
+        <div class="mb-2 text-gray-500 text-sm">
+          Любимые инструменты для работы, которые хочется рекомендовать всем.
         </div>
       </div>
       <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
-        <h3 class="font-semibold mb-1 text-gray-600">Инвентарь</h3>
-        <div class="mb-2 text-gray-500 text-sm">См. ниже, скоро будет отдельный раздел.</div>
-      </div>
-      <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
-        <h3 class="font-semibold mb-1 text-gray-600">Блогролл</h3>
+        <div class="mb-1">
+          <Icon
+            name="noto:pushpin"
+            class="mr-2"
+          />
+          <h3 class="font-semibold text-gray-600 inline-block">Блогролл</h3>
+        </div>
         <div class="mb-2 text-gray-500 text-sm">
-          В разработке. Здесь я хочу поделиться ссылками на качественные технические блоги.
+          Страничка пока ещё в разработке. Здесь я хочу поделиться ссылками на качественные, информативные
+          технические блоги.
         </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="mb-16">
     <div class="px-4 max-w-screen-xl">
       <h2
         class="text-2xl mt-8 mb-4 font-semibold"
@@ -216,182 +252,5 @@ const breadcrumbs: Breadcrumb[] = [
         </div>
       </div>
     </div>
-  </section>
-
-  <section>
-    <div class="px-4 max-w-screen-xl">
-      <h2
-        class="text-2xl mt-8 mb-4 font-semibold"
-        id="tools"
-      >
-        Инвентарь
-      </h2>
-
-      <p class="mb-2">
-        Периодически узнаю о разных интересных инструментах на сайтах разработчиков, поэтому здесь тоже
-        перечислю любимые программы, которыми каждый день пользуюсь сам. Наверняка, вы найдёте тут что-то
-        полезное для себя.
-      </p>
-
-      <div class="grid max-w-screen-xl lg:px-4 mx-auto gap-2 lg:gap-8 grid-cols-1 lg:grid-cols-12">
-        <div class="flex flex-col lg:col-span-4 rounded-lg shadow-md px-4 py-4">
-          <h3 class="font-semibold mb-1">Dev Tools</h3>
-          <div class="mb-2 text-gray-500 text-sm">Любимые инструменты для разработки софта</div>
-
-          <ul class="list-disc list-inside">
-            <li>
-              <a
-                href="https://www.jetbrains.com/ru-ru/pycharm/"
-                class="underline"
-                >PyCharm Pro</a
-              >,
-              <a
-                href="https://code.visualstudio.com/"
-                class="underline"
-                >VS Code</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://app.warp.dev/referral/2K4PXZ"
-                class="underline"
-                >Warp</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.docker.com/products/docker-desktop/"
-                class="underline"
-                >Docker Desktop</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://github.com/jonas/tig"
-                class="underline"
-                >tig</a
-              >,
-              <a
-                href="https://github.com/ogham/exa"
-                class="underline"
-                >exa</a
-              >,
-              <a
-                href="https://github.com/tmux/tmux"
-                class="underline"
-                >tmux</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.sourcetreeapp.com/"
-                class="underline"
-                >Sourcetree</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="flex flex-col lg:col-span-4 rounded-lg shadow-md px-4 py-4">
-          <h3 class="font-semibold mb-1">Mac Apps</h3>
-          <div class="mb-2 text-gray-500 text-sm">Программы для мака, без которых не жизнь</div>
-
-          <ul class="list-disc list-inside">
-            <li>
-              Браузеры: Safari, Firefox,
-              <a
-                href="https://arc.net/"
-                class="underline"
-                >Arc</a
-              >
-            </li>
-            <li>
-              База знаний:
-              <a
-                href="https://notion.so"
-                class="underline"
-                >Notion</a
-              >,
-              <a
-                href="https://obsidian.md/"
-                class="underline"
-                >Obsidian</a
-              >
-            </li>
-            <li>
-              RSS:
-              <a
-                href="https://netnewswire.com/"
-                class="underline"
-                >NetNewsWire</a
-              >
-            </li>
-            <li>
-              Clipboard:
-              <a
-                href="https://maccy.app/"
-                class="underline"
-                >Maccy</a
-              >
-            </li>
-            <li>
-              Menu:
-              <a
-                href="https://bjango.com/mac/istatmenus/"
-                class="underline"
-                >iStat Menus</a
-              >,
-              <a
-                href="https://www.macbartender.com/"
-                class="underline"
-                >Bartender</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="flex flex-col lg:col-span-4 rounded-lg shadow-md px-4 py-4">
-          <h3 class="font-semibold mb-1">SaaS</h3>
-          <div class="mb-2 text-gray-500 text-sm">Веб-приложения на (почти) каждый день</div>
-
-          <ul class="list-disc list-inside">
-            <li>
-              <a
-                href="https://omnivore.app"
-                class="underline"
-                >Omnivore</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://uptimerobot.com/"
-                class="underline"
-                >UptimeRobot</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://gist.github.com/hazadus"
-                class="underline"
-                >GitHub Gists</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://track.toggl.com/"
-                class="underline"
-                >Toggl Track</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://rss.hazadus.ru"
-                class="underline"
-                >RSS Reader</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <p class="mt-8 mb-8 text-gray-300">Просмотров странички: {{ viewCount }}</p>
   </section>
 </template>

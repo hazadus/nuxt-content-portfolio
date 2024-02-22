@@ -138,7 +138,7 @@
               </li>
               <li>
                 <NuxtLink
-                  to="/about/#tools"
+                  to="/about/inventory/"
                   class="hover:underline"
                 >
                   Инвентарь
