@@ -74,10 +74,9 @@ const breadcrumbs: Breadcrumb[] = [
         </p>
 
         <p class="mt-4">
-          Также владею: <Icon name="devicon:flask" /> Flask, <Icon name="simple-icons:pydantic" /> Pydantic,
-          <Icon name="logos:typescript-icon" /> TypeScript, <Icon name="logos:nuxt-icon" /> Nuxt,
-          <Icon name="logos:docker-icon" /> Tailwind, <Icon name="logos:mongodb-icon" /> MongoDB, Mongoose, и
-          др.
+          Также владею: <Icon name="devicon:flask" /> Flask, <Icon name="logos:typescript-icon" /> TypeScript,
+          <Icon name="logos:nuxt-icon" /> Nuxt, <Icon name="logos:docker-icon" /> Tailwind,
+          <Icon name="logos:mongodb-icon" /> MongoDB, Mongoose, и др.
         </p>
 
         <p class="mt-4">
@@ -134,7 +133,13 @@ const breadcrumbs: Breadcrumb[] = [
           <h3 class="font-semibold mb-1 inline-block">Вишлист знаний</h3>
         </div>
         <div class="mb-2 text-gray-500 text-sm">Хочу освоить в этом году:</div>
-        <div><Icon name="logos:fastapi-icon" /> FastAPI <Icon name="logos:go" /> Go</div>
+        <div class="flex flex-col">
+          <span class="inline-block"
+            ><Icon name="logos:fastapi-icon" /> FastAPI, <Icon name="simple-icons:pydantic" /> Pydantic,
+            aiohttp</span
+          >
+          <span class="inline-block"> <Icon name="logos:go" /> Go</span>
+        </div>
       </div>
       <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
         <div class="mb-1">
@@ -168,7 +173,6 @@ const breadcrumbs: Breadcrumb[] = [
         </div>
       </div>
       -->
-
     </div>
   </section>
 
