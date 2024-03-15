@@ -74,20 +74,17 @@ const tootStore = useTootStore();
 
         <a
           href="http://rss.hazadus.ru/"
-          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100"
+          class="inline-flex items-center justify-center px-5 py-3 mr-8 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100"
         >
           Открыть сайт
         </a>
+        <NuxtLink
+          to="/projects/"
+          class="inline-flex items-center justify-center px-5 py-3 mt-2 md:mt-0 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100"
+        >
+          Все проекты
+        </NuxtLink>
       </div>
-    </div>
-
-    <div class="text-base text-right">
-      <NuxtLink
-        to="/projects/"
-        class="italic hover:underline"
-      >
-        Смотреть все проекты...
-      </NuxtLink>
     </div>
   </section>
 

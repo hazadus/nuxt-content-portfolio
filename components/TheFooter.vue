@@ -11,6 +11,7 @@
               hazadus.ru
             </span>
           </NuxtLink>
+          <span class="italic text-gray-500">Дом-страница Александра Голдовского</span>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-16 sm:grid-cols-4">
           <div>

@@ -83,7 +83,7 @@ const breadcrumbs: Breadcrumb[] = [
         <p class="mt-4">
           Коллекционирую
           <a
-            href="https://www.discogs.com/user/hazadus"
+            href="https://www.discogs.com/user/hazadus/collection?header=1"
             class="underline"
             >винил</a
           >
@@ -152,6 +152,8 @@ const breadcrumbs: Breadcrumb[] = [
           Любимые инструменты для работы, которые хочется рекомендовать всем.
         </div>
       </div>
+
+      <!--
       <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
         <div class="mb-1">
           <Icon
@@ -165,6 +167,8 @@ const breadcrumbs: Breadcrumb[] = [
           технические блоги.
         </div>
       </div>
+      -->
+
     </div>
   </section>
 
