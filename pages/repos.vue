@@ -31,7 +31,20 @@ const excludedRepos = [
   "pySkillboxMessenger",
   "aiogram-bot-demo",
   "rusty-llama",
-  "asyncio-learn",
+  "flask-demo",
+  "pyHzdsBigBrotherBot",
+  "react-dig-ocean-tutorial",
+  "react-to-do-list",
+  "react-func-comp-tutorial",
+  "react-farm-fcc",
+  "fastapi-farm-fcc",
+  "django-c3-pages",
+  "django-c4-msgboard",
+  "django-c5-blog",
+  "django-website",
+  "react-ts-todo-fcc",
+  "django-eshop",
+  "js-mp3-player",
 ];
 
 // Stuff I want to always show on the top of the page:
