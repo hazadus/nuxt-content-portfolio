@@ -76,7 +76,7 @@ const filteredTags = computed(() => {
 </script>
 
 <template>
-  <Title> {{ pageTitle }} | Hazadus.ru </Title>
+  <Title> {{ pageTitle }} | Александр Голдовский </Title>
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 

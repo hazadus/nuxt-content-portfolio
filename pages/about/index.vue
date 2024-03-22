@@ -26,17 +26,17 @@ const breadcrumbs: Breadcrumb[] = [
 </script>
 
 <template>
-  <Title> {{ pageTitle }} | Hazadus.ru </Title>
+  <Title> {{ pageTitle }} | Александр Голдовский </Title>
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
-  <section class="bg-white">
+  <section class="bg-white mb-6">
     <div class="grid max-w-screen-xl mt-8 px-4 mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
       <div class="mr-auto lg:col-span-9">
         <h1 class="text-4xl font-bold mb-2">Привет, меня зовут Александр! 👋</h1>
 
         <p class="mt-4">
-          В свободное время я занимаюсь разработкой web-приложений. Моя цель – делать это профессионально.
+          В свободное время я занимаюсь backend разработкой. Моя цель – делать это профессионально.
         </p>
 
         <p class="mt-4">

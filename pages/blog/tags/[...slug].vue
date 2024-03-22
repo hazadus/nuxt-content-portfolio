@@ -19,7 +19,7 @@ const breadcrumbs: Breadcrumb[] = [
   },
 ];
 
-const pageTitle = `Посты с меткой "${slug}" | Посты | Hazadus.ru`;
+const pageTitle = `Посты с меткой "${slug}" | Посты | Александр Голдовский`;
 const pageDescription = `Все посты на сайте с меткой "${slug}".`;
 
 useSeoMeta({
@@ -36,7 +36,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <Title> Посты с меткой &laquo;{{ slug }}&raquo; | Посты | Hazadus.ru </Title>
+  <Title> Посты с меткой &laquo;{{ slug }}&raquo; | Посты | Александр Голдовский </Title>
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 

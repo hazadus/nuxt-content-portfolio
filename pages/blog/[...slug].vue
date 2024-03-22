@@ -4,7 +4,7 @@ import type { Breadcrumb } from "@/types";
 const { path } = useRoute();
 const { data } = await useAsyncData(`content-${path}`, () => queryContent().where({ _path: path }).findOne());
 const viewCount = await getViewCount(path);
-const pageTitle = data.value?.title + " | Посты | Hazadus.ru";
+const pageTitle = data.value?.title + " | Посты | Александр Голдовский";
 
 const breadcrumbs: Breadcrumb[] = [
   {

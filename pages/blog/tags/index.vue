@@ -3,11 +3,11 @@ import type { Breadcrumb, BlogPost } from "@/types";
 
 useSeoMeta({
   description: "Все теги к постам.",
-  ogTitle: "Все теги | Посты | Hazadus.ru",
+  ogTitle: "Все теги | Посты | Александр Голдовский",
   ogDescription: "Все теги к постам.",
   ogUrl: "https://hazadus.ru/blog/tags/",
   ogImage: "/images/ogImage.jpg",
-  twitterTitle: "Все теги | Посты | Hazadus.ru",
+  twitterTitle: "Все теги | Посты | Александр Голдовский",
   twitterDescription: "Все теги к постам.",
   twitterCard: "summary",
   twitterImage: "/images/ogImage.jpg",
@@ -40,7 +40,7 @@ posts.value?.forEach((post) => {
 </script>
 
 <template>
-  <Title> Все теги | Посты | Hazadus.ru </Title>
+  <Title> Все теги | Посты | Александр Голдовский </Title>
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 
