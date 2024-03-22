@@ -1,6 +1,6 @@
-# Hazadus.ru
+# 🏡 Hazadus.ru | amgold.ru
 
-My personal web site, running at [https://hazadus.ru](https://hazadus.ru).
+My personal web site, running at [https://amgold.ru](https://amgold.ru) and [https://hazadus.ru](https://hazadus.ru).
 
 ## Configuration
 

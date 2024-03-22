@@ -23,6 +23,38 @@ const breadcrumbs: Breadcrumb[] = [
     url: null,
   },
 ];
+
+const myHardSkills = [
+  "Python",
+  "Django",
+  "PostgreSQL",
+  "SQL",
+  "SQLAlchemy",
+  "Django REST Framework",
+  "Flask",
+  "unittest",
+  "asyncio",
+  "Celery",
+  "Redis",
+  "RabbitMQ",
+  "Docker",
+  "Git",
+  "Nginx",
+];
+
+const myAdditionalSkills = [
+  "HTML",
+  "CSS3",
+  "JavaScript",
+  "TypeScript",
+  "Nuxt",
+  "Vue3",
+  "Tailwind",
+  "MongoDB",
+  "Mongoose",
+];
+
+const myWishlist = ["FastAPI", "Pydantic", "aiohttp", "Go"];
 </script>
 
 <template>
@@ -66,17 +98,21 @@ const breadcrumbs: Breadcrumb[] = [
         </p>
 
         <p class="mt-4">
-          Мои основные навыки:
-          <Icon name="logos:python" /> Python, <Icon name="logos:postgresql" /> PostgreSQL,
-          <Icon name="logos:django-icon" /> Django, Celery, <Icon name="logos:redis" /> Redis,
-          <Icon name="logos:nginx" /> Nginx, <Icon name="logos:docker-icon" /> Docker,
-          <Icon name="logos:git-icon" /> Git.
+          <span class="font-semibold mr-2">Мои основные навыки:</span>
+          <TechTag
+            v-for="tech in myHardSkills"
+            :key="`skill-${tech}`"
+            :title="tech"
+          />
         </p>
 
         <p class="mt-4">
-          Также владею: <Icon name="devicon:flask" /> Flask, <Icon name="logos:typescript-icon" /> TypeScript,
-          <Icon name="logos:nuxt-icon" /> Nuxt, <Icon name="logos:docker-icon" /> Tailwind,
-          <Icon name="logos:mongodb-icon" /> MongoDB, Mongoose, и др.
+          <span class="font-semibold mr-2">Также владею:</span>
+          <TechTag
+            v-for="tech in myAdditionalSkills"
+            :key="`skill-additional-${tech}`"
+            :title="tech"
+          />
         </p>
 
         <p class="mt-4">
@@ -119,7 +155,7 @@ const breadcrumbs: Breadcrumb[] = [
             >Читаю</NuxtLink
           >
         </div>
-        <div class="mb-2 text-gray-500 text-sm">
+        <div class="mb-2 text-gray-500 text-sm cursor-default">
           Одно из давних увлечений - техническая литература. Здесь я отмечаю, что читаю, прочитал, планирую
           читать.
         </div>
@@ -130,15 +166,15 @@ const breadcrumbs: Breadcrumb[] = [
             name="noto:brain"
             class="mr-2"
           />
-          <h3 class="font-semibold mb-1 inline-block">Вишлист знаний</h3>
+          <h3 class="font-semibold mb-1 inline-block cursor-default">Вишлист знаний</h3>
         </div>
-        <div class="mb-2 text-gray-500 text-sm">Хочу освоить в этом году:</div>
-        <div class="flex flex-col">
-          <span class="inline-block"
-            ><Icon name="logos:fastapi-icon" /> FastAPI, <Icon name="simple-icons:pydantic" /> Pydantic,
-            aiohttp</span
-          >
-          <span class="inline-block"> <Icon name="logos:go" /> Go</span>
+        <div class="mb-2 text-gray-500 text-sm cursor-default">Хочу освоить в этом году:</div>
+        <div class="flex flex-wrap">
+          <TechTag
+            v-for="tech in myWishlist"
+            :key="`skill-wish-${tech}`"
+            :title="tech"
+          />
         </div>
       </div>
       <div class="flex flex-col col-span-3 md:col-span-6 xl:col-span-3 rounded-lg shadow-md px-4 py-8">
@@ -153,7 +189,7 @@ const breadcrumbs: Breadcrumb[] = [
             >Инвентарь</NuxtLink
           >
         </div>
-        <div class="mb-2 text-gray-500 text-sm">
+        <div class="mb-2 text-gray-500 text-sm cursor-default">
           Любимые инструменты для работы, которые хочется рекомендовать всем.
         </div>
       </div>

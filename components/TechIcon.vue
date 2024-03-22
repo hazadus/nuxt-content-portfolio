@@ -36,10 +36,16 @@ topicIcons.set("css3", "logos:css-3");
 topicIcons.set("javascript", "logos:javascript");
 topicIcons.set("typescript", "logos:typescript-icon");
 topicIcons.set("bulma", "logos:bulma");
+topicIcons.set("tailwind", "logos:tailwindcss-icon");
 topicIcons.set("tailwindcss", "logos:tailwindcss-icon");
 topicIcons.set("bootstrap5", "logos:bootstrap");
 topicIcons.set("docker", "logos:docker-icon");
 topicIcons.set("graphql", "logos:graphql");
+topicIcons.set("git", "logos:git-icon");
+topicIcons.set("postgresql", "logos:postgresql");
+topicIcons.set("rabbitmq", "logos:rabbitmq-icon");
+topicIcons.set("fastapi", "logos:fastapi-icon");
+topicIcons.set("pydantic", "simple-icons:pydantic");
 </script>
 
 <template>
