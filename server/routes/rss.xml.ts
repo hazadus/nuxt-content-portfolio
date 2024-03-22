@@ -3,7 +3,7 @@ import RSS from "rss";
 
 export default defineEventHandler(async (event) => {
   const feed = new RSS({
-    title: "Hazadus.ru Blog",
+    title: "Блог Александра Голдовского",
     site_url: "https://hazadus.ru",
     feed_url: `https://hazadus.ru/rss.xml`,
   });

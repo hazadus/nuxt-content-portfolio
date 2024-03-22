@@ -2,7 +2,7 @@
 import type { Breadcrumb } from "@/types";
 import { useTootStore } from "~/store/tootStore";
 
-const pageTitle = "Приветствую на Hazadus.ru!";
+const pageTitle = "Добро пожаловать 👋!";
 
 useSeoMeta({
   description: "Моя домашняя страница.",
@@ -28,7 +28,7 @@ const tootStore = useTootStore();
 </script>
 
 <template>
-  <Title> Hazadus.ru </Title>
+  <Title> Дом-страница Александра Голдовского </Title>
 
   <Breadcrumbs :breadcrumbs="breadcrumbs" />
 

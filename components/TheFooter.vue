@@ -2,20 +2,22 @@
   <footer class="p-4 sm:p-6 bg-gray-800 lg:py-10">
     <div class="mx-auto max-w-screen-xl">
       <div class="md:flex md:justify-between lg:pr-10">
-        <div class="mb-6 md:mb-0">
+        <div class="mb-12 md:mb-0">
           <NuxtLink
-            to="/"
+            to="/about/"
             class="flex items-center"
           >
-            <span class="self-center text-2xl font-semibold whitespace-nowrap text-gray-300">
-              hazadus.ru
+            <span class="self-center mb-2 text-2xl font-semibold whitespace-nowrap text-gray-300">
+              Александр Голдовский
             </span>
           </NuxtLink>
-          <span class="italic text-gray-500">Дом-страница Александра Голдовского</span>
+          <span class="italic text-gray-400 cursor-default"
+            >Backend разработка на <Icon name="logos:python" /> Python, и не только.</span
+          >
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-16 sm:grid-cols-4">
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Разработки</h2>
+            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase cursor-default">Разработки</h2>
             <ul class="text-gray-400">
               <li class="mb-4">
                 <NuxtLink
@@ -36,7 +38,7 @@
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Мои сайты</h2>
+            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase cursor-default">Мои сайты</h2>
             <ul class="text-gray-400">
               <li class="mb-4">
                 <a
@@ -82,7 +84,7 @@
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Посты</h2>
+            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase cursor-default">Посты</h2>
             <ul class="text-gray-400">
               <li class="mb-4">
                 <NuxtLink
@@ -103,7 +105,7 @@
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase">Автор</h2>
+            <h2 class="mb-6 text-sm font-semibold text-gray-300 uppercase cursor-default">Автор</h2>
             <ul class="text-gray-400">
               <li class="mb-4">
                 <NuxtLink
@@ -154,7 +156,13 @@
 
       <div class="sm:flex sm:items-center sm:justify-between">
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          &copy; 2022 - 2024 hazadus &middot; <a href="/dash/">🚀</a>
+          &copy; 2022 - 2024
+          <NuxtLink
+            to="/about/"
+            class="hover:underline"
+            >hazadus</NuxtLink
+          >
+          &middot; <a href="/dash/">🚀</a>
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
           <a
