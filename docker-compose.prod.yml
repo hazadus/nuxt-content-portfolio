@@ -21,8 +21,10 @@ services:
       - "443:443"
     volumes:
       - ./docker/nginx/logs:/var/log/nginx
-      - ./docker/nginx/default.prod.conf:/etc/nginx/conf.d/default.conf
+      - ./docker/nginx/hazadus.ru.conf:/etc/nginx/conf.d/hazadus.ru.conf
+      - ./docker/nginx/amgold.ru.conf:/etc/nginx/conf.d/amgold.ru.conf
       - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
-      - /etc/letsencrypt/archive/hazadus.ru/:/certs
+      - /etc/letsencrypt/archive/hazadus.ru/:/hazadus_ru_certs
+      - /etc/letsencrypt/archive/amgold.ru/:/amgold_ru_certs
     depends_on:
       - node
